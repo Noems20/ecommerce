@@ -1,0 +1,57 @@
+{
+  "name": "trescastillos",
+  "version": "1.0.0",
+  "description": "MERN shopping app",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node backend/server",
+    "server:prod": "SET NODE_ENV=production&& nodemon backend/server",
+    "server": "nodemon backend/server",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend",
+    "data:import": "node backend/data/seeder",
+    "data:destroy": "node backend/data/seeder -d"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Noems20/tres-castillos.git"
+  },
+  "author": "Noé Muñoz Sánchez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Noems20/tres-castillos/issues"
+  },
+  "homepage": "https://github.com/Noems20/tres-castillos#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1058.0",
+    "bcryptjs": "^2.4.3",
+    "colors": "^1.4.0",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-mongo-sanitize": "^2.1.0",
+    "express-rate-limit": "^5.5.0",
+    "helmet": "^4.6.0",
+    "hpp": "^0.2.3",
+    "html-to-text": "^8.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
+    "mongoose": "^6.0.12",
+    "multer": "^1.4.4",
+    "multer-sharp-s3": "git+https://github.com/rvanzon/multer-sharp-s3.git",
+    "nodemailer": "^6.7.0",
+    "pug": "^3.0.2",
+    "slugify": "^1.6.3",
+    "validator": "^13.7.0",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "concurrently": "^6.3.0",
+    "nodemon": "^2.0.14"
+  },
+  "engines": {
+    "node": "^16"
+  }
+}

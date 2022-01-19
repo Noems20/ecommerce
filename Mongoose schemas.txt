@@ -1,0 +1,73 @@
+------------------------------------------------------------------
+                                USER
+------------------------------------------------------------------
+Name - String
+Email - String, unique
+Photo - String
+Verified - Boolean
+Role - String
+Password - String
+PasswordConfirm - String
+Cart - [{cartProductId}]
+Addresses - [{
+    State - String, default: Zacatecas
+    City - String
+    PostalCode - Number, length: 5
+    Phone - Number, length 10
+    Suburb - String
+    Address - String
+    References - String
+    Instructions - String
+}]
+
+------------------------------------------------------------------
+                           CART PRODUCT
+------------------------------------------------------------------
+Product - ProductId
+Quantity - Number
+colorName - String
+size - String
+
+------------------------------------------------------------------
+        CART PRODUCT CLOTHES (INHERIT FROM CART PRODUCT)
+------------------------------------------------------------------
+ColorCode - String
+Size - String
+
+------------------------------------------------------------------
+                            PRODUCT
+------------------------------------------------------------------
+Name - String
+Slug - String
+Description - String
+Category - String
+Catalog -  String
+ratingsAverage - Number
+ratingsQuantity - Number
+Price - Number
+CreatedAt - Date
+
+------------------------------------------------------------------
+                        SUB CATEGORY
+------------------------------------------------------------------
+Genre - String, enum: [male, female]
+Variants - [{
+    ColorName - String
+    ColorCode - String, unique
+    Images - [String]
+    XS - Number
+    S - Number
+    M - Number
+    L - Number
+    XL - Number
+    XXL - Number
+}]
+
+------------------------------------------------------------------
+                            REVIEW
+------------------------------------------------------------------
+Product - ProductId
+User - UserId
+Review - String
+Rating - Number
+CreatedAt -  date
