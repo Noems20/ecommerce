@@ -10,9 +10,9 @@ export const createOrder = () => async (dispatch) => {
     });
     // 1) Get checkout session from API
     const { data } = await axios.get(`/api/v1/orders/checkout-session`);
-    console.log(data.session);
+    // console.log(data.session);
 
-    // window.location.replace(data.session.url);
+    window.location.replace(data.session.url);
     dispatch({
       type: SET_UI_LOADING,
       payload: { firstLoader: false },

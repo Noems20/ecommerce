@@ -173,6 +173,8 @@ const CreateLocalOrderTab = ({
       0
     );
 
+    newTotalPrice += (newTotalPrice * (Number(percentage) / 100) * 100) / 100;
+
     setUserCredentials({
       ...userCredentials,
       totalPrice: Math.round(newTotalPrice * 100) / 100,
@@ -197,8 +199,7 @@ const CreateLocalOrderTab = ({
         0
       );
 
-      newTotalPrice +=
-        Math.round(newTotalPrice * (Number(percentage) / 100) * 100) / 100;
+      newTotalPrice += (newTotalPrice * (Number(percentage) / 100) * 100) / 100;
 
       setUserCredentials({
         ...userCredentials,

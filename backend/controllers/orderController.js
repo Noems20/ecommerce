@@ -52,6 +52,9 @@ export const getCheckoutSession = catchAsync(async (req, res, next) => {
     //   allowed_countries: ['MX'],
     // },
     line_items: formatedCartProducts,
+    metadata: {
+      address: 'pepinillos',
+    },
   });
 
   // 4) Create session as response
@@ -67,11 +70,11 @@ export const getCheckoutSession = catchAsync(async (req, res, next) => {
 // -------------------------------------------------------------------------------
 
 const createOrderCheckout = async (session) => {
-  const user = (await User.findOne({ email: session.customer_email })).id;
-  const cartProducts = stripe.checkout.sessions.listLineItems(session.id);
+  const user = await User.findOne({ email: session.customer_email });
+  const cartProducts = user.productsCart;
   console.log(cartProducts);
   const totalPrice = session.amount_total / 100;
-  // await Order.create({ user, totalPrice });
+  // await Order.create({ user: user, totalPrice });
 };
 
 // -------------------------------------------------------------------------------
