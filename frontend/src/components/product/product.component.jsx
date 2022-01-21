@@ -171,7 +171,7 @@ const Product = ({ product }) => {
                 src={`https://copiasnoe-ecommerce.s3.amazonaws.com/products/${color.image}`}
                 onClick={() => handleSubcategoryChange(color)}
                 variants={imageVariants}
-                whileHover='hover'
+                whileHover="hover"
               />
             );
           })}

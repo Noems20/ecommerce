@@ -64,7 +64,7 @@ const Cart = () => {
           totalPrice={totalPrice}
         />
       </Container>
-      <ProductSuggestions catalog='agendas' />
+      <ProductSuggestions catalog="agendas" />
     </PageGrid>
   );
 };

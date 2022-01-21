@@ -7,7 +7,7 @@ import {
   DELETE_ORDER,
   COMPLETE_ORDER,
   CLEAR_ORDERS,
-} from './ordersTypes';
+} from './local-orders-types';
 import { addItem, updateItem, deleteItem } from '../utils/reducerUtils';
 
 const initialState = {

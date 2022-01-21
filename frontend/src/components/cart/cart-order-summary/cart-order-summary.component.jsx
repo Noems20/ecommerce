@@ -1,5 +1,9 @@
 import React from 'react';
 
+// REDUX
+import { createOrder } from '../../../redux/orders/orders-actions';
+import { useDispatch, useSelector } from 'react-redux';
+
 // COMPONENTS
 import CustomButton from '../../custom-button/custom-button.component';
 
@@ -27,6 +31,15 @@ const OrderInfoItem = ({ name, price, quantity = null }) => {
 };
 
 const CartOrderSummary = ({ cart, productsAmmount, totalPrice }) => {
+  // ------------------------ STATE AND CONSTANTS -------------------
+  const dispatch = useDispatch();
+  const { loading } = useSelector((state) => state.ui);
+
+  // ------------------------ HANDLERS -------------------
+  const checkout = () => {
+    dispatch(createOrder());
+  };
+
   return (
     <Container>
       <Title>Resumen de orden</Title>
@@ -52,10 +65,17 @@ const CartOrderSummary = ({ cart, productsAmmount, totalPrice }) => {
                 name={`Subtotal(${productsAmmount})`}
                 price={totalPrice}
               />
-              <OrderInfoItem name='Envio' price='50' />
-              <OrderInfoItem name='Precio total' price={totalPrice + 50} />
+              <OrderInfoItem name="Envio" price="50" />
+              <OrderInfoItem name="Precio total" price={totalPrice + 50} />
             </TotalContainer>
-            <CustomButton primary>Proceder al pago</CustomButton>{' '}
+            <CustomButton
+              primary
+              onClick={checkout}
+              loading={loading.firstLoader}
+              disabled={loading.firstLoader}
+            >
+              Proceder al pago
+            </CustomButton>
           </>
         ) : (
           <OrderInfoTitle style={{ textAlign: 'center' }}>

@@ -19,6 +19,7 @@ import userRouter from './routes/userRoutes.js';
 import productRouter from './routes/productRoutes.js';
 import reviewRouter from './routes/reviewRoutes.js';
 import localOrderRouter from './routes/localOrderRoutes.js';
+import orderRouter from './routes/orderRoutes.js';
 
 dotenv.config();
 
@@ -132,6 +133,7 @@ app.use('/api/v1/users', userRouter);
 app.use('/api/v1/products', productRouter);
 app.use('/api/v1/reviews', reviewRouter);
 app.use('/api/v1/localOrders', localOrderRouter);
+app.use('/api/v1/orders', orderRouter);
 
 // --------------------------- SERVE REACT STATIC'S ----------------
 if (process.env.NODE_ENV === 'production') {

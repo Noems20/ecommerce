@@ -4,7 +4,10 @@ import 'moment/locale/es-us';
 
 // REDUX
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchOrders, clearOrders } from '../../../redux/orders/ordersActions';
+import {
+  fetchLocalOrders,
+  clearLocalOrders,
+} from '../../../redux/local-orders/local-orders-actions';
 
 // COMPONENTS
 import LocalOrderCard from '../local-order-card/local-order-card.component';
@@ -31,9 +34,9 @@ const LocalOrders = ({ active }) => {
 
   // ---------------------------- USE EFFECTs --------------------------
   useEffect(() => {
-    dispatch(fetchOrders(active, 9, page));
+    dispatch(fetchLocalOrders(active, 9, page));
     return () => {
-      dispatch(clearOrders());
+      dispatch(clearLocalOrders());
     };
   }, [dispatch, active, page]);
 

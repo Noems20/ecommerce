@@ -10,7 +10,7 @@ import CreateLocalOrderTab from '../../components/local-orders-tab/create-local-
 // STYLES
 import { UserDetailsContainer, Title } from './edit-local-order.styles';
 import { PageGrid } from '../../general.styles';
-import { fetchSingleOrder } from '../../redux/orders/ordersActions';
+import { fetchSingleLocalOrder } from '../../redux/local-orders/local-orders-actions';
 import { LoaderModified } from '../../general.styles';
 
 const EditLocalOrderPage = () => {
@@ -24,7 +24,7 @@ const EditLocalOrderPage = () => {
 
   // ---------------------------------- USE EFFECT'S -------------
   useEffect(() => {
-    dispatch(fetchSingleOrder(id));
+    dispatch(fetchSingleLocalOrder(id));
     return () => {};
   }, [dispatch, id]);
 

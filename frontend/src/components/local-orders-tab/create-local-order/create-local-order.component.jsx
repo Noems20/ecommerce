@@ -12,7 +12,10 @@ import { AnimatePresence } from 'framer-motion';
 // REDUX
 import { useSelector, useDispatch } from 'react-redux';
 import { clearUiErrors, clearSuccess } from '../../../redux/ui/uiActions';
-import { createOrder, updateOrder } from '../../../redux/orders/ordersActions';
+import {
+  createLocalOrder,
+  updateLocalOrder,
+} from '../../../redux/local-orders/local-orders-actions';
 
 // COMPONENTS
 import TextInput from '../../form-inputs/text-input/text-input.component';
@@ -208,7 +211,7 @@ const CreateLocalOrderTab = ({
   const handleSubmitCreate = (e) => {
     e.preventDefault();
     dispatch(
-      createOrder(
+      createLocalOrder(
         clientName,
         clientCellphone,
         clientEmail,
@@ -226,7 +229,7 @@ const CreateLocalOrderTab = ({
   const handleSubmitUpdate = (e) => {
     e.preventDefault();
     dispatch(
-      updateOrder(
+      updateLocalOrder(
         order._id,
         clientName,
         clientCellphone,
@@ -258,9 +261,9 @@ const CreateLocalOrderTab = ({
     <>
       <Container
         variants={variants}
-        initial='hidden'
-        animate='visible'
-        exit='hidden'
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
       >
         <Content>
           <FormContainer
@@ -270,52 +273,52 @@ const CreateLocalOrderTab = ({
 
             <Title>Información</Title>
             <TextInput
-              name='clientName'
-              type='text'
+              name="clientName"
+              type="text"
               handleChange={handleChange}
               value={clientName}
-              label='Nombre de cliente'
+              label="Nombre de cliente"
               error={errorsOne.clientName}
             />
             <TextInput
-              name='clientCellphone'
-              type='text'
+              name="clientCellphone"
+              type="text"
               handleChange={handleChange}
               value={clientCellphone}
-              label='Teléfono de cliente'
+              label="Teléfono de cliente"
               error={errorsOne.clientCellphone}
             />
             <TextInput
-              name='clientEmail'
-              type='text'
+              name="clientEmail"
+              type="text"
               handleChange={handleChange}
               value={clientEmail}
-              label='Email de cliente'
+              label="Email de cliente"
               error={errorsOne.clientEmail}
             />
             <SelectInput
-              label='Nombre de quien atiende'
-              name='employeeName'
+              label="Nombre de quien atiende"
+              name="employeeName"
               onChange={handleChange}
               value={employeeName}
               defaultValue={order ? order.employeeName : ''}
               error={errorsOne.employeeName}
             >
-              <option value=''>Selecciona uno</option>
-              <option value='Gael'>Gael</option>
-              <option value='José de Jesús'>José de Jesús</option>
-              <option value='Jassiel'>Jassiel</option>
-              <option value='Miguel Muñoz'>Miguel Muñoz</option>
-              <option value='Miguel Antonio'>Miguel Antonio</option>
-              <option value='María'>María</option>
+              <option value="">Selecciona uno</option>
+              <option value="Gael">Gael</option>
+              <option value="José de Jesús">José de Jesús</option>
+              <option value="Jassiel">Jassiel</option>
+              <option value="Miguel Muñoz">Miguel Muñoz</option>
+              <option value="Miguel Antonio">Miguel Antonio</option>
+              <option value="María">María</option>
             </SelectInput>
             <TextInput
               textarea
-              name='description'
-              type='text'
+              name="description"
+              type="text"
               handleChange={handleChange}
               value={description}
-              label='Descripción'
+              label="Descripción"
               error={errorsOne.description}
             />
             {/* ----------------------------- PRODUCTS ------------------------- */}
@@ -325,41 +328,41 @@ const CreateLocalOrderTab = ({
                 <Fragment key={index}>
                   <ProductRow>
                     <TextInput
-                      name='product'
-                      type='text'
+                      name="product"
+                      type="text"
                       handleChange={(event) =>
                         handleProductChange(event, index)
                       }
                       value={product.product}
-                      label='Producto'
+                      label="Producto"
                       error={errorsOne[`products.${index}.product`]}
                     />
                     <TextInput
-                      name='quantity'
-                      type='text'
+                      name="quantity"
+                      type="text"
                       handleChange={(event) =>
                         handleProductChange(event, index)
                       }
                       value={product.quantity}
-                      label='Cantidad'
+                      label="Cantidad"
                       error={errorsOne[`products.${index}.quantity`]}
                     />
 
                     <TextInput
-                      name='price'
-                      type='text'
+                      name="price"
+                      type="text"
                       handleChange={(event) =>
                         handleProductChange(event, index)
                       }
                       value={product.price}
-                      label='Precio'
+                      label="Precio"
                       error={errorsOne[`products.${index}.price`]}
                     />
                     <ProductPrice>{`Subtotal: $${product.totalPrice}`}</ProductPrice>
                     {index > 0 && (
                       <CustomButton
                         danger
-                        type='button'
+                        type="button"
                         style={{ justifySelf: 'stretch' }}
                         onClick={() => handleRemoveProduct(index)}
                       >
@@ -373,19 +376,19 @@ const CreateLocalOrderTab = ({
             })}
             <ExtraRow>
               <TextInput
-                name='paid'
-                type='text'
+                name="paid"
+                type="text"
                 handleChange={handleChange}
                 value={paid}
-                label='Pagado'
+                label="Pagado"
                 error={errorsOne.paid}
               />
               <TextInput
-                name='percentage'
-                type='text'
+                name="percentage"
+                type="text"
                 handleChange={handleChange}
                 value={percentage}
-                label='Porcentaje añadido (%)'
+                label="Porcentaje añadido (%)"
                 error={errorsOne.percentage}
               />
             </ExtraRow>
@@ -396,7 +399,7 @@ const CreateLocalOrderTab = ({
             {/* ----------------------------- DELIVERY DATE ------------------------- */}
             <Title>Fecha de entrega</Title>
             <Calendar
-              className='animate__animated animate__zoomIn'
+              className="animate__animated animate__zoomIn"
               renderCustomHeader={({
                 date,
                 decreaseMonth,
@@ -417,8 +420,8 @@ const CreateLocalOrderTab = ({
               onChange={(date) => setSelectedDate(date)}
               inline
               showTimeSelect
-              locale='es'
-              timeFormat='h:mm aaa'
+              locale="es"
+              timeFormat="h:mm aaa"
               timeCaption={'Horario'}
               timeIntervals={30}
               minDate={
@@ -437,7 +440,7 @@ const CreateLocalOrderTab = ({
               }
               filterDate={(date) => date.getDay() !== 0}
               filterTime={filterPassedTime}
-              dateFormat='MMMM d, yyyy h:mm aa'
+              dateFormat="MMMM d, yyyy h:mm aa"
               error={errorsOne.date}
             />
 
@@ -455,10 +458,10 @@ const CreateLocalOrderTab = ({
         {success && (
           <Modal handleClose={handleClose}>
             <Alert
-              title='!Exito¡'
+              title="!Exito¡"
               text={`Orden ${update ? 'actualizada' : 'creada'} correctamente`}
-              button='Continuar'
-              type='success'
+              button="Continuar"
+              type="success"
               handleClose={handleClose}
               handleAction={handleTabChange}
             />

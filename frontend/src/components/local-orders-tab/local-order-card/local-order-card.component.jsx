@@ -8,8 +8,8 @@ import 'moment/locale/es-us';
 // REDUX
 import {
   deleteLocalOrder,
-  setActiveOrder,
-} from '../../../redux/orders/ordersActions';
+  setActiveLocalOrder,
+} from '../../../redux/local-orders/local-orders-actions';
 
 // COMPONENTS
 import CustomButton from '../../custom-button/custom-button.component';
@@ -67,7 +67,7 @@ const LocalOrderCard = ({ order }) => {
 
   const handleComplete = (active) => {
     setCompleteLoader(true);
-    dispatch(setActiveOrder(order._id, active));
+    dispatch(setActiveLocalOrder(order._id, active));
   };
 
   const handleClose = () => {
@@ -175,7 +175,7 @@ const LocalOrderCard = ({ order }) => {
                   primary={1}
                   as={Link}
                   to={`/ordenes-locales/editar/${order._id}`}
-                  target='_blank'
+                  target="_blank"
                 >
                   Editar
                 </CustomButton>
@@ -211,10 +211,10 @@ const LocalOrderCard = ({ order }) => {
         {open === 'delete' && (
           <Modal handleClose={handleClose}>
             <Alert
-              title='Cuidado'
+              title="Cuidado"
               text={`¿Seguro que deseas eliminar la orden de ${order.clientName}?`}
-              button='Continuar'
-              type='danger'
+              button="Continuar"
+              type="danger"
               handleClose={handleClose}
               handleAction={handleDelete}
             />

@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-import localOrderReducer from './orders/ordersReducer';
+import localOrderReducer from './local-orders/local-orders-reducer';
 import addressesReducer from './addresses/addressesReducer';
 import productsReducer from './products/productsReducer';
 import cartReducer from './cart/cartReducer';

@@ -1,14 +1,12 @@
 import User from '../models/userModel.js';
 import S3 from 'aws-sdk/clients/s3.js';
 
-import { uploadFile } from '../config/s3.js';
 import multerSharp from 'multer-sharp-s3';
 
 import catchAsync from '../utils/catchAsync.js';
 import AppError from '../utils/appError.js';
 import Email from '../utils/email.js';
 import multer from 'multer';
-import sharp from 'sharp';
 import { getAll } from './handlerFactory.js';
 import { validateMailData } from '../utils/validators.js';
 import dotenv from 'dotenv';

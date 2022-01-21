@@ -67,7 +67,13 @@ export const Button = styled.button`
   -moz-transform: translateY(60px);
   -o-transform: translateY(60px);
   transform: translateY(60px);
-  transition: 0.5s;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+
+  &:hover {
+    border-color: var(--color-primary-light);
+    background-color: var(--color-primary-light);
+    color: #fff;
+  }
 `;
 
 export const Card = styled.div`
@@ -156,7 +162,8 @@ export const Card = styled.div`
     -moz-transform: translateY(0px);
     -o-transform: translateY(0px);
     transform: translateY(0px);
-    transition-delay: 0.75s;
+    transition: transform 0.5s ease 0.2s, opacity 0.5s ease 0.2s,
+      color 0.2s ease, background-color 0.2s ease;
   }
 
   @media only screen and (max-width: 1100px) {

@@ -89,25 +89,25 @@ const Home = () => {
   return (
     <PageGrid
       variants={containerVariants}
-      initial='hidden'
-      animate='visible'
-      exit='hidden'
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
     >
       {/* ---------------------------- HERO ---------------------- */}
       <HeroSection>
         <LeftColumn>
-          <HeroSubtitleUp className='animate__animated animate__fadeInDown'>
+          <HeroSubtitleUp className="animate__animated animate__fadeInDown">
             La mejor relación calidad-precio
           </HeroSubtitleUp>
-          <HeroTitle className='animate__animated animate__fadeIn animate__delay-1s'>
+          <HeroTitle className="animate__animated animate__fadeIn animate__delay-1s">
             Agendas
           </HeroTitle>
-          <HeroSubtitleDown className='animate__animated animate__fadeInUp animate__delay-2s'>
+          <HeroSubtitleDown className="animate__animated animate__fadeInUp animate__delay-2s">
             Proximamente Agendas Personalizadas
           </HeroSubtitleDown>
           <HeroButton
-            to='/agendas'
-            className='animate__animated animate__flipInY animate__delay-2s'
+            to="/agendas"
+            className="animate__animated animate__flipInY animate__delay-2s"
           >
             Explorar ahora
           </HeroButton>
@@ -117,7 +117,7 @@ const Home = () => {
           <Waves src={waves} />
           <HeroImage
             src={agenda}
-            className='animate__animated animate__fadeIn animate__delay-3s'
+            className="animate__animated animate__fadeIn animate__delay-3s"
           />
         </RightColumn>
       </HeroSection>
@@ -132,30 +132,30 @@ const Home = () => {
             imageUrl={bindingBackground}
           />
         </BarItem> */}
-        <BarItem to='/agendas' className='top'>
+        <BarItem to="/agendas" className="top">
           <BarItemContent>
             <BarItemTitle>Agendas</BarItemTitle>
           </BarItemContent>
           <BackgroundImageContainer
-            className='background-image'
+            className="background-image"
             imageUrl={scheduleBackground}
           />
         </BarItem>
-        <BarItem to='/ropa/general/todo'>
+        <BarItem to="/ropa/general/todo">
           <BarItemContent>
             <BarItemTitle>Ropa</BarItemTitle>
           </BarItemContent>
           <BackgroundImageContainer
-            className='background-image'
+            className="background-image"
             imageUrl={clothingBackground}
           />
         </BarItem>
-        <BarItem to='/regalos'>
+        <BarItem to="/regalos">
           <BarItemContent>
             <BarItemTitle>Regalos</BarItemTitle>
           </BarItemContent>
           <BackgroundImageContainer
-            className='background-image'
+            className="background-image"
             imageUrl={giftsBackground}
           />
         </BarItem>
@@ -189,17 +189,17 @@ const Home = () => {
           {fetchLoader ? (
             <LoaderModified
               variants={containerVariants}
-              initial='hidden'
-              animate='visible'
-              exit='hidden'
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
               key={1}
             />
           ) : (
             <ProductsGrid
               variants={containerVariants}
-              initial='hidden'
-              animate='visible'
-              exit='hidden'
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
               key={2}
             >
               {products.map((product) => {
@@ -223,8 +223,8 @@ const Home = () => {
             </ServiceInfoIconContainer>
             <ServiceInfoTitle>Sencillo sistema de ordenes</ServiceInfoTitle>
             <ServiceInfoText>
-              Muy sencillo si la verdad me siento bien con hambre y ganas de ir
-              por unas pizzas.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              felis ante, dignissim ut lorem id, iaculis hendrerit felis.
             </ServiceInfoText>
           </ServiceInfoItem>
           <ServiceInfoItem>
@@ -233,8 +233,8 @@ const Home = () => {
             </ServiceInfoIconContainer>
             <ServiceInfoTitle>Entregas en tiempo</ServiceInfoTitle>
             <ServiceInfoText>
-              Muy sencillo si la verdad me siento bien con hambre y ganas de ir
-              por unas pizzas.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              felis ante, dignissim ut lorem id, iaculis hendrerit felis.
             </ServiceInfoText>
           </ServiceInfoItem>
           <ServiceInfoItem>
@@ -243,8 +243,8 @@ const Home = () => {
             </ServiceInfoIconContainer>
             <ServiceInfoTitle>Garantía de devolución del 100%</ServiceInfoTitle>
             <ServiceInfoText>
-              Muy sencillo si la verdad me siento bien con hambre y ganas de ir
-              por unas pizzas.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+              felis ante, dignissim ut lorem id, iaculis hendrerit felis.
             </ServiceInfoText>
           </ServiceInfoItem>
         </ServiceInfoContent>

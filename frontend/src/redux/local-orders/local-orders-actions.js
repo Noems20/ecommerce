@@ -6,7 +6,7 @@ import {
   DELETE_ORDER,
   COMPLETE_ORDER,
   CLEAR_ORDERS,
-} from './ordersTypes';
+} from './local-orders-types';
 import {
   SET_UI_LOADING,
   SET_UI_ERRORS,
@@ -19,7 +19,7 @@ import axios from 'axios';
 // ------------------------------------------------------------------------
 //  CLEAR ORDERS
 // ------------------------------------------------------------------------
-export const clearOrders = () => async (dispatch) => {
+export const clearLocalOrders = () => async (dispatch) => {
   dispatch({
     type: CLEAR_ORDERS,
   });
@@ -28,7 +28,7 @@ export const clearOrders = () => async (dispatch) => {
 // ------------------------------------------------------------------------
 //  FETCH SINGLE ORDER
 // ------------------------------------------------------------------------
-export const fetchSingleOrder = (id) => async (dispatch) => {
+export const fetchSingleLocalOrder = (id) => async (dispatch) => {
   try {
     dispatch({
       type: SET_UI_LOADING,
@@ -54,7 +54,7 @@ export const fetchSingleOrder = (id) => async (dispatch) => {
 // ------------------------------------------------------------------------
 //  FETCH ORDERS
 // ------------------------------------------------------------------------
-export const fetchOrders =
+export const fetchLocalOrders =
   (active, limit = 9, page = 1) =>
   async (dispatch) => {
     try {
@@ -89,7 +89,7 @@ export const fetchOrders =
 // ------------------------------------------------------------------------
 //  CREATE ORDER
 // ------------------------------------------------------------------------
-export const createOrder =
+export const createLocalOrder =
   (
     clientName,
     clientCellphone,
@@ -165,7 +165,7 @@ export const createOrder =
 // ------------------------------------------------------------------------
 //  COMPLETE ORDER
 // ------------------------------------------------------------------------
-export const setActiveOrder = (id, active) => async (dispatch) => {
+export const setActiveLocalOrder = (id, active) => async (dispatch) => {
   try {
     const config = {
       headers: {
@@ -192,7 +192,7 @@ export const setActiveOrder = (id, active) => async (dispatch) => {
 // ------------------------------------------------------------------------
 //  UPDATE ORDER
 // ------------------------------------------------------------------------
-export const updateOrder =
+export const updateLocalOrder =
   (
     id,
     clientName,
