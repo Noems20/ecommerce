@@ -11,6 +11,7 @@ import {
   changeUserRole,
   updateAddress,
   removeAddress,
+  makePredetermined,
 } from '../controllers/userController.js';
 
 // USER
@@ -54,6 +55,7 @@ router
 
 // USER ADDRESSES
 router.route('/address/:idx').patch(updateAddress).delete(removeAddress);
+router.route('/address/makePredetermined/:idx').patch(makePredetermined);
 
 // USER
 router.patch('/updateMyPassword', updatePassword);

@@ -100,7 +100,7 @@ const userSchema = new mongoose.Schema(
     addresses: {
       type: [
         {
-          default: {
+          predetermined: {
             type: Boolean,
             default: false,
           },
@@ -156,7 +156,7 @@ const userSchema = new mongoose.Schema(
                     value.split(' ').join(''),
                     'es-ES',
                     {
-                      ignore: ',.!¡¿?"()',
+                      ignore: ',.#!¡¿?"()',
                     }
                   );
                 }
@@ -176,7 +176,7 @@ const userSchema = new mongoose.Schema(
                     value.split(' ').join(''),
                     'es-ES',
                     {
-                      ignore: ',.!¡¿?"()',
+                      ignore: ',.#!¡¿?"()',
                     }
                   );
                 }

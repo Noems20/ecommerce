@@ -22,7 +22,7 @@ export const setAddresses =
     address,
     references,
     instructions,
-    defaultAddress = false
+    predetermined
   ) =>
   async (dispatch) => {
     try {
@@ -39,7 +39,6 @@ export const setAddresses =
       const { data } = await axios.patch(
         `/api/v1/users/address/${idx}`,
         {
-          default: defaultAddress,
           state,
           city,
           postalcode,
@@ -48,6 +47,7 @@ export const setAddresses =
           address,
           references,
           instructions,
+          predetermined,
         },
         config
       );
@@ -78,6 +78,50 @@ export const setAddresses =
       });
     }
   };
+
+// --------------------------------------------------------------------
+//                      MAKE ADDRESS PREDETERMINED
+// --------------------------------------------------------------------
+export const makeAddressPredetermined = (idx) => async (dispatch) => {
+  try {
+    dispatch({
+      type: SET_UI_LOADING,
+      payload: { secondLoader: true },
+    });
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+
+    const { data } = await axios.patch(
+      `/api/v1/users/address/makePredetermined/${idx}`,
+      {},
+      config
+    );
+
+    dispatch({
+      type: SET_ADDRESSES,
+      payload: data.data,
+    });
+    dispatch({
+      type: CLEAR_UI_ERRORS,
+    });
+    dispatch({
+      type: SET_UI_LOADING,
+      payload: { secondLoader: false },
+    });
+  } catch (error) {
+    dispatch({
+      type: SET_UI_ERRORS,
+      payload: { errorsOne: error.response.data.uiErrors },
+    });
+    dispatch({
+      type: SET_UI_LOADING,
+      payload: { secondLoader: false },
+    });
+  }
+};
 
 // --------------------------------------------------------------------
 //                               REMOVE ADDRESS

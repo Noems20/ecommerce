@@ -11,7 +11,7 @@ export const Card = styled.div`
   align-items: center;
 
   @media only screen and (max-width: 400px) {
-    border-radius: 0px;
+    margin: 0 2rem;
   }
 `;
 

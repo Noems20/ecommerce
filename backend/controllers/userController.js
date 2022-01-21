@@ -241,6 +241,7 @@ export const deleteUser = catchAsync(async (req, res, next) => {
 
   res.status(204).json({ status: 'success', data: null });
 });
+
 // ----------------------------------------------------------------------
 //                       UPDATE AND ADD USER ADDRESS
 // ----------------------------------------------------------------------
@@ -249,6 +250,35 @@ export const updateAddress = catchAsync(async (req, res, next) => {
   let { addresses } = req.user;
 
   addresses[addressIdx] = req.body;
+
+  const updatedUser = await User.findByIdAndUpdate(
+    req.user.id,
+    { addresses },
+    {
+      new: true,
+      runValidators: true,
+    }
+  );
+
+  res.status(200).json({
+    status: 'success',
+    results: updatedUser.addresses.length,
+    data: updatedUser.addresses,
+  });
+});
+
+// ----------------------------------------------------------------------
+//                       MAKE ADDRESS PREDETERMINED
+// ----------------------------------------------------------------------
+export const makePredetermined = catchAsync(async (req, res, next) => {
+  const { idx: addressIdx } = req.params;
+  const { addresses } = req.user;
+
+  addresses.map((address, index) => {
+    if (index === Number(addressIdx)) address.predetermined = true;
+    else address.predetermined = false;
+    return address;
+  });
 
   const updatedUser = await User.findByIdAndUpdate(
     req.user.id,

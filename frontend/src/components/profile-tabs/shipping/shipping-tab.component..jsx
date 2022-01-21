@@ -8,8 +8,7 @@ import ShippingCard from '../../shipping-card/shipping-card.component';
 import EmptyShippingCard from '../../empty-shipping-card/empty-shipping-card.component';
 
 // STYLES
-import { Container, Content } from './shipping-tab.styles';
-import { Title } from '../tab-styles';
+import { Container, Content, ModifiedTitle } from './shipping-tab.styles';
 
 const ShippingTab = ({ variants }) => {
   const addresses = useSelector((state) => state.addresses);
@@ -17,11 +16,11 @@ const ShippingTab = ({ variants }) => {
   return (
     <Container
       variants={variants}
-      initial='hidden'
-      animate='visible'
-      exit='hidden'
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
     >
-      <Title style={{ marginBottom: '2rem' }}>Mis direcciones</Title>
+      <ModifiedTitle>Mis direcciones</ModifiedTitle>
       <Content>
         {addresses.map((address, index) => {
           return (

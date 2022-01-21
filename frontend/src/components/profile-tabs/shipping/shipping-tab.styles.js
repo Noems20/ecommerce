@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import { Title } from '../tab-styles';
 
 export const Container = styled(motion.div)`
   grid-column: full-start / full-end;
@@ -14,6 +15,7 @@ export const Content = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   grid-gap: 2rem;
+  grid-row-gap: 4rem;
 
   @media only screen and (max-width: 720px) {
     grid-gap: 3.5rem;
@@ -21,5 +23,15 @@ export const Content = styled.div`
 
   @media only screen and (max-width: 400px) {
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-row-gap: 6rem;
+  }
+`;
+
+export const ModifiedTitle = styled(Title)`
+  margin-bottom: 3rem;
+
+  @media only screen and (max-width: 400px) {
+    text-align: center;
+    margin-bottom: 4rem;
   }
 `;

@@ -5,6 +5,7 @@ import { AnimatePresence } from 'framer-motion';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   setAddresses,
+  makeAddressPredetermined,
   removeAddress,
 } from '../../redux/addresses/addressesActions';
 import { clearUiErrors } from '../../redux/ui/uiActions';
@@ -32,6 +33,7 @@ import {
   EditForm,
   TwoColumnsModal,
   FormTitle,
+  PredeterminedButton,
 } from './shipping-card.styles';
 
 // ICONS
@@ -102,13 +104,18 @@ const ShippingCard = ({ address, index }) => {
         suburb,
         addressInput,
         references,
-        instructions
+        instructions,
+        address.predetermined
       )
     );
   };
 
   const handleDelete = () => {
     dispatch(removeAddress(index));
+  };
+
+  const handlePredetermined = () => {
+    dispatch(makeAddressPredetermined(index));
   };
 
   return (
@@ -158,6 +165,12 @@ const ShippingCard = ({ address, index }) => {
             </InfoContainer>
           )}
         </CardBody>
+        <PredeterminedButton
+          disabled={address.predetermined}
+          onClick={handlePredetermined}
+        >
+          {address.predetermined ? 'Predeterminado' : 'Hacer predeterminado'}
+        </PredeterminedButton>
       </Card>
 
       {/* -------------------------- MODAL ----------------------------- */}
@@ -168,90 +181,90 @@ const ShippingCard = ({ address, index }) => {
               <FormTitle>Editar dirección</FormTitle>
               <TwoColumnsModal>
                 <SelectInput
-                  label='Estado'
-                  name='state'
+                  label="Estado"
+                  name="state"
                   onChange={handleChange}
                   value={state}
                   error={errorsOne[`addresses.${index}.state`]}
                 >
-                  <option key={0} value=''>
+                  <option key={0} value="">
                     Selecciona tu estado
                   </option>
-                  <option key={1} value='Zacatecas'>
+                  <option key={1} value="Zacatecas">
                     Zacatecas
                   </option>
                 </SelectInput>
                 <SelectInput
-                  label='Ciudad'
-                  name='city'
+                  label="Ciudad"
+                  name="city"
                   onChange={handleChange}
                   value={city}
                   error={errorsOne[`addresses.${index}.city`]}
                 >
-                  <option key={0} value=''>
+                  <option key={0} value="">
                     Selecciona tu ciudad
                   </option>
-                  <option key={1} value='Zacatecas'>
+                  <option key={1} value="Zacatecas">
                     Zacatecas
                   </option>
-                  <option key={2} value='Guadalupe'>
+                  <option key={2} value="Guadalupe">
                     Guadalupe
                   </option>
                 </SelectInput>
                 <TextInput
-                  type='text'
-                  label='Código postal'
-                  name='postalCode'
+                  type="text"
+                  label="Código postal"
+                  name="postalCode"
                   value={postalCode}
                   handleChange={handleChange}
                   error={errorsOne[`addresses.${index}.postalcode`]}
                 />
                 <TextInput
-                  type='text'
-                  label='Teléfono'
-                  name='phone'
+                  type="text"
+                  label="Teléfono"
+                  name="phone"
                   value={phone}
                   handleChange={handleChange}
                   error={errorsOne[`addresses.${index}.phone`]}
                 />
               </TwoColumnsModal>
               <TextInput
-                type='text'
-                label='Colonia'
-                name='suburb'
+                type="text"
+                label="Colonia"
+                name="suburb"
                 value={suburb}
                 handleChange={handleChange}
                 error={errorsOne[`addresses.${index}.suburb`]}
               />
               <TextInput
-                type='text'
-                label='Dirección'
-                name='addressInput'
+                type="text"
+                label="Dirección"
+                name="addressInput"
                 value={addressInput}
                 handleChange={handleChange}
                 error={errorsOne[`addresses.${index}.address`]}
               />
               <TextInput
                 textarea
-                type='text'
-                label='Referencias'
-                name='references'
+                type="text"
+                label="Referencias"
+                name="references"
                 value={references}
                 handleChange={handleChange}
                 error={errorsOne[`addresses.${index}.references`]}
               />
               <TextInput
-                type='text'
+                type="text"
                 textarea
-                label='Instrucciones de entrega'
-                name='instructions'
+                label="Instrucciones de entrega"
+                name="instructions"
                 value={instructions}
                 handleChange={handleChange}
                 error={errorsOne[`addresses.${index}.instructions`]}
               />
               <CustomButton
                 primary
-                type='submit'
+                type="submit"
                 loading={loading.firstLoader}
                 disabled={loading.firstLoader}
               >
@@ -263,10 +276,10 @@ const ShippingCard = ({ address, index }) => {
         {open === 'delete' && (
           <Modal handleClose={handleClose}>
             <Message
-              type='error'
-              title='Cuidado'
-              text='¿Seguro que quieres eliminar esta dirección?'
-              button='Continuar'
+              type="error"
+              title="Cuidado"
+              text="¿Seguro que quieres eliminar esta dirección?"
+              button="Continuar"
               handleClose={handleClose}
               handleAction={handleDelete}
             />

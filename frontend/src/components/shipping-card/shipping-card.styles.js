@@ -3,6 +3,7 @@ import background from './cardBackground.jpg';
 
 export const Card = styled.div`
   border-radius: 8px;
+  padding-bottom: 7px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 0px 3px -1px;
   height: max-content;
@@ -156,4 +157,27 @@ export const TwoColumnsModal = styled.div`
 
 export const FormTitle = styled.h1`
   color: var(--color-primary);
+`;
+
+export const PredeterminedButton = styled.button`
+  font-family: inherit;
+  font-size: 1.5rem;
+  padding: 6px;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-primary-light);
+  color: var(--color-primary-light);
+  cursor: pointer;
+
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: var(--color-primary-light);
+    color: #fff;
+    font-weight: 500;
+  }
 `;
