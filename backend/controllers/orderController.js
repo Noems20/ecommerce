@@ -1,6 +1,14 @@
 import Stripe from 'stripe';
+import User from '../models/userModel.js';
+import Order from '../models/orderModel.js';
 import catchAsync from '../utils/catchAsync.js';
-import AppError from '../utils/appError.js';
+import {
+  createOne,
+  getOne,
+  getAll,
+  updateOne,
+  deleteOne,
+} from './handlerFactory.js';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
@@ -36,7 +44,7 @@ export const getCheckoutSession = catchAsync(async (req, res, next) => {
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
     mode: 'payment',
-    success_url: url,
+    success_url: url + 'perfil?tab=ordenes-activas',
     cancel_url: url + 'carrito',
     customer_email: req.user.email,
     // client_reference_id: req.params.tourId,
@@ -53,3 +61,40 @@ export const getCheckoutSession = catchAsync(async (req, res, next) => {
     session,
   });
 });
+
+// -------------------------------------------------------------------------------
+// CREATE ORDER CHECKOUT
+// -------------------------------------------------------------------------------
+
+const createOrderCheckout = async (session) => {
+  const user = (await User.findOne({ email: session.customer_email })).id;
+  const cartProducts = stripe.checkout.sessions.listLineItems(session.id);
+  console.log(cartProducts);
+  const totalPrice = session.amount_total / 100;
+  // await Order.create({ user, totalPrice });
+};
+
+// -------------------------------------------------------------------------------
+// WEBHOOK CHECKOUT
+// -------------------------------------------------------------------------------
+
+export const webhookCheckout = (req, res, next) => {
+  const signature = req.headers['stripe-signature'];
+
+  let event;
+
+  try {
+    event = stripe.webhooks.constructEvent(
+      req.body,
+      signature,
+      process.env.STRIPE_WEBHOOK_SECRET
+    );
+  } catch (err) {
+    return res.status(400).send(`Webhook error: ${err.message}`);
+  }
+
+  if (event.type === 'checkout.session.completed')
+    createOrderCheckout(event.data.object);
+
+  res.status(200).json({ received: true });
+};

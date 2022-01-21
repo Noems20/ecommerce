@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import { useLocation } from 'react-router-dom';
 
 // REDUX
 import { useSelector, useDispatch } from 'react-redux';
@@ -34,7 +35,7 @@ import { BsCamera } from 'react-icons/bs';
 const Profile = () => {
   // ------------------------------- STATE AND CONSTANTS ----------------
   const [imageHash, setImageHash] = useState(Date.now());
-  const [tab, setTab] = useState('profile');
+  const [tab, setTab] = useState(sessionStorage.getItem('tab') || 'profile');
   const [open, setOpen] = useState(false);
   const [selectedFile, setSelectedFile] = useState('');
 
@@ -43,6 +44,7 @@ const Profile = () => {
   const userImageSrc = `https://copiasnoe-ecommerce.s3.amazonaws.com/users/${user.photo}`;
 
   const dispatch = useDispatch();
+  const location = useLocation();
 
   const containerVariants = {
     hidden: {
@@ -76,8 +78,17 @@ const Profile = () => {
       height: 'auto',
     },
   };
+  const urlTab = location.search.split('tab=')[1];
 
   // --------------------------------- USE EFFECT ------------------
+
+  useEffect(() => {
+    if (!sessionStorage.getItem('tab') && urlTab === 'ordenes-activas') {
+      sessionStorage.setItem('tab', 'current-order');
+      setTab('current-order');
+    }
+  }, [urlTab]);
+
   useEffect(() => {
     // ---------- UPDATE USER PHOTO ---------
     if (userLoaded.updatedUser === true) {
@@ -104,13 +115,9 @@ const Profile = () => {
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      sessionStorage.removeItem('tab');
     };
   }, []);
-
-  const handleImageChange = (e) => {
-    setSelectedFile(e.target.files[0]);
-    dispatch(updateMe(user.name, e.target.files[0]));
-  };
 
   // --------------------------------- HANDLERS ---------------------
   const renderSwitch = () => {
@@ -121,9 +128,9 @@ const Profile = () => {
         return (
           <motion.h1
             variants={containerVariants}
-            initial='hidden'
-            animate='visible'
-            exit='hidden'
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
             key={2}
           >
             Pedidos actuales
@@ -133,9 +140,9 @@ const Profile = () => {
         return (
           <motion.h1
             variants={containerVariants}
-            initial='hidden'
-            animate='visible'
-            exit='hidden'
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
             key={3}
           >
             Historial de pedidos
@@ -148,12 +155,22 @@ const Profile = () => {
     }
   };
 
+  const handleImageChange = (e) => {
+    setSelectedFile(e.target.files[0]);
+    dispatch(updateMe(user.name, e.target.files[0]));
+  };
+
+  const tabHandler = (tab) => {
+    setTab(tab);
+    sessionStorage.setItem('tab', tab);
+  };
+
   return (
     <PageGrid
       variants={containerVariants}
-      initial='hidden'
-      animate='visible'
-      exit='hidden'
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
     >
       {/* -------------------------------- HEADER ---------------------- */}
       <UserDetailsContainer>
@@ -161,7 +178,7 @@ const Profile = () => {
           <UserImageContainer>
             <UserImage url={`${userImageSrc}?${imageHash}`} />
             <ImageInputLabel
-              htmlFor='photo'
+              htmlFor="photo"
               error={uiErrors.errorsOne.photo ? true : false}
               className={
                 selectedFile ? !uiErrors.errorsOne.photo && 'selected' : ''
@@ -170,10 +187,10 @@ const Profile = () => {
               <BsCamera />
             </ImageInputLabel>
             <ImageInput
-              type='file'
-              accept='image/*'
+              type="file"
+              accept="image/*"
               // name='photo'
-              id='photo'
+              id="photo"
               onChange={handleImageChange}
               // onChange={(e) => setSelectedFile(e.target.files[0])}
             />
@@ -200,30 +217,30 @@ const Profile = () => {
           {open && (
             <SettingsBar
               variants={window.innerWidth <= 500 ? barVariants : barVariants2}
-              initial='hidden'
-              animate='visible'
-              exit='hidden'
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
             >
               <SettingItem
-                onClick={() => setTab('profile')}
+                onClick={() => tabHandler('profile')}
                 className={tab === 'profile' ? 'active' : ''}
               >
                 Perfil
               </SettingItem>
               <SettingItem
-                onClick={() => setTab('current-order')}
+                onClick={() => tabHandler('current-order')}
                 className={tab === 'current-order' ? 'active' : ''}
               >
                 Pedidos en curso
               </SettingItem>
               <SettingItem
-                onClick={() => setTab('orders-history')}
+                onClick={() => tabHandler('orders-history')}
                 className={tab === 'orders-history' ? 'active' : ''}
               >
                 Historial de pedidos
               </SettingItem>
               <SettingItem
-                onClick={() => setTab('shipping')}
+                onClick={() => tabHandler('shipping')}
                 className={tab === 'shipping' ? 'active' : ''}
               >
                 Envio

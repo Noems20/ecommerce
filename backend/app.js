@@ -21,6 +21,9 @@ import reviewRouter from './routes/reviewRoutes.js';
 import localOrderRouter from './routes/localOrderRoutes.js';
 import orderRouter from './routes/orderRoutes.js';
 
+// HANDLERS
+import { webhookCheckout } from './controllers/orderController.js';
+
 dotenv.config();
 
 const app = express();
@@ -93,6 +96,12 @@ app.use(
 
 // Limit request from same API
 app.use('/api', limiter);
+
+app.post(
+  '/webhook-checkout',
+  express.raw({ type: 'application/json' }),
+  webhookCheckout
+);
 
 // ------------- BODY PARSER -----------
 // Reading data from body into req.body

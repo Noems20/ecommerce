@@ -12,7 +12,7 @@ export const createOrder = () => async (dispatch) => {
     const { data } = await axios.get(`/api/v1/orders/checkout-session`);
     console.log(data.session);
 
-    window.location.replace(data.session.url);
+    // window.location.replace(data.session.url);
     dispatch({
       type: SET_UI_LOADING,
       payload: { firstLoader: false },
