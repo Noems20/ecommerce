@@ -35,6 +35,10 @@ export const BackButton = styled.button`
   background-color: var(--color-primary);
   cursor: pointer;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   & svg {
     color: #fff;
     font-size: 3rem;

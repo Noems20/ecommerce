@@ -76,7 +76,7 @@ export const SearchButton = styled.button`
   & svg {
     font-size: 1.8rem;
     color: var(--color-grey-dark-3);
-    transform: translate(-3.4rem, -1rem);
+    transform: translate(-3.4rem, -0.9rem);
     /* margin-left: -4rem; */
   }
 
