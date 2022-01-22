@@ -38,7 +38,7 @@ export const BackButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  //
+
   & svg {
     color: #fff;
     font-size: 3rem;
