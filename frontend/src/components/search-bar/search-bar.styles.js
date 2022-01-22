@@ -64,18 +64,20 @@ export const SearchInput = styled.input`
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Edge, Opera and Firefox */
-  } 
+  }
 `;
 
 export const SearchButton = styled.button`
   border: none;
   background-color: transparent;
-  margin-left: -3.4rem;
-
+  width: 0;
+  height: 0;
 
   & svg {
     font-size: 1.8rem;
     color: var(--color-grey-dark-3);
+    transform: translate(-3.4rem, -1rem);
+    /* margin-left: -4rem; */
   }
 
   &:focus {
