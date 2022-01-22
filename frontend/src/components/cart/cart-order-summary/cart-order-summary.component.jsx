@@ -29,7 +29,12 @@ const OrderInfoItem = ({ name, price, quantity = null }) => {
   );
 };
 
-const CartOrderSummary = ({ cart, productsAmmount, totalPrice }) => {
+const CartOrderSummary = ({
+  cart,
+  productsAmmount,
+  totalPrice,
+  button = true,
+}) => {
   // ------------------------ STATE AND CONSTANTS -------------------
 
   // ------------------------ HANDLERS -------------------
@@ -62,9 +67,11 @@ const CartOrderSummary = ({ cart, productsAmmount, totalPrice }) => {
               <OrderInfoItem name="Envio" price="50" />
               <OrderInfoItem name="Precio total" price={totalPrice + 50} />
             </TotalContainer>
-            <CustomButton primary={1} as={Link} to="/checkout">
-              Proceder al pago
-            </CustomButton>
+            {button && (
+              <CustomButton primary={1} as={Link} to="/checkout">
+                Proceder al pago
+              </CustomButton>
+            )}
           </>
         ) : (
           <OrderInfoTitle style={{ textAlign: 'center' }}>

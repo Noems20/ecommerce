@@ -45,7 +45,7 @@ export const getCheckoutSession = catchAsync(async (req, res, next) => {
     payment_method_types: ['card'],
     mode: 'payment',
     success_url: url + 'perfil?tab=ordenes-activas',
-    cancel_url: url + 'carrito',
+    cancel_url: url + 'checkout',
     customer_email: req.user.email,
     // client_reference_id: req.params.tourId,
     // shipping_address_collection: {

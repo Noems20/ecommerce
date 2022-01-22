@@ -25,6 +25,7 @@ import {
   SizeItem,
   Price,
   InfoSubContainer,
+  Quantity,
 } from './cart-item.styles';
 
 const CartItem = ({
@@ -39,6 +40,7 @@ const CartItem = ({
     quantity,
     price,
   },
+  disabled = false,
 }) => {
   // --------------------------------- STATE AND CONSTANTS ----------------------
   const [limit, setLimit] = useState(0);
@@ -84,7 +86,7 @@ const CartItem = ({
         <ImageContainer>
           <Image
             src={`https://copiasnoe-ecommerce.s3.amazonaws.com/products/${image}`}
-            alt='producto'
+            alt="producto"
           />
         </ImageContainer>
         <InfoContainer>
@@ -107,17 +109,23 @@ const CartItem = ({
         </InfoContainer>
         <QuantityContainer>
           <Title>Cantidad</Title>
-          <QuantityInput
-            quantity={quantity}
-            limit={limit}
-            incHandler={incHandler}
-            decHandler={decHandler}
-            required
-            disabled
-          />
-          <CustomButton danger onClick={deleteFromCart}>
-            Eliminar
-          </CustomButton>
+          {disabled ? (
+            <Quantity>{quantity}</Quantity>
+          ) : (
+            <QuantityInput
+              quantity={quantity}
+              limit={limit}
+              incHandler={incHandler}
+              decHandler={decHandler}
+              required
+              disabled
+            />
+          )}
+          {!disabled && (
+            <CustomButton danger onClick={deleteFromCart}>
+              Eliminar
+            </CustomButton>
+          )}
         </QuantityContainer>
         <PriceContainer>
           <Title>Precio</Title>

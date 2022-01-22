@@ -8,10 +8,10 @@ import {
   CartItems,
 } from './cart-items-container.styles';
 
-const CartItemsContainer = ({ children }) => {
+const CartItemsContainer = ({ children, title = 'Tu Carrito' }) => {
   return (
     <Container>
-      <Title>Tu Carrito</Title>
+      <Title>{title}</Title>
       <Line />
       <CartItems>{children}</CartItems>
     </Container>

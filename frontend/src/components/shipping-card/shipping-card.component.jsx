@@ -46,6 +46,7 @@ const ShippingCard = ({
   select,
   selected = false,
   setSelected,
+  disabled = false,
 }) => {
   // ---------------------------- STATE AND CONSTANTS ------------------
   const [open, setOpen] = useState(false);
@@ -131,15 +132,17 @@ const ShippingCard = ({
 
   return (
     <>
-      <Card className={selected ? 'selected' : ''}>
-        <CardMenu>
-          <IconContainer edit onClick={() => setOpen('edit')}>
-            <FaEdit />
-          </IconContainer>
-          <IconContainer onClick={() => setOpen('delete')}>
-            <FaTrashAlt />
-          </IconContainer>
-        </CardMenu>
+      <Card className={!disabled && selected ? 'selected' : ''}>
+        {!disabled && (
+          <CardMenu>
+            <IconContainer edit onClick={() => setOpen('edit')}>
+              <FaEdit />
+            </IconContainer>
+            <IconContainer onClick={() => setOpen('delete')}>
+              <FaTrashAlt />
+            </IconContainer>
+          </CardMenu>
+        )}
         <CardHeader>
           <State>{address.state}</State>
           <City>{address.city}</City>
@@ -177,20 +180,22 @@ const ShippingCard = ({
           )}
         </CardBody>
         <ButtonContainer>
-          {select ? (
-            <Button disabled={selected} onClick={handleSelect}>
-              {selected ? 'Seleccionado' : 'Seleccionar'}
-            </Button>
-          ) : (
-            <Button
-              disabled={address.predetermined}
-              onClick={handlePredetermined}
-            >
-              {address.predetermined
-                ? 'Predeterminado'
-                : 'Hacer predeterminado'}
-            </Button>
-          )}
+          {!disabled ? (
+            select ? (
+              <Button disabled={selected} onClick={handleSelect}>
+                {selected ? 'Seleccionado' : 'Seleccionar'}
+              </Button>
+            ) : (
+              <Button
+                disabled={address.predetermined}
+                onClick={handlePredetermined}
+              >
+                {address.predetermined
+                  ? 'Predeterminado'
+                  : 'Hacer predeterminado'}
+              </Button>
+            )
+          ) : null}
         </ButtonContainer>
       </Card>
 

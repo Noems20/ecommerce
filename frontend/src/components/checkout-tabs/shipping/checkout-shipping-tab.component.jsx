@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 // REDUX
-import { useSelector } from 'react-redux';
 
 // COMPONENTS
 import ShippingCard from '../../shipping-card/shipping-card.component';
@@ -15,19 +14,18 @@ import {
   Content,
 } from './checkout-shipping-tab.styles';
 
-const CheckoutShippingTab = ({ variants, setTab }) => {
+const CheckoutShippingTab = ({
+  variants,
+  setTab,
+  setSelectedAddress,
+  selectedAddress,
+  addresses,
+}) => {
   // --------------------------- STATE AND CONSTANTS ----------
-  const [selectedAddress, setSelectedAddress] = useState(0);
-
-  const addresses = useSelector((state) => state.addresses);
-
-  useEffect(() => {
-    for (let idx in addresses) {
-      if (addresses[idx].predetermined === true) {
-        setSelectedAddress(Number(idx));
-      }
-    }
-  }, [addresses]);
+  // -------------------------- HANDLERS -----------------------
+  const handleContinue = () => {
+    if (selectedAddress !== null) setTab('order-resume');
+  };
 
   return (
     <Container
@@ -56,7 +54,7 @@ const CheckoutShippingTab = ({ variants, setTab }) => {
       <CustomButton
         primary
         style={{ display: 'block', margin: '0 auto' }}
-        onClick={() => setTab('order-resume')}
+        onClick={handleContinue}
       >
         Continuar
       </CustomButton>

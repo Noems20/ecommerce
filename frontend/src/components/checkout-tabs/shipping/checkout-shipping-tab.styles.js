@@ -4,7 +4,7 @@ import { Title } from '../../profile-tabs/tab-styles';
 
 export const Container = styled(motion.div)`
   grid-column: full-start / full-end;
-  margin: 4rem;
+  margin: 3rem 4rem;
 
   @media only screen and (max-width: 400px) {
     margin: 4rem 0;
@@ -25,10 +25,6 @@ export const Content = styled.div`
 `;
 
 export const ModifiedTitle = styled(Title)`
-  margin-bottom: 3rem;
-
-  @media only screen and (max-width: 400px) {
-    text-align: center;
-    margin-bottom: 4rem;
-  }
+  margin-bottom: 6rem;
+  text-align: center;
 `;

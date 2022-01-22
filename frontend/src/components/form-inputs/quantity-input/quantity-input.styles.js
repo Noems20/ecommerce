@@ -8,6 +8,7 @@ export const Container = styled.div`
 `;
 
 export const Input = styled.input`
+  font-family: inherit;
   font-size: 2rem;
   font-weight: 700;
   color: var(--color-grey-product);

@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 
 // REDUX
+import { useSelector } from 'react-redux';
 
 // COMPONENTS
 import CheckoutShippingTab from '../../components/checkout-tabs/shipping/checkout-shipping-tab.component';
@@ -13,27 +14,8 @@ import { PageGrid } from '../../general.styles';
 const CheckoutPage = () => {
   // ----------------------- STATE AND CONSTANTS ---------------
   const [tab, setTab] = useState('shipping');
-
-  const containerVariants = {
-    hidden: {
-      x: '-100vw',
-      transition: {
-        type: 'tween',
-      },
-    },
-    visible: {
-      x: 0,
-      transition: {
-        type: 'tween',
-      },
-    },
-    exit: {
-      x: '100vw',
-      transition: {
-        type: 'tween',
-      },
-    },
-  };
+  const [selectedAddress, setSelectedAddress] = useState(null);
+  const addresses = useSelector((state) => state.addresses);
 
   const containerVariants2 = {
     hidden: {
@@ -43,12 +25,18 @@ const CheckoutPage = () => {
       opacity: 1,
     },
     exit: {
-      x: '100vw',
-      transition: {
-        type: 'tween',
-      },
+      opacity: 0,
     },
   };
+
+  // ----------------------- USE EFFECT'S ------------
+  useEffect(() => {
+    for (let idx in addresses) {
+      if (addresses[idx].predetermined === true) {
+        setSelectedAddress(Number(idx));
+      }
+    }
+  }, [addresses]);
 
   // ----------------------- HANDLERS --------------------
   const renderSwitch = () => {
@@ -59,14 +47,19 @@ const CheckoutPage = () => {
             key={1}
             variants={containerVariants2}
             setTab={setTab}
+            setSelectedAddress={setSelectedAddress}
+            selectedAddress={selectedAddress}
+            addresses={addresses}
           />
         );
       case 'order-resume':
         return (
           <OrderResumeTab
             key={2}
-            variants={containerVariants}
+            variants={containerVariants2}
             setTab={setTab}
+            address={selectedAddress}
+            addresses={addresses}
           />
         );
       default:

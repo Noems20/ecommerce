@@ -171,7 +171,7 @@ export const SizeItem = styled.div`
   font-weight: 700;
   color: var(--color-grey-product);
   padding: 0.5rem 2rem;
-  border: 2px solid var(--color-primary-light);
+  border: 2px solid var(--color-primary);
   transition: all 0.2s ease;
   cursor: pointer;
 
@@ -190,4 +190,13 @@ export const SizeItem = styled.div`
     color: #fff;
     transition: all 0.2s ease;
   }
+`;
+
+export const Quantity = styled.p`
+  font-family: inherit;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-grey-product);
+  -webkit-text-fill-color: var(--color-grey-product);
+  text-align: center;
 `;

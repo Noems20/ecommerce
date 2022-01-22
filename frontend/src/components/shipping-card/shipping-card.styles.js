@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import background from './cardBackground.jpg';
 
 export const Card = styled.div`
+  min-width: 40rem;
   border-radius: 8px;
   padding-bottom: 7px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 5px -1px,
@@ -23,6 +24,7 @@ export const Card = styled.div`
 
   @media only screen and (max-width: 400px) {
     border-radius: 0px;
+    min-width: 30rem;
   }
 `;
 
@@ -188,11 +190,13 @@ export const Button = styled.button`
   border-radius: var(--border-radius);
   border: 1px solid var(--color-primary);
   cursor: pointer;
+  transition: all 0.5s ease;
 
   &:disabled {
     cursor: not-allowed;
     background-color: var(--color-primary);
     color: #fff;
     font-weight: 500;
+    transition: all 0.2s ease;
   }
 `;
