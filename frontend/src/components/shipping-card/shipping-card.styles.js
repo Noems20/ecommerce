@@ -8,9 +8,18 @@ export const Card = styled.div`
     rgba(0, 0, 0, 0.3) 0px 0px 3px -1px;
   height: max-content;
   position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
 
   display: grid;
   grid-template-rows: max-content max-content;
+
+  &.selected {
+    -webkit-box-shadow: 0px 7px 19px 0px rgba(36, 150, 255, 0.68);
+    box-shadow: 0px 7px 19px 0px rgba(36, 150, 255, 0.68);
+
+    transform: scale(1.01);
+    transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
+  }
 
   @media only screen and (max-width: 400px) {
     border-radius: 0px;
@@ -159,24 +168,30 @@ export const FormTitle = styled.h1`
   color: var(--color-primary);
 `;
 
-export const PredeterminedButton = styled.button`
-  font-family: inherit;
-  font-size: 1.5rem;
-  padding: 6px;
-  background-color: #fff;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--color-primary-light);
-  color: var(--color-primary-light);
-  cursor: pointer;
-
+export const ButtonContainer = styled.div`
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
 
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 1rem;
+`;
+
+export const Button = styled.button`
+  font-family: inherit;
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  padding: 6px;
+  background-color: #fff;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+
   &:disabled {
     cursor: not-allowed;
-    background-color: var(--color-primary-light);
+    background-color: var(--color-primary);
     color: #fff;
     font-weight: 500;
   }

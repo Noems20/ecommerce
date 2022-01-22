@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { Title } from '../tab-styles';
+import { Title } from '../../profile-tabs/tab-styles';
 
 export const Container = styled(motion.div)`
   grid-column: full-start / full-end;
@@ -16,6 +16,8 @@ export const Content = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
   grid-gap: 2rem;
   grid-row-gap: 6rem;
+
+  margin-bottom: 6rem;
 
   @media only screen and (max-width: 400px) {
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));

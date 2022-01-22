@@ -12,7 +12,6 @@ import Cart from './pages/cart/cart.page';
 import Login from './pages/login/login.page';
 import Profile from './pages/profile/profile.page';
 import Register from './pages/register/register.page';
-import Shipping from './pages/shipping/shipping.page';
 import GiftsPage from './pages/gifts/gifts.page';
 import ProductPage from './pages/product/product.page';
 import diariesPage from './pages/diaries/diaries.page';
@@ -21,6 +20,7 @@ import LocalOrdersPage from './pages/local-orders/local-orders.page';
 import EditLocalOrderPage from './pages/edit-local-order/edit-local-order.page';
 import VerifyAccount from './pages/verify-account/verify-account.page';
 import SearchPage from './pages/search/search.page';
+import CheckoutPage from './pages/checkout/checkout.page';
 
 // COMPONENTS
 import Header from './components/header/header.component';
@@ -87,6 +87,11 @@ const App = () => {
           />
           <Route
             exact
+            path="/checkout"
+            render={() => (user ? <CheckoutPage /> : <Redirect to="/login" />)}
+          />
+          <Route
+            exact
             path="/ordenes-locales"
             render={() =>
               user && user.role === 'admin' ? (
@@ -95,11 +100,6 @@ const App = () => {
                 <Redirect to="/login" />
               )
             }
-          />
-          <Route
-            exact
-            path="/envio"
-            render={() => (user ? <Shipping /> : <Redirect to="/login" />)}
           />
           <Route
             exact

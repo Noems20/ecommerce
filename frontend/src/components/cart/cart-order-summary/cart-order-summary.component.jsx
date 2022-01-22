@@ -1,8 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // REDUX
-import { createOrder } from '../../../redux/orders/orders-actions';
-import { useDispatch, useSelector } from 'react-redux';
 
 // COMPONENTS
 import CustomButton from '../../custom-button/custom-button.component';
@@ -32,13 +31,8 @@ const OrderInfoItem = ({ name, price, quantity = null }) => {
 
 const CartOrderSummary = ({ cart, productsAmmount, totalPrice }) => {
   // ------------------------ STATE AND CONSTANTS -------------------
-  const dispatch = useDispatch();
-  const { loading } = useSelector((state) => state.ui);
 
   // ------------------------ HANDLERS -------------------
-  const checkout = () => {
-    dispatch(createOrder());
-  };
 
   return (
     <Container>
@@ -68,12 +62,7 @@ const CartOrderSummary = ({ cart, productsAmmount, totalPrice }) => {
               <OrderInfoItem name="Envio" price="50" />
               <OrderInfoItem name="Precio total" price={totalPrice + 50} />
             </TotalContainer>
-            <CustomButton
-              primary
-              onClick={checkout}
-              loading={loading.firstLoader}
-              disabled={loading.firstLoader}
-            >
+            <CustomButton primary={1} as={Link} to="/checkout">
               Proceder al pago
             </CustomButton>
           </>

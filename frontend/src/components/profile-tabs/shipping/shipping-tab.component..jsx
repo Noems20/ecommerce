@@ -11,7 +11,10 @@ import EmptyShippingCard from '../../empty-shipping-card/empty-shipping-card.com
 import { Container, Content, ModifiedTitle } from './shipping-tab.styles';
 
 const ShippingTab = ({ variants }) => {
+  // -------------------------- STATE AND CONSTANTS ------------
   const addresses = useSelector((state) => state.addresses);
+
+  // ------------------------ HANDLERS -------------------
 
   return (
     <Container

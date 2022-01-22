@@ -17,19 +17,19 @@ const SearchBar = () => {
   // ---------------------------------  HANDLERS ------------------------
   const handleSubmit = (e) => {
     e.preventDefault();
-    history.push(`/search/${keyword.trim()}`);
+    if (keyword.trim().length > 0) history.push(`/search/${keyword.trim()}`);
   };
 
   return (
     <SearchBarContainer onSubmit={handleSubmit}>
       <SearchInput
-        type='text'
-        placeholder='Buscar productos'
-        name='keyword'
+        type="text"
+        placeholder="Buscar productos"
+        name="keyword"
         value={keyword}
         onChange={(e) => setKeyword(e.target.value)}
       />
-      <SearchButton type='submit'>
+      <SearchButton type="submit">
         <FaSearch />
       </SearchButton>
     </SearchBarContainer>

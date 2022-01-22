@@ -33,13 +33,20 @@ import {
   EditForm,
   TwoColumnsModal,
   FormTitle,
-  PredeterminedButton,
+  ButtonContainer,
+  Button,
 } from './shipping-card.styles';
 
 // ICONS
 import { FaEdit, FaTrashAlt } from 'react-icons/fa';
 
-const ShippingCard = ({ address, index }) => {
+const ShippingCard = ({
+  address,
+  index,
+  select,
+  selected = false,
+  setSelected,
+}) => {
   // ---------------------------- STATE AND CONSTANTS ------------------
   const [open, setOpen] = useState(false);
   const [addressData, setAddressData] = useState({
@@ -118,9 +125,13 @@ const ShippingCard = ({ address, index }) => {
     dispatch(makeAddressPredetermined(index));
   };
 
+  const handleSelect = () => {
+    setSelected(index);
+  };
+
   return (
     <>
-      <Card>
+      <Card className={selected ? 'selected' : ''}>
         <CardMenu>
           <IconContainer edit onClick={() => setOpen('edit')}>
             <FaEdit />
@@ -165,12 +176,22 @@ const ShippingCard = ({ address, index }) => {
             </InfoContainer>
           )}
         </CardBody>
-        <PredeterminedButton
-          disabled={address.predetermined}
-          onClick={handlePredetermined}
-        >
-          {address.predetermined ? 'Predeterminado' : 'Hacer predeterminado'}
-        </PredeterminedButton>
+        <ButtonContainer>
+          {select ? (
+            <Button disabled={selected} onClick={handleSelect}>
+              {selected ? 'Seleccionado' : 'Seleccionar'}
+            </Button>
+          ) : (
+            <Button
+              disabled={address.predetermined}
+              onClick={handlePredetermined}
+            >
+              {address.predetermined
+                ? 'Predeterminado'
+                : 'Hacer predeterminado'}
+            </Button>
+          )}
+        </ButtonContainer>
       </Card>
 
       {/* -------------------------- MODAL ----------------------------- */}
