@@ -1,7 +1,9 @@
 import Stripe from 'stripe';
 import User from '../models/userModel.js';
 import Order from '../models/orderModel.js';
+import Product from '../models/productModel.js';
 import catchAsync from '../utils/catchAsync.js';
+import slugify from 'slugify';
 import {
   createOne,
   getOne,
@@ -27,7 +29,8 @@ export const getCheckoutSession = catchAsync(async (req, res, next) => {
   // 2) Format cart products
   const formatedCartProducts = productsCart.map((cartProduct) => {
     return {
-      name: `${cartProduct.name} - ${cartProduct.for}#${cartProduct.colorname}`,
+      name: `${cartProduct.name} - ${cartProduct.for}|${cartProduct.size}|${cartProduct.colorname}`,
+      price: cartProduct._id,
       images: [
         `https://copiasnoe-ecommerce.s3.amazonaws.com/products/${cartProduct.image}`,
       ],
@@ -76,15 +79,47 @@ export const getCheckoutSession = catchAsync(async (req, res, next) => {
 const createOrderCheckout = async (session) => {
   const user = await User.findOne({ email: session.customer_email });
   const shippingAddress = JSON.parse(session.metadata.address);
-  stripe.checkout.sessions.listLineItems(
-    session.id,
-    // { limit: 5 },
-    function (err, lineItems) {
-      console.log(lineItems.data);
+  const items = await stripe.checkout.sessions.listLineItems(session.id);
+
+  const fetchedProducts = {};
+
+  for (const item of items.data) {
+    const productInfo = item.description.split(' - ');
+    const specification = productInfo[1].split('|');
+    const key = `${productInfo[0]}-${specification[0]}`;
+    if (!(key in fetchedProducts)) {
+      const product = await Product.findOne({
+        name: productInfo[0],
+        for: specification[0],
+      });
+      fetchedProducts[key] = product.id;
     }
-  );
-  // const totalPrice = session.amount_total / 100;
-  // await Order.create({ user: user._id, shippingAddress, totalPrice });
+  }
+
+  const formatedCartProducts = items.data.map((cartItem) => {
+    const productInfo = cartItem.description.split(' - ');
+    const specification = productInfo[1].split('|');
+    const key = `${productInfo[0]}-${specification[0]}`;
+
+    return {
+      name: productInfo[0],
+      slug: slugify(productInfo[0] + ' ' + specification[0], { lower: true }),
+      image: `product-${fetchedProducts[key]}-${specification[2]}.png`,
+      for: specification[0],
+      size: specification[1],
+      colorname: specification[2],
+      quantity: cartItem.quantity,
+      price: cartItem.price.unit_amount / 100,
+      totalprice: cartItem.amount_total / 100,
+    };
+  });
+
+  await Order.create({
+    user: user._id,
+    shippingAddress,
+    orderItems: formatedCartProducts,
+    totalPrice: session.amount_total / 100,
+  });
 };
 
 // -------------------------------------------------------------------------------

@@ -15,8 +15,8 @@ export const Card = styled.div`
   grid-template-rows: max-content max-content;
 
   &.selected {
-    -webkit-box-shadow: 0px 7px 19px 0px rgba(36, 150, 255, 0.68);
-    box-shadow: 0px 7px 19px 0px rgba(36, 150, 255, 0.68);
+    -webkit-box-shadow: 0px 7px 19px 0px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 7px 19px 0px rgba(0, 0, 0, 0.68);
 
     transform: scale(1.01);
     transition: transform 0.3s ease, box-shadow 0.3s ease-in-out;
