@@ -31,12 +31,14 @@ const CheckoutPage = () => {
 
   // ----------------------- USE EFFECT'S ------------
   useEffect(() => {
-    for (let idx in addresses) {
-      if (addresses[idx].predetermined === true) {
-        setSelectedAddress(Number(idx));
+    if (selectedAddress === null) {
+      for (let idx in addresses) {
+        if (addresses[idx].predetermined === true) {
+          setSelectedAddress(Number(idx));
+        }
       }
     }
-  }, [addresses]);
+  }, [addresses, selectedAddress]);
 
   // ----------------------- HANDLERS --------------------
   const renderSwitch = () => {

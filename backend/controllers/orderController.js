@@ -17,13 +17,17 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 // -------------------------------------------------------------------------------
 export const getCheckoutSession = catchAsync(async (req, res, next) => {
   // 1) Get current cart
-  const { productsCart } = req.user;
+  const { addressIdx } = req.body;
+  const { productsCart, addresses } = req.user;
+
+  const selectedAddress = JSON.parse(JSON.stringify(addresses[addressIdx]));
+  delete selectedAddress.predetermined;
+  delete selectedAddress._id;
 
   // 2) Format cart products
   const formatedCartProducts = productsCart.map((cartProduct) => {
     return {
-      name: `${cartProduct.name}`,
-      // description: tour.summary,
+      name: `${cartProduct.name} - ${cartProduct.for}#${cartProduct.colorname}`,
       images: [
         `https://copiasnoe-ecommerce.s3.amazonaws.com/products/${cartProduct.image}`,
       ],
@@ -53,7 +57,7 @@ export const getCheckoutSession = catchAsync(async (req, res, next) => {
     // },
     line_items: formatedCartProducts,
     metadata: {
-      address: 'pepinillos',
+      address: JSON.stringify(selectedAddress),
     },
   });
 
@@ -71,10 +75,16 @@ export const getCheckoutSession = catchAsync(async (req, res, next) => {
 
 const createOrderCheckout = async (session) => {
   const user = await User.findOne({ email: session.customer_email });
-  const cartProducts = user.productsCart;
-  console.log(cartProducts);
-  const totalPrice = session.amount_total / 100;
-  // await Order.create({ user: user, totalPrice });
+  const shippingAddress = JSON.parse(session.metadata.address);
+  stripe.checkout.sessions.listLineItems(
+    session.id,
+    // { limit: 5 },
+    function (err, lineItems) {
+      console.log(lineItems.data);
+    }
+  );
+  // const totalPrice = session.amount_total / 100;
+  // await Order.create({ user: user._id, shippingAddress, totalPrice });
 };
 
 // -------------------------------------------------------------------------------
@@ -90,7 +100,9 @@ export const webhookCheckout = (req, res, next) => {
     event = stripe.webhooks.constructEvent(
       req.body,
       signature,
-      process.env.STRIPE_WEBHOOK_SECRET
+      process.env.NODE_ENV === 'production'
+        ? process.env.STRIPE_WEBHOOK_SECRET
+        : process.env.STRIPE_WEBHOOK_SECRET_DEVELOPMENT
     );
   } catch (err) {
     return res.status(400).send(`Webhook error: ${err.message}`);

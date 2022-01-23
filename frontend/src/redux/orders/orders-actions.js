@@ -2,15 +2,25 @@ import axios from 'axios';
 import { SET_UI_LOADING } from '../ui/uiTypes';
 // import stripe from 'stripe';
 
-export const createOrder = () => async (dispatch) => {
+export const createOrder = (addressIdx) => async (dispatch) => {
   try {
     dispatch({
       type: SET_UI_LOADING,
       payload: { firstLoader: true },
     });
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+
     // 1) Get checkout session from API
-    const { data } = await axios.get(`/api/v1/orders/checkout-session`);
-    // console.log(data.session);
+    const { data } = await axios.post(
+      `/api/v1/orders/checkout-session`,
+      { addressIdx },
+      config
+    );
+    console.log(data.session);
 
     window.location.replace(data.session.url);
     dispatch({

@@ -36,7 +36,7 @@ const OrderResumeTab = ({ variants, setTab, addresses, address }) => {
 
   // ---------------------- HANDLERS ----------------------
   const handleCreateOrder = () => {
-    dispatch(createOrder());
+    dispatch(createOrder(address));
   };
 
   return (

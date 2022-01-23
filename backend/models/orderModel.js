@@ -49,10 +49,6 @@ const orderSchema = mongoose.Schema(
       },
     ],
     shippingAddress: {
-      default: {
-        type: Boolean,
-        default: false,
-      },
       state: {
         type: String,
         enum: {
@@ -146,7 +142,6 @@ const orderSchema = mongoose.Schema(
     },
     isDelivered: {
       type: Boolean,
-      required: true,
       default: false,
     },
     deliveredAt: {
