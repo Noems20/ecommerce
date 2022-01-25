@@ -15,6 +15,21 @@ import {
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 // -------------------------------------------------------------------------------
+// GET LOGGED USER ORDERS
+// -------------------------------------------------------------------------------
+export const getMyOrders = catchAsync(async (req, res, next) => {
+  const orders = await Order.find({
+    user: req.user.id,
+    status: { $ne: 'Entregado' },
+  });
+
+  res.status(200).json({
+    status: 'success',
+    data: orders,
+  });
+});
+
+// -------------------------------------------------------------------------------
 // GET CHECKOUT SESSION
 // -------------------------------------------------------------------------------
 export const getCheckoutSession = catchAsync(async (req, res, next) => {
@@ -103,6 +118,7 @@ const createOrderCheckout = async (session) => {
 
     return {
       name: productInfo[0],
+      product: fetchedProducts[key],
       slug: slugify(productInfo[0] + ' ' + specification[0], { lower: true }),
       image: `product-${fetchedProducts[key]}-${specification[2]}.png`,
       for: specification[0],

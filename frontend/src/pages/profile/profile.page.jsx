@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
 
 // REDUX
@@ -9,6 +9,7 @@ import { updateMe, setUpdatedUser } from '../../redux/user/userActions';
 // COMPONENTS
 import ProfileTab from '../../components/profile-tabs/profile/profile-tab.component';
 import ShippingTab from '../../components/profile-tabs/shipping/shipping-tab.component.';
+import OrdersTab from '../../components/profile-tabs/orders/orders-tab.component';
 
 // STYLES
 import {
@@ -35,7 +36,7 @@ import { BsCamera } from 'react-icons/bs';
 const Profile = () => {
   // ------------------------------- STATE AND CONSTANTS ----------------
   const [imageHash, setImageHash] = useState(Date.now());
-  const [tab, setTab] = useState(sessionStorage.getItem('tab') || 'profile');
+  const [tab, setTab] = useState(sessionStorage.getItem('tab') || 'Perfil');
   const [open, setOpen] = useState(false);
   const [selectedFile, setSelectedFile] = useState('');
 
@@ -84,8 +85,8 @@ const Profile = () => {
 
   useEffect(() => {
     if (!sessionStorage.getItem('tab') && urlTab === 'ordenes-activas') {
-      sessionStorage.setItem('tab', 'current-order');
-      setTab('current-order');
+      sessionStorage.setItem('tab', 'Pedidos en curso');
+      setTab('Pedidos en curso');
     }
   }, [urlTab]);
 
@@ -122,34 +123,18 @@ const Profile = () => {
   // --------------------------------- HANDLERS ---------------------
   const renderSwitch = () => {
     switch (tab) {
-      case 'profile':
+      case 'Perfil':
         return <ProfileTab variants={containerVariants} key={1} />;
-      case 'current-order':
+      case 'Pedidos en curso':
         return (
-          <motion.h1
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            key={2}
-          >
-            Pedidos actuales
-          </motion.h1>
+          <OrdersTab variants={containerVariants} status={'active'} key={2} />
         );
-      case 'orders-history':
+      case 'Historial de pedidos':
         return (
-          <motion.h1
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            key={3}
-          >
-            Historial de pedidos
-          </motion.h1>
+          <OrdersTab variants={containerVariants} status={'unactive'} key={3} />
         );
-      case 'shipping':
-        return <ShippingTab variants={containerVariants} key={3} />;
+      case 'Envio':
+        return <ShippingTab variants={containerVariants} key={4} />;
       default:
         return <ProfileTab variants={containerVariants} key={1} />;
     }
@@ -211,7 +196,7 @@ const Profile = () => {
       {/* -------------------------------- SETTINGS BAR ---------------------- */}
       <Settings>
         <CollapseItem onClick={() => setOpen(!open)}>
-          Configuración <FaCaretDown />
+          {tab} <FaCaretDown />
         </CollapseItem>
         <AnimatePresence>
           {open && (
@@ -222,26 +207,26 @@ const Profile = () => {
               exit="hidden"
             >
               <SettingItem
-                onClick={() => tabHandler('profile')}
-                className={tab === 'profile' ? 'active' : ''}
+                onClick={() => tabHandler('Perfil')}
+                className={tab === 'Perfil' ? 'active' : ''}
               >
                 Perfil
               </SettingItem>
               <SettingItem
-                onClick={() => tabHandler('current-order')}
-                className={tab === 'current-order' ? 'active' : ''}
+                onClick={() => tabHandler('Pedidos en curso')}
+                className={tab === 'Pedidos en curso' ? 'active' : ''}
               >
                 Pedidos en curso
               </SettingItem>
               <SettingItem
-                onClick={() => tabHandler('orders-history')}
-                className={tab === 'orders-history' ? 'active' : ''}
+                onClick={() => tabHandler('Historial de pedidos')}
+                className={tab === 'Historial de pedidos' ? 'active' : ''}
               >
                 Historial de pedidos
               </SettingItem>
               <SettingItem
-                onClick={() => tabHandler('shipping')}
-                className={tab === 'shipping' ? 'active' : ''}
+                onClick={() => tabHandler('Envio')}
+                className={tab === 'Envio' ? 'active' : ''}
               >
                 Envio
               </SettingItem>

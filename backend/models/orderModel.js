@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import validator from 'validator';
+import Product from './productModel.js';
 
 const orderSchema = mongoose.Schema(
   {
@@ -10,6 +11,11 @@ const orderSchema = mongoose.Schema(
     },
     orderItems: [
       {
+        product: {
+          type: mongoose.Schema.ObjectId,
+          ref: 'Product',
+          required: [true, 'Debe pertenecer a un producto'],
+        },
         name: { type: String, required: [true, 'No puede estar vacío'] },
         slug: {
           type: String,
@@ -140,9 +146,19 @@ const orderSchema = mongoose.Schema(
       type: Boolean,
       default: true,
     },
-    isDelivered: {
-      type: Boolean,
-      default: false,
+    status: {
+      type: String,
+      enum: {
+        values: [
+          'Pedido recibido',
+          'Preparando pedido',
+          'Listo para entregar',
+          'En camino',
+          'Entregado',
+        ],
+        message: 'Proporciona un estado válido',
+      },
+      default: 'Pedido recibido',
     },
     deliveredAt: {
       type: Date,
@@ -153,9 +169,39 @@ const orderSchema = mongoose.Schema(
   }
 );
 
+// --------------------------------------- MIDDLEWARE -----------------------------------------------
+
+// --------------- UPDATE PRODUCTS STOCK -----------------
+orderSchema.pre('save', async function (next) {
+  const fetchedProducts = {};
+
+  for (const item of this.orderItems) {
+    if (!(item.product in fetchedProducts)) {
+      const product = await Product.findById(item.product);
+      fetchedProducts[item.product] = product;
+    }
+    for (let color of fetchedProducts[item.product].subcategory.color) {
+      if (color.colorname === item.colorname) {
+        for (let size of color.sizes) {
+          if (size.size === item.size) {
+            size.quantity -= item.quantity;
+          }
+        }
+      }
+    }
+  }
+
+  for (let product in fetchedProducts) {
+    // console.log(fetchedProducts[product].subcategory.color[0]);
+    await fetchedProducts[product].save();
+  }
+
+  next();
+});
+
 // -------------------- QUERY MIDDLEWARE -------------------
 orderSchema.pre(/^find/, function (next) {
-  this.populate('user');
+  // this.populate('user');
   next();
 });
 
