@@ -200,8 +200,14 @@ const createOrderCheckout = async (session) => {
   });
 
   // Clear user cart
-  user.productsCart = [];
-  await user.save();
+  await User.findByIdAndUpdate(
+    user._id,
+    { productsCart: [] },
+    {
+      new: true,
+      runValidators: true,
+    }
+  );
 };
 
 // -------------------------------------------------------------------------------
