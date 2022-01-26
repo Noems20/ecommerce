@@ -17,7 +17,7 @@ const EditLocalOrderPage = () => {
   // -------------------- STATE AND CONSTANTS ----------------
   const { id } = useParams();
   const dispatch = useDispatch();
-  const { order } = useSelector((state) => state.orders);
+  const { order } = useSelector((state) => state.localOrders);
   const {
     loading: { fetchLoader },
   } = useSelector((state) => state.ui);

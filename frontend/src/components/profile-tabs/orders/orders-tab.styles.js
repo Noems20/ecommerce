@@ -31,3 +31,14 @@ export const OrdersContainer = styled.div`
   display: grid;
   grid-gap: 5rem;
 `;
+
+export const EmptyTitle = styled.h1`
+  padding: 0 3rem;
+  font-size: 3rem;
+  color: var(--color-grey-product);
+  text-align: center;
+
+  & span {
+    font-size: 7rem;
+  }
+`;

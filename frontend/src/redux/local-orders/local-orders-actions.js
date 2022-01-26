@@ -1,11 +1,11 @@
 import {
-  SET_ORDERS,
-  SET_ORDERS_PAGES,
-  SET_ORDER,
-  ADD_ORDER,
-  DELETE_ORDER,
-  COMPLETE_ORDER,
-  CLEAR_ORDERS,
+  SET_LOCAL_ORDERS,
+  SET_LOCAL_ORDERS_PAGES,
+  SET_LOCAL_ORDER,
+  ADD_LOCAL_ORDER,
+  DELETE_LOCAL_ORDER,
+  COMPLETE_LOCAL_ORDER,
+  CLEAR_LOCAL_ORDERS,
 } from './local-orders-types';
 import {
   SET_UI_LOADING,
@@ -21,7 +21,7 @@ import axios from 'axios';
 // ------------------------------------------------------------------------
 export const clearLocalOrders = () => async (dispatch) => {
   dispatch({
-    type: CLEAR_ORDERS,
+    type: CLEAR_LOCAL_ORDERS,
   });
 };
 
@@ -38,7 +38,7 @@ export const fetchSingleLocalOrder = (id) => async (dispatch) => {
 
     batch(() => {
       dispatch({
-        type: SET_ORDER,
+        type: SET_LOCAL_ORDER,
         payload: data.data,
       });
       dispatch({
@@ -69,11 +69,11 @@ export const fetchLocalOrders =
 
       batch(() => {
         dispatch({
-          type: SET_ORDERS,
+          type: SET_LOCAL_ORDERS,
           payload: data.data,
         });
         dispatch({
-          type: SET_ORDERS_PAGES,
+          type: SET_LOCAL_ORDERS_PAGES,
           payload: data.pages,
         });
         dispatch({
@@ -135,7 +135,7 @@ export const createLocalOrder =
 
       batch(() => {
         dispatch({
-          type: ADD_ORDER,
+          type: ADD_LOCAL_ORDER,
           payload: data.data,
         });
         dispatch({
@@ -175,7 +175,7 @@ export const setActiveLocalOrder = (id, active) => async (dispatch) => {
     await axios.patch(`/api/v1/localOrders/${id}`, { active }, config);
     batch(() => {
       dispatch({
-        type: COMPLETE_ORDER,
+        type: COMPLETE_LOCAL_ORDER,
         payload: id,
       });
     });
@@ -238,7 +238,7 @@ export const updateLocalOrder =
 
       batch(() => {
         dispatch({
-          type: SET_ORDER,
+          type: SET_LOCAL_ORDER,
           payload: data.data,
         });
         dispatch({
@@ -274,7 +274,7 @@ export const deleteLocalOrder = (id) => async (dispatch) => {
     await axios.delete(`/api/v1/localOrders/${id}`);
     batch(() => {
       dispatch({
-        type: DELETE_ORDER,
+        type: DELETE_LOCAL_ORDER,
         payload: id,
       });
     });

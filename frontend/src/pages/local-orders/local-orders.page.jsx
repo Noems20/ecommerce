@@ -23,7 +23,9 @@ import { FaCaretDown } from 'react-icons/fa';
 
 const LocalOrdersPage = () => {
   // ------------------------------- STATE AND CONSTANTS ----------------
-  const [tab, setTab] = useState(sessionStorage.getItem('tab') || 'crear');
+  const [tab, setTab] = useState(
+    sessionStorage.getItem('tab') || 'Crear orden'
+  );
   const [open, setOpen] = useState(false);
 
   const containerVariants = {
@@ -90,7 +92,7 @@ const LocalOrdersPage = () => {
   // --------------------------------- HANDLERS ---------------------
   const renderSwitch = () => {
     switch (tab) {
-      case 'crear':
+      case 'Crear orden':
         return (
           <CreateLocalOrderTab
             variants={containerVariants}
@@ -98,11 +100,11 @@ const LocalOrdersPage = () => {
             key={1}
           />
         );
-      case 'ordenes-actuales':
+      case 'Ordenes activas':
         return (
           <LocalOrders variants={containerVariants} key={2} active={true} />
         );
-      case 'historial':
+      case 'Historial de ordenes':
         return (
           <LocalOrders variants={containerVariants} key={3} active={false} />
         );
@@ -120,9 +122,9 @@ const LocalOrdersPage = () => {
   return (
     <PageGrid
       variants={containerVariants}
-      initial='hidden'
-      animate='visible'
-      exit='hidden'
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
     >
       {/* -------------------------------- HEADER ---------------------- */}
       <UserDetailsContainer>
@@ -131,33 +133,33 @@ const LocalOrdersPage = () => {
       {/* -------------------------------- SETTINGS BAR ---------------------- */}
       <Settings>
         <CollapseItem onClick={() => setOpen(!open)}>
-          Configuración <FaCaretDown />
+          {tab} <FaCaretDown />
         </CollapseItem>
         <AnimatePresence>
           {open && (
             <SettingsBar
               variants={window.innerWidth <= 500 ? barVariants : barVariants2}
-              initial='hidden'
-              animate='visible'
-              exit='hidden'
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
             >
               <SettingItem
-                onClick={() => tabHandler('crear')}
-                className={tab === 'crear' ? 'active' : ''}
+                onClick={() => tabHandler('Crear orden')}
+                className={tab === 'Crear orden' ? 'active' : ''}
               >
                 Crear orden
               </SettingItem>
               <SettingItem
-                onClick={() => tabHandler('ordenes-actuales')}
-                className={tab === 'ordenes-actuales' ? 'active' : ''}
+                onClick={() => tabHandler('Ordenes activas')}
+                className={tab === 'Ordenes activas' ? 'active' : ''}
               >
                 Ordenes activas
               </SettingItem>
               <SettingItem
-                onClick={() => tabHandler('historial')}
-                className={tab === 'historial' ? 'active' : ''}
+                onClick={() => tabHandler('Historial de ordenes')}
+                className={tab === 'Historial de ordenes' ? 'active' : ''}
               >
-                Ordenes pasadas
+                Historial de ordenes
               </SettingItem>
             </SettingsBar>
           )}

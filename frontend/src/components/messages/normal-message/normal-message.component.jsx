@@ -21,6 +21,7 @@ const Message = ({
   handleClose,
   handleAction,
   className,
+  ...props
 }) => {
   const renderIcon = (type) => {
     switch (type) {
@@ -34,7 +35,7 @@ const Message = ({
   };
 
   return (
-    <Container type={type} className={className}>
+    <Container type={type} className={className} {...props}>
       <Icon>{renderIcon(type)} </Icon>
       <AlertContent>
         <AlertTitle>{title}</AlertTitle>

@@ -1,12 +1,12 @@
 import {
-  SET_ORDERS,
-  SET_ORDERS_PAGES,
-  SET_ORDER,
-  ADD_ORDER,
-  UPDATE_ORDER,
-  DELETE_ORDER,
-  COMPLETE_ORDER,
-  CLEAR_ORDERS,
+  SET_LOCAL_ORDERS,
+  SET_LOCAL_ORDERS_PAGES,
+  SET_LOCAL_ORDER,
+  ADD_LOCAL_ORDER,
+  UPDATE_LOCAL_ORDER,
+  DELETE_LOCAL_ORDER,
+  COMPLETE_LOCAL_ORDER,
+  CLEAR_LOCAL_ORDERS,
 } from './local-orders-types';
 import { addItem, updateItem, deleteItem } from '../utils/reducerUtils';
 
@@ -18,38 +18,38 @@ const initialState = {
 
 const localOrderReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SET_ORDERS:
+    case SET_LOCAL_ORDERS:
       return {
         ...state,
         orders: [...action.payload],
       };
-    case SET_ORDERS_PAGES:
+    case SET_LOCAL_ORDERS_PAGES:
       return {
         ...state,
         pages: action.payload,
       };
-    case SET_ORDER:
+    case SET_LOCAL_ORDER:
       return {
         ...state,
         order: action.payload,
       };
-    case ADD_ORDER:
+    case ADD_LOCAL_ORDER:
       return {
         ...state,
         orders: addItem(action.payload, state.orders),
       };
-    case UPDATE_ORDER:
+    case UPDATE_LOCAL_ORDER:
       return {
         ...state,
         orders: updateItem(action.payload, state.orders),
       };
-    case DELETE_ORDER:
-    case COMPLETE_ORDER:
+    case DELETE_LOCAL_ORDER:
+    case COMPLETE_LOCAL_ORDER:
       return {
         ...state,
         orders: deleteItem(action.payload, state.orders),
       };
-    case CLEAR_ORDERS:
+    case CLEAR_LOCAL_ORDERS:
       return initialState;
     default:
       return state;

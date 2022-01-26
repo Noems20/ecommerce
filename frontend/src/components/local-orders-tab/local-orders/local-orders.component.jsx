@@ -27,7 +27,7 @@ const LocalOrders = ({ active }) => {
   // console.log('Entra');
   const [page, setPage] = useState(sessionStorage.getItem('page') || 1);
   const dispatch = useDispatch();
-  const { orders, pages } = useSelector((state) => state.orders);
+  const { orders, pages } = useSelector((state) => state.localOrders);
   const {
     loading: { fetchLoader },
   } = useSelector((state) => state.ui);
