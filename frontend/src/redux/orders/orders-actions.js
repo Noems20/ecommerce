@@ -1,6 +1,60 @@
 import axios from 'axios';
 import { SET_UI_ERRORS, SET_UI_LOADING, CLEAR_UI_ERRORS } from '../ui/uiTypes';
-import { SET_ORDERS, UPDATE_ORDER } from './orders-types';
+import {
+  DELETE_ORDER,
+  SET_ORDERS,
+  SET_ORDERS_PAGES,
+  CLEAR_ORDERS,
+  UPDATE_ORDER,
+} from './orders-types';
+
+// ------------------------------------------------------------------------
+//  CLEAR ORDERS
+// ------------------------------------------------------------------------
+export const clearOrders = () => async (dispatch) => {
+  dispatch({
+    type: CLEAR_ORDERS,
+  });
+};
+
+// -----------------------------------------------------------
+// FETCH MY ORDERS
+// -----------------------------------------------------------
+export const fetchMyOrders = (status, limit, page) => async (dispatch) => {
+  try {
+    dispatch({
+      type: SET_UI_LOADING,
+      payload: { fetchLoader: true },
+    });
+
+    const statusString =
+      status === 'active' ? '?status[ne]=Entregado' : '?status=Entregado';
+
+    // 1) Get current logged user orders
+    const { data } = await axios.get(
+      `/api/v1/orders/my-orders${statusString}&limit=${limit}&page=${page}`
+    );
+
+    dispatch({
+      type: SET_ORDERS,
+      payload: data.data,
+    });
+    dispatch({
+      type: SET_ORDERS_PAGES,
+      payload: data.pages,
+    });
+    dispatch({
+      type: SET_UI_LOADING,
+      payload: { fetchLoader: false },
+    });
+  } catch (error) {
+    console.log(error);
+    dispatch({
+      type: SET_UI_LOADING,
+      payload: { fetchLoader: false },
+    });
+  }
+};
 
 // -----------------------------------------------------------
 // CREATE ORDER
@@ -36,36 +90,6 @@ export const createOrder = (addressIdx) => async (dispatch) => {
     dispatch({
       type: SET_UI_LOADING,
       payload: { firstLoader: false },
-    });
-  }
-};
-
-// -----------------------------------------------------------
-// FETCH MY ORDERS
-// -----------------------------------------------------------
-export const fetchMyOrders = (status) => async (dispatch) => {
-  try {
-    dispatch({
-      type: SET_UI_LOADING,
-      payload: { fetchLoader: true },
-    });
-
-    // 1) Get current logged user orders
-    const { data } = await axios.get(`/api/v1/orders/my-orders/${status}`);
-
-    dispatch({
-      type: SET_ORDERS,
-      payload: data.data,
-    });
-    dispatch({
-      type: SET_UI_LOADING,
-      payload: { fetchLoader: false },
-    });
-  } catch (error) {
-    console.log(error);
-    dispatch({
-      type: SET_UI_LOADING,
-      payload: { fetchLoader: false },
     });
   }
 };
@@ -136,3 +160,18 @@ export const updateOrderAddress =
       });
     }
   };
+
+// -----------------------------------------------------------
+// CANCEL ORDER
+// -----------------------------------------------------------
+export const cancelMyOrder = (id) => async (dispatch) => {
+  try {
+    await axios.delete(`/api/v1/orders/my-orders/${id}`);
+    dispatch({
+      type: DELETE_ORDER,
+      payload: id,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+};

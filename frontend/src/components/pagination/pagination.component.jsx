@@ -16,6 +16,7 @@ const Pagination = ({ page = 1, setPage, numOfPages, className }) => {
 
   // ----------------------------- HANDLERS ---------------------
   const handlePage = (num) => {
+    window.scrollTo(0, 0);
     const newPage = Number(page) + num;
     setPage(newPage);
     sessionStorage.setItem('page', newPage);
@@ -31,7 +32,8 @@ const Pagination = ({ page = 1, setPage, numOfPages, className }) => {
   }, [setPage]);
 
   return (
-    !fetchLoader && (
+    !fetchLoader &&
+    numOfPages > 1 && (
       <Container className={className}>
         <Button
           style={{ visibility: page > 1 ? 'visible' : 'hidden' }}

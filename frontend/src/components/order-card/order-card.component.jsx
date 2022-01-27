@@ -7,7 +7,10 @@ import 'moment/locale/es-us';
 // REDUX
 import { useSelector, useDispatch } from 'react-redux';
 import { clearUiErrors } from '../../redux/ui/uiActions';
-import { updateOrderAddress } from '../../redux/orders/orders-actions';
+import {
+  updateOrderAddress,
+  cancelMyOrder,
+} from '../../redux/orders/orders-actions';
 
 // COMPONENTS
 import Modal from '../modal/modal.component';
@@ -94,6 +97,8 @@ const OrderCard = ({ order }) => {
     loading,
   } = useSelector((state) => state.ui);
 
+  const { user } = useSelector((state) => state.user);
+
   const variants = {
     hidden: {
       height: 0,
@@ -142,7 +147,9 @@ const OrderCard = ({ order }) => {
     );
   };
 
-  const handleDelete = () => {};
+  const handleDelete = () => {
+    dispatch(cancelMyOrder(order._id));
+  };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -244,7 +251,9 @@ const OrderCard = ({ order }) => {
             {/* SHIPPING ADDRESS */}
             {/* --------------------------------------- */}
             <ButtonsContainer>
-              {order.status === 'Pedido recibido' && (
+              {/* {(order.status === 'Pedido recibido' ||
+                user.role === 'admin') && ( */}
+              {user.role === 'admin' && (
                 <CustomButton danger onClick={() => setOpen('delete')}>
                   Cancelar pedido
                 </CustomButton>
@@ -268,14 +277,15 @@ const OrderCard = ({ order }) => {
               >
                 <CardBodyTitle>Dirección de envio</CardBodyTitle>
                 <ShippingCard>
-                  {order.status !== 'En camino' &&
-                    order.status !== 'Entregado' && (
-                      <CardMenu>
-                        <IconContainer edit onClick={() => setOpen('edit')}>
-                          <FaEdit />
-                        </IconContainer>
-                      </CardMenu>
-                    )}
+                  {((order.status !== 'En camino' &&
+                    order.status !== 'Entregado') ||
+                    user.role === 'admin') && (
+                    <CardMenu>
+                      <IconContainer edit onClick={() => setOpen('edit')}>
+                        <FaEdit />
+                      </IconContainer>
+                    </CardMenu>
+                  )}
                   <ShippingCardHeader>
                     <State>{order.shippingAddress.state}</State>
                     <City>{order.shippingAddress.city}</City>

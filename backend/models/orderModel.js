@@ -201,7 +201,7 @@ orderSchema.pre('save', async function (next) {
 
 // -------------------- QUERY MIDDLEWARE -------------------
 orderSchema.pre(/^find/, function (next) {
-  // this.populate('user');
+  this.populate('user', 'name');
   next();
 });
 

@@ -18,7 +18,7 @@ const router = express.Router();
 
 router.use(protect);
 router.post('/checkout-session', getCheckoutSession);
-router.get('/my-orders/:status', getMyOrders);
+router.get('/my-orders', getMyOrders);
 router
   .route('/my-orders/:id')
   .patch(checkIfAuthor, updateOrderAddress)

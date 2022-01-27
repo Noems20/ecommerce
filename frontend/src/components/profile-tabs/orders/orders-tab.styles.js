@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Title } from '../tab-styles';
+import Pagination from '../../pagination/pagination.component';
 
 export const Container = styled(motion.div)`
   grid-column: center-start / center-end;
@@ -33,6 +34,7 @@ export const OrdersContainer = styled.div`
 `;
 
 export const EmptyTitle = styled.h1`
+  margin: 10rem 0;
   padding: 0 3rem;
   font-size: 3rem;
   color: var(--color-grey-product);
@@ -41,4 +43,8 @@ export const EmptyTitle = styled.h1`
   & span {
     font-size: 7rem;
   }
+`;
+
+export const PaginationModified = styled(Pagination)`
+  justify-self: center;
 `;

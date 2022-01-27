@@ -134,6 +134,8 @@ export const signUp =
 export const logout = () => async () => {
   const { data } = await axios.get('/api/v1/users/logout');
   if ((data.status = 'success')) {
+    sessionStorage.removeItem('page');
+    sessionStorage.removeItem('tab');
     window.location.reload();
   }
 };

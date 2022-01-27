@@ -58,6 +58,8 @@ import {
   FaReceipt,
 } from 'react-icons/fa';
 
+import { RiAdminFill } from 'react-icons/ri';
+
 function useOutsideAlerter(closer, ref, secondRef) {
   useEffect(() => {
     /**
@@ -119,7 +121,7 @@ const Header = () => {
             {/* ----------- ROPA ---------  */}
             <NavItem>
               <NavbarLink
-                as='p'
+                as="p"
                 ref={itemExpandedRef2}
                 onClick={() => handleMenu('clothes')}
                 onMouseEnter={handleHover}
@@ -144,9 +146,9 @@ const Header = () => {
             <NavItem>
               <NavbarLink
                 onMouseEnter={() => setItemExpanded(false)}
-                activeClassName='is-active'
+                activeClassName="is-active"
                 onClick={handleLinkClick}
-                to='/agendas'
+                to="/agendas"
                 exact
               >
                 Agendas
@@ -168,9 +170,9 @@ const Header = () => {
             <NavItem>
               <NavbarLink
                 onMouseEnter={() => setItemExpanded(false)}
-                activeClassName='is-active'
+                activeClassName="is-active"
                 onClick={handleLinkClick}
-                to='/regalos'
+                to="/regalos"
                 exact
               >
                 Regalos
@@ -180,9 +182,9 @@ const Header = () => {
             <NavItem>
               <NavbarLink
                 onMouseEnter={() => setItemExpanded(false)}
-                activeClassName='is-active'
+                activeClassName="is-active"
                 onClick={handleLinkClick}
-                to='/carrito'
+                to="/carrito"
                 exact
               >
                 {collapse ? (
@@ -205,7 +207,7 @@ const Header = () => {
                 <>
                   <NavItem>
                     <NavbarLink
-                      as='p'
+                      as="p"
                       onClick={() => handleMenu('account')}
                       onMouseEnter={handleHover}
                       className={!collapse && itemExpanded && 'is-active'}
@@ -229,9 +231,9 @@ const Header = () => {
               ) : (
                 <NavItem>
                   <NavbarLink
-                    activeClassName='is-active'
+                    activeClassName="is-active"
                     onClick={handleLinkClick}
-                    to='/login'
+                    to="/login"
                     exact
                   >
                     Iniciar sesión
@@ -244,7 +246,7 @@ const Header = () => {
               <NavItem>
                 <NavbarLink
                   onMouseEnter={() => setItemExpanded(false)}
-                  as='div'
+                  as="div"
                   ref={dropdownRef}
                   onClick={() => setOpen(!open)}
                 >
@@ -252,7 +254,7 @@ const Header = () => {
                   <DropDown open={open} setOpen={setOpen}>
                     {user ? (
                       <>
-                        <UserInfo to='/perfil' exact>
+                        <UserInfo to="/perfil" exact>
                           <UserImage
                             src={`https://copiasnoe-ecommerce.s3.amazonaws.com/users/${user.photo}?${photoHash}`}
                           />
@@ -261,23 +263,34 @@ const Header = () => {
 
                         <DropDownItem
                           as={NavLink}
-                          to='/perfil'
+                          to="/perfil"
                           exact
-                          activeClassName='is-active'
+                          activeClassName="is-active"
                           icon={<FaUser />}
                         >
                           <p>Perfil</p>
                         </DropDownItem>
                         {user.role === 'admin' && (
-                          <DropDownItem
-                            as={NavLink}
-                            to='/ordenes-locales'
-                            exact
-                            activeClassName='is-active'
-                            icon={<FaReceipt />}
-                          >
-                            <p>Ordenes locales</p>
-                          </DropDownItem>
+                          <>
+                            <DropDownItem
+                              as={NavLink}
+                              to="/panel-admin"
+                              exact
+                              activeClassName="is-active"
+                              icon={<RiAdminFill />}
+                            >
+                              <p>Administrador</p>
+                            </DropDownItem>
+                            <DropDownItem
+                              as={NavLink}
+                              to="/ordenes-locales"
+                              exact
+                              activeClassName="is-active"
+                              icon={<FaReceipt />}
+                            >
+                              <p>Ordenes locales</p>
+                            </DropDownItem>
+                          </>
                         )}
                         <DropDownItem
                           icon={<FiLogOut />}
@@ -290,18 +303,18 @@ const Header = () => {
                       <>
                         <DropDownItem
                           as={NavLink}
-                          to='/registro'
+                          to="/registro"
                           exact
-                          activeClassName='is-active'
+                          activeClassName="is-active"
                           icon={<FaUserPlus />}
                         >
                           <p>Registrarse</p>
                         </DropDownItem>
                         <DropDownItem
                           as={NavLink}
-                          to='/login'
+                          to="/login"
                           exact
-                          activeClassName='is-active'
+                          activeClassName="is-active"
                           icon={<FiLogIn />}
                         >
                           <p>Iniciar Sesión</p>
@@ -322,15 +335,15 @@ const Header = () => {
           <>
             {/* ------------------------ MENU ROPA ------------------ */}
             <NavItem>
-              <NavbarLink as='div' onClick={() => setActiveMenu('main')}>
+              <NavbarLink as="div" onClick={() => setActiveMenu('main')}>
                 <FaChevronLeft style={{ fontSize: '3rem' }} />
               </NavbarLink>
             </NavItem>
             <NavItem>
               <NavbarLink
-                activeClassName='is-active'
+                activeClassName="is-active"
                 onClick={handleLinkClick}
-                to='/ropa/general/todo'
+                to="/ropa/general/todo"
                 exact
               >
                 General
@@ -338,9 +351,9 @@ const Header = () => {
             </NavItem>
             <NavItem>
               <NavbarLink
-                activeClassName='is-active'
+                activeClassName="is-active"
                 onClick={handleLinkClick}
-                to='/ropa/hombre/todo'
+                to="/ropa/hombre/todo"
                 exact
               >
                 Hombre
@@ -348,9 +361,9 @@ const Header = () => {
             </NavItem>
             <NavItem>
               <NavbarLink
-                activeClassName='is-active'
+                activeClassName="is-active"
                 onClick={handleLinkClick}
-                to='/ropa/mujer/todo'
+                to="/ropa/mujer/todo"
                 exact
               >
                 Mujer
@@ -358,9 +371,9 @@ const Header = () => {
             </NavItem>
             <NavItem>
               <NavbarLink
-                activeClassName='is-active'
+                activeClassName="is-active"
                 onClick={handleLinkClick}
-                to='/ropa/niño/todo'
+                to="/ropa/niño/todo"
                 exact
               >
                 Niño
@@ -368,9 +381,9 @@ const Header = () => {
             </NavItem>
             <NavItem>
               <NavbarLink
-                activeClassName='is-active'
+                activeClassName="is-active"
                 onClick={handleLinkClick}
-                to='/ropa/niña/todo'
+                to="/ropa/niña/todo"
                 exact
               >
                 Niña
@@ -385,34 +398,46 @@ const Header = () => {
         return (
           <>
             <NavItem>
-              <NavbarLink as='div' onClick={() => setActiveMenu('main')}>
+              <NavbarLink as="div" onClick={() => setActiveMenu('main')}>
                 <FaChevronLeft style={{ fontSize: '3rem' }} />
               </NavbarLink>
             </NavItem>
             <NavItem>
               <NavbarLink
-                activeClassName='is-active'
+                activeClassName="is-active"
                 onClick={handleLinkClick}
-                to='/perfil'
+                to="/perfil"
                 exact
               >
                 Perfil
               </NavbarLink>
             </NavItem>
             {user.role === 'admin' && (
-              <NavItem>
-                <NavbarLink
-                  activeClassName='is-active'
-                  onClick={handleLinkClick}
-                  to='/ordenes-locales'
-                  exact
-                >
-                  Ordenes locales
-                </NavbarLink>
-              </NavItem>
+              <>
+                <NavItem>
+                  <NavbarLink
+                    activeClassName="is-active"
+                    onClick={handleLinkClick}
+                    to="/panel-admin"
+                    exact
+                  >
+                    Administrador
+                  </NavbarLink>
+                </NavItem>
+                <NavItem>
+                  <NavbarLink
+                    activeClassName="is-active"
+                    onClick={handleLinkClick}
+                    to="/ordenes-locales"
+                    exact
+                  >
+                    Ordenes locales
+                  </NavbarLink>
+                </NavItem>
+              </>
             )}
             <NavItem onClick={() => dispatch(logout())}>
-              <NavbarLink as='p'>Cerrar sesión</NavbarLink>
+              <NavbarLink as="p">Cerrar sesión</NavbarLink>
             </NavItem>
           </>
         );
@@ -498,7 +523,7 @@ const Header = () => {
     <Container>
       <HeaderContainer>
         {/* ------------------- LOGO ------------------ */}
-        <NavLogoLink to='/' onClick={handleLinkClick} exact>
+        <NavLogoLink to="/" onClick={handleLinkClick} exact>
           <NavLogo src={logo4} />
         </NavLogoLink>
 
@@ -507,7 +532,7 @@ const Header = () => {
 
         {/* --------------- BURGER BUTTON ------------- */}
         <MenuIcon
-          htmlFor='menu-btn'
+          htmlFor="menu-btn"
           className={burguerClass}
           onClick={handleBurgerClass}
         >
@@ -530,26 +555,26 @@ const Header = () => {
         >
           <Column>
             <ColumnTitle
-              to='/ropa/general/todo'
+              to="/ropa/general/todo"
               onClick={() => setItemExpanded(false)}
             >
               General
             </ColumnTitle>
             <ColumnItems>
               <ColumnItem
-                to='/ropa/general/playera'
+                to="/ropa/general/playera"
                 onClick={() => setItemExpanded(false)}
               >
                 Playeras
               </ColumnItem>
               <ColumnItem
-                to='/ropa/general/sudadera'
+                to="/ropa/general/sudadera"
                 onClick={() => setItemExpanded(false)}
               >
                 Sudaderas
               </ColumnItem>
               <ColumnItem
-                to='/ropa/general/todo'
+                to="/ropa/general/todo"
                 onClick={() => setItemExpanded(false)}
               >
                 Todo
@@ -559,26 +584,26 @@ const Header = () => {
           </Column>
           <Column>
             <ColumnTitle
-              to='/ropa/hombre/todo'
+              to="/ropa/hombre/todo"
               onClick={() => setItemExpanded(false)}
             >
               Hombre
             </ColumnTitle>
             <ColumnItems>
               <ColumnItem
-                to='/ropa/hombre/playera'
+                to="/ropa/hombre/playera"
                 onClick={() => setItemExpanded(false)}
               >
                 Playeras
               </ColumnItem>
               <ColumnItem
-                to='/ropa/hombre/sudadera'
+                to="/ropa/hombre/sudadera"
                 onClick={() => setItemExpanded(false)}
               >
                 Sudaderas
               </ColumnItem>
               <ColumnItem
-                to='/ropa/hombre/todo'
+                to="/ropa/hombre/todo"
                 onClick={() => setItemExpanded(false)}
               >
                 Todo
@@ -588,26 +613,26 @@ const Header = () => {
           </Column>
           <Column>
             <ColumnTitle
-              to='/ropa/mujer/todo'
+              to="/ropa/mujer/todo"
               onClick={() => setItemExpanded(false)}
             >
               Mujer
             </ColumnTitle>
             <ColumnItems>
               <ColumnItem
-                to='/ropa/mujer/playera'
+                to="/ropa/mujer/playera"
                 onClick={() => setItemExpanded(false)}
               >
                 Playeras
               </ColumnItem>
               <ColumnItem
-                to='/ropa/mujer/sudadera'
+                to="/ropa/mujer/sudadera"
                 onClick={() => setItemExpanded(false)}
               >
                 Sudaderas
               </ColumnItem>
               <ColumnItem
-                to='/ropa/mujer/todo'
+                to="/ropa/mujer/todo"
                 onClick={() => setItemExpanded(false)}
               >
                 Todo
@@ -617,26 +642,26 @@ const Header = () => {
           </Column>
           <Column>
             <ColumnTitle
-              to='/ropa/niño/todo'
+              to="/ropa/niño/todo"
               onClick={() => setItemExpanded(false)}
             >
               Niño
             </ColumnTitle>
             <ColumnItems>
               <ColumnItem
-                to='/ropa/niño/playera'
+                to="/ropa/niño/playera"
                 onClick={() => setItemExpanded(false)}
               >
                 Playeras
               </ColumnItem>
               <ColumnItem
-                to='/ropa/niño/sudadera'
+                to="/ropa/niño/sudadera"
                 onClick={() => setItemExpanded(false)}
               >
                 Sudaderas
               </ColumnItem>
               <ColumnItem
-                to='/ropa/niño/todo'
+                to="/ropa/niño/todo"
                 onClick={() => setItemExpanded(false)}
               >
                 Todo
@@ -646,26 +671,26 @@ const Header = () => {
           </Column>
           <Column>
             <ColumnTitle
-              to='/ropa/niña/todo'
+              to="/ropa/niña/todo"
               onClick={() => setItemExpanded(false)}
             >
               Niña
             </ColumnTitle>
             <ColumnItems>
               <ColumnItem
-                to='/ropa/niña/playera'
+                to="/ropa/niña/playera"
                 onClick={() => setItemExpanded(false)}
               >
                 Playeras
               </ColumnItem>
               <ColumnItem
-                to='/ropa/niña/sudadera'
+                to="/ropa/niña/sudadera"
                 onClick={() => setItemExpanded(false)}
               >
                 Sudaderas
               </ColumnItem>
               <ColumnItem
-                to='/ropa/niña/todo'
+                to="/ropa/niña/todo"
                 onClick={() => setItemExpanded(false)}
               >
                 Todo

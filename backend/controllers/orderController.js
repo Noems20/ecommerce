@@ -33,10 +33,10 @@ export const checkIfAuthor = catchAsync(async (req, res, next) => {
   const order = await Order.findById(req.params.id);
   if (req.user.role !== 'admin') {
     if (order.user.id !== req.user.id)
-      return next(
-        new AppError(`No puedes editar la orden de otra persona`, 403)
-      );
+      return next(new AppError(`You can't edit someone else's order`, 403));
   }
+
+  req.order = order;
   next();
 });
 
@@ -44,10 +44,8 @@ export const checkIfAuthor = catchAsync(async (req, res, next) => {
 // GET LOGGED USER ORDERS
 // -------------------------------------------------------------------------------
 export const getMyOrders = catchAsync(async (req, res, next) => {
-  const { status } = req.params;
   let filter = {
     user: req.user.id,
-    status: status === 'active' ? { $ne: 'Entregado' } : { $eq: 'Entregado' },
   };
 
   // Execute query
@@ -241,26 +239,16 @@ export const webhookCheckout = (req, res, next) => {
 // UPDATE ORDER ADDRESS
 // -------------------------------------------------------------------------------
 export const updateOrderAddress = catchAsync(async (req, res, next) => {
-  // const filteredBody = filterObj(
-  //   req.body,
-  //   'state',
-  //   'city',
-  //   'suburb',
-  //   'postalcode',
-  //   'address',
-  //   'phone',
-  //   'instructions',
-  //   'references'
-  // );
-  const { id: docID } = req.params;
-
-  const doc = await Order.findById(docID);
+  const doc = req.order;
 
   if (!doc) {
     return next(new AppError('No doc found with that ID', 404));
   }
 
-  if (doc.status === 'Entregado' || doc.status === 'En camino') {
+  if (
+    (doc.status === 'Entregado' || doc.status === 'En camino') &&
+    req.user.role !== 'admin'
+  ) {
     return next(
       new AppError('It is no longer possible to make a change of address', 403)
     );
@@ -278,4 +266,22 @@ export const updateOrderAddress = catchAsync(async (req, res, next) => {
 // -------------------------------------------------------------------------------
 // CANCEL ORDER
 // -------------------------------------------------------------------------------
-export const cancelOrder = catchAsync(async (req, res, next) => {});
+export const cancelOrder = catchAsync(async (req, res, next) => {
+  const { id: docID } = req.params;
+
+  const doc = req.order;
+
+  if (!doc) {
+    return next(new AppError('No doc found with that ID', 404));
+  }
+
+  if (doc.status !== 'Pedido recibido' && req.user.role !== 'admin') {
+    return next(
+      new AppError('It is no longer possible to cancel this order', 403)
+    );
+  }
+
+  await Order.findByIdAndDelete(docID);
+
+  res.status(204).json({ status: 'success', data: null });
+});

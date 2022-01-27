@@ -1,8 +1,11 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // REDUX
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchMyOrders } from '../../../redux/orders/orders-actions';
+import {
+  fetchMyOrders,
+  clearOrders,
+} from '../../../redux/orders/orders-actions';
 import { LoaderModified } from '../../../general.styles';
 
 // COMPONENTS
@@ -14,19 +17,25 @@ import {
   ModifiedTitle,
   OrdersContainer,
   EmptyTitle,
+  PaginationModified,
 } from './orders-tab.styles';
 
 const OrdersTab = ({ variants, status }) => {
   // ------------------------------ STATE AND CONSTANTS -------------
+  const [page, setPage] = useState(sessionStorage.getItem('page') || 1);
 
   const dispatch = useDispatch();
-  const { orders } = useSelector((state) => state.orders);
+  const { orders, pages } = useSelector((state) => state.orders);
   const { loading } = useSelector((state) => state.ui);
 
   // ----------------------------- USE EFFECT'S -------------------
   useEffect(() => {
-    dispatch(fetchMyOrders(status));
-  }, [dispatch, status]);
+    dispatch(fetchMyOrders(status, 4, page));
+
+    return () => {
+      dispatch(clearOrders());
+    };
+  }, [dispatch, status, page]);
 
   // ------------------------------- HANDLERS ---------------------
 
@@ -52,6 +61,7 @@ const OrdersTab = ({ variants, status }) => {
             No tienes ningún pedido <br /> <span>😓</span>
           </EmptyTitle>
         )}
+        <PaginationModified page={page} numOfPages={pages} setPage={setPage} />
       </OrdersContainer>
     </Container>
   );
