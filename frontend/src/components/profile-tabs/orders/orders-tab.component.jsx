@@ -2,10 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 // REDUX
 import { useSelector, useDispatch } from 'react-redux';
-import {
-  fetchMyOrders,
-  clearOrders,
-} from '../../../redux/orders/orders-actions';
+import { fetchOrders, clearOrders } from '../../../redux/orders/orders-actions';
 import { LoaderModified } from '../../../general.styles';
 
 // COMPONENTS
@@ -20,7 +17,7 @@ import {
   PaginationModified,
 } from './orders-tab.styles';
 
-const OrdersTab = ({ variants, status }) => {
+const OrdersTab = ({ variants, status, title, admin = false }) => {
   // ------------------------------ STATE AND CONSTANTS -------------
   const [page, setPage] = useState(sessionStorage.getItem('page') || 1);
 
@@ -30,12 +27,12 @@ const OrdersTab = ({ variants, status }) => {
 
   // ----------------------------- USE EFFECT'S -------------------
   useEffect(() => {
-    dispatch(fetchMyOrders(status, 4, page));
+    dispatch(fetchOrders(status, 4, page, admin));
 
     return () => {
       dispatch(clearOrders());
     };
-  }, [dispatch, status, page]);
+  }, [dispatch, status, page, admin]);
 
   // ------------------------------- HANDLERS ---------------------
 
@@ -46,9 +43,7 @@ const OrdersTab = ({ variants, status }) => {
       animate="visible"
       exit="hidden"
     >
-      <ModifiedTitle>
-        {status === 'active' ? 'Pedidos en curso' : 'Historial de pedidos'}
-      </ModifiedTitle>
+      <ModifiedTitle>{title}</ModifiedTitle>
       <OrdersContainer>
         {loading.fetchLoader ? (
           <LoaderModified />

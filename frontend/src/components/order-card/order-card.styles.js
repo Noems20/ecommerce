@@ -297,11 +297,13 @@ export const Line = styled.div`
   }
 `;
 
+export const DetailsContainer = styled(motion.div)``;
+
 // ------------------------------------------------------------------------------------
 // ADDRESS
 // ------------------------------------------------------------------------------------
 
-export const AddressContainer = styled(motion.div)`
+export const AddressContainer = styled.div`
   margin: 2rem 4rem;
   margin-top: 0;
 
@@ -316,7 +318,6 @@ export const AddressContainer = styled(motion.div)`
 export const ShippingCard = styled.div`
   min-width: 40rem;
   border-radius: 8px;
-  padding-bottom: 7px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 0px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 0px 3px -1px;
   height: max-content;
@@ -443,6 +444,75 @@ export const InfoTitle = styled.h2`
 
 export const Info = styled.p`
   font-size: 1.7rem;
+`;
+
+// ------------------------------------------------------------------------------------
+// USER INFO
+// ------------------------------------------------------------------------------------
+
+export const UserInfoContainer = styled.div`
+  margin: 2rem 4rem;
+  margin-top: 0;
+
+  display: grid;
+  grid-gap: 2rem;
+  justify-content: center;
+  justify-items: center;
+`;
+
+export const UserInfo = styled.div`
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  align-items: center;
+  grid-gap: 3rem;
+`;
+
+export const UserPhoto = styled.div`
+  grid-row: 1 / 2;
+  height: 15rem;
+  width: 15rem;
+
+  border-radius: 50%;
+  border: 5px solid var(--color-primary);
+  background-image: ${(props) => `url(${props.url})`};
+  background-size: cover;
+  background-position: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 8px 1px;
+
+  @media only screen and (max-width: 500px) {
+    height: 13rem;
+    width: 13rem;
+  }
+`;
+
+export const UserData = styled.div`
+  display: grid;
+  grid-gap: 1rem;
+  height: max-content;
+`;
+
+export const UserText = styled.div`
+  color: var(--color-primary);
+
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+
+  & h1 {
+    font-size: 3rem;
+
+    @media only screen and (max-width: 500px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  & p {
+    font-size: 2rem;
+    line-height: 1;
+  }
+  & svg {
+    font-size: 2rem;
+  }
 `;
 
 // ------------------------------------------------------------------------------------

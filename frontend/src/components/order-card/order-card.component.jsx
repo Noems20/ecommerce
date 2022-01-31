@@ -19,8 +19,12 @@ import TextInput from '../form-inputs/text-input/text-input.component';
 import SelectInput from '../form-inputs/select-input/select-input.component';
 import CustomButton from '../custom-button/custom-button.component';
 
+// ICONS
+import { FaEnvelope } from 'react-icons/fa';
+
 // STYLES
 import {
+  // PRODUCTS
   Card,
   CardHeader,
   CardHeaderInfo,
@@ -45,6 +49,8 @@ import {
   Text,
   InfoSubContainer,
   Line,
+  DetailsContainer,
+  // ADDRESS
   AddressContainer,
   ShippingCard,
   CardMenu,
@@ -57,6 +63,13 @@ import {
   ShippingInfoContainer,
   InfoTitle,
   Info,
+  // USER
+  UserInfoContainer,
+  UserInfo,
+  UserPhoto,
+  UserData,
+  UserText,
+  // MODAL
   EditForm,
   FormTitle,
   TwoColumnsModal,
@@ -269,61 +282,84 @@ const OrderCard = ({ order }) => {
           </Body>
           <AnimatePresence>
             {viewDetails && (
-              <AddressContainer
+              <DetailsContainer
                 variants={variants}
                 initial="hidden"
                 animate="visible"
                 exit="hidden"
               >
-                <CardBodyTitle>Dirección de envio</CardBodyTitle>
-                <ShippingCard>
-                  {((order.status !== 'En camino' &&
-                    order.status !== 'Entregado') ||
-                    user.role === 'admin') && (
-                    <CardMenu>
-                      <IconContainer edit onClick={() => setOpen('edit')}>
-                        <FaEdit />
-                      </IconContainer>
-                    </CardMenu>
-                  )}
-                  <ShippingCardHeader>
-                    <State>{order.shippingAddress.state}</State>
-                    <City>{order.shippingAddress.city}</City>
-                  </ShippingCardHeader>
-                  <ShippingCardBody>
-                    <TwoColumns>
-                      <ShippingInfoContainer>
-                        <InfoTitle>Colonia</InfoTitle>
-                        <Info>{order.shippingAddress.suburb}</Info>
-                      </ShippingInfoContainer>
-                      <ShippingInfoContainer>
-                        <InfoTitle>Dirección</InfoTitle>
-                        <Info>{order.shippingAddress.address}</Info>
-                      </ShippingInfoContainer>
-                      <ShippingInfoContainer>
-                        <InfoTitle>Codigo postal</InfoTitle>
-                        <Info>{order.shippingAddress.postalcode}</Info>
-                      </ShippingInfoContainer>
-                      <ShippingInfoContainer>
-                        <InfoTitle>Teléfono</InfoTitle>
-                        <Info>{order.shippingAddress.phone}</Info>
-                      </ShippingInfoContainer>
-                    </TwoColumns>
-                    {order.shippingAddress.references && (
-                      <ShippingInfoContainer>
-                        <InfoTitle>Referencias</InfoTitle>
-                        <Info>{order.shippingAddress.references}</Info>
-                      </ShippingInfoContainer>
+                <AddressContainer>
+                  <CardBodyTitle>Dirección de envio</CardBodyTitle>
+                  <ShippingCard>
+                    {((order.status !== 'En camino' &&
+                      order.status !== 'Entregado') ||
+                      user.role === 'admin') && (
+                      <CardMenu>
+                        <IconContainer edit onClick={() => setOpen('edit')}>
+                          <FaEdit />
+                        </IconContainer>
+                      </CardMenu>
                     )}
-                    {order.shippingAddress.instructions && (
-                      <ShippingInfoContainer>
-                        <InfoTitle>Instrucciones de entrega</InfoTitle>
-                        <Info>{order.shippingAddress.instructions}</Info>
-                      </ShippingInfoContainer>
-                    )}
-                  </ShippingCardBody>
-                </ShippingCard>
-              </AddressContainer>
+                    <ShippingCardHeader>
+                      <State>{order.shippingAddress.state}</State>
+                      <City>{order.shippingAddress.city}</City>
+                    </ShippingCardHeader>
+                    <ShippingCardBody>
+                      <TwoColumns>
+                        <ShippingInfoContainer>
+                          <InfoTitle>Colonia</InfoTitle>
+                          <Info>{order.shippingAddress.suburb}</Info>
+                        </ShippingInfoContainer>
+                        <ShippingInfoContainer>
+                          <InfoTitle>Dirección</InfoTitle>
+                          <Info>{order.shippingAddress.address}</Info>
+                        </ShippingInfoContainer>
+                        <ShippingInfoContainer>
+                          <InfoTitle>Codigo postal</InfoTitle>
+                          <Info>{order.shippingAddress.postalcode}</Info>
+                        </ShippingInfoContainer>
+                        <ShippingInfoContainer>
+                          <InfoTitle>Teléfono</InfoTitle>
+                          <Info>{order.shippingAddress.phone}</Info>
+                        </ShippingInfoContainer>
+                      </TwoColumns>
+                      {order.shippingAddress.references && (
+                        <ShippingInfoContainer>
+                          <InfoTitle>Referencias</InfoTitle>
+                          <Info>{order.shippingAddress.references}</Info>
+                        </ShippingInfoContainer>
+                      )}
+                      {order.shippingAddress.instructions && (
+                        <ShippingInfoContainer>
+                          <InfoTitle>Instrucciones de entrega</InfoTitle>
+                          <Info>{order.shippingAddress.instructions}</Info>
+                        </ShippingInfoContainer>
+                      )}
+                    </ShippingCardBody>
+                  </ShippingCard>
+                </AddressContainer>
+                {/* ---------------------------------------------- */}
+                {/* USER INFO */}
+                {/* ---------------------------------------------- */}
+                {user.role === 'admin' && (
+                  <UserInfoContainer>
+                    <CardBodyTitle>Usuario</CardBodyTitle>
+                    <UserInfo>
+                      <UserPhoto
+                        url={`https://copiasnoe-ecommerce.s3.amazonaws.com/users/${order.user.photo}`}
+                      />
+                      <UserData>
+                        <UserText>
+                          <h1>{order.user.name}</h1>
+                        </UserText>
+                        <UserText>
+                          <FaEnvelope /> <p>{order.user.email}</p>
+                        </UserText>
+                      </UserData>
+                    </UserInfo>
+                  </UserInfoContainer>
+                )}
+              </DetailsContainer>
             )}
           </AnimatePresence>
         </CardBody>

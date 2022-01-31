@@ -18,43 +18,74 @@ export const clearOrders = () => async (dispatch) => {
 };
 
 // -----------------------------------------------------------
-// FETCH MY ORDERS
+// FETCH ORDERS
 // -----------------------------------------------------------
-export const fetchMyOrders = (status, limit, page) => async (dispatch) => {
-  try {
-    dispatch({
-      type: SET_UI_LOADING,
-      payload: { fetchLoader: true },
-    });
+export const fetchOrders =
+  (status, limit, page, admin = false) =>
+  async (dispatch) => {
+    try {
+      dispatch({
+        type: SET_UI_LOADING,
+        payload: { fetchLoader: true },
+      });
 
-    const statusString =
-      status === 'active' ? '?status[ne]=Entregado' : '?status=Entregado';
+      let statusString;
+      switch (status) {
+        case 'Recibidos':
+          statusString = '?status=Pedido recibido';
+          break;
+        case 'En preparación':
+          statusString = '?status=Preparando pedido';
+          break;
+        case 'Para entregar':
+          statusString = '?status=Listo para entregar';
+          break;
+        case 'En camino':
+          statusString = '?status=En camino';
+          break;
+        case 'Entregados':
+          statusString = '?status=Entregado';
+          break;
+        case 'active':
+          statusString = '?status[ne]=Entregado';
+          break;
+        default:
+          statusString = '';
+          break;
+      }
 
-    // 1) Get current logged user orders
-    const { data } = await axios.get(
-      `/api/v1/orders/my-orders${statusString}&limit=${limit}&page=${page}`
-    );
+      let res;
+      if (admin) {
+        res = await axios.get(
+          `/api/v1/orders${statusString}&limit=${limit}&page=${page}`
+        );
+      } else {
+        res = await axios.get(
+          `/api/v1/orders/my-orders${statusString}&limit=${limit}&page=${page}`
+        );
+      }
+      const { data } = res;
 
-    dispatch({
-      type: SET_ORDERS,
-      payload: data.data,
-    });
-    dispatch({
-      type: SET_ORDERS_PAGES,
-      payload: data.pages,
-    });
-    dispatch({
-      type: SET_UI_LOADING,
-      payload: { fetchLoader: false },
-    });
-  } catch (error) {
-    console.log(error);
-    dispatch({
-      type: SET_UI_LOADING,
-      payload: { fetchLoader: false },
-    });
-  }
-};
+      dispatch({
+        type: SET_ORDERS,
+        payload: data.data,
+      });
+      dispatch({
+        type: SET_ORDERS_PAGES,
+        payload: data.pages,
+      });
+      dispatch({
+        type: SET_UI_LOADING,
+        payload: { fetchLoader: false },
+      });
+    } catch (error) {
+      console.log(error);
+      dispatch({
+        type: SET_UI_LOADING,
+        payload: { fetchLoader: false },
+      });
+    }
+  };
 
 // -----------------------------------------------------------
 // CREATE ORDER

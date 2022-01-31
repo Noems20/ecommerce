@@ -123,11 +123,21 @@ const Profile = () => {
         return <ProfileTab variants={containerVariants} key={1} />;
       case 'Pedidos en curso':
         return (
-          <OrdersTab variants={containerVariants} status={'active'} key={2} />
+          <OrdersTab
+            variants={containerVariants}
+            status={'active'}
+            title="Pedidos en curso"
+            key={2}
+          />
         );
       case 'Historial de pedidos':
         return (
-          <OrdersTab variants={containerVariants} status={'unactive'} key={3} />
+          <OrdersTab
+            variants={containerVariants}
+            status={'Entregados'}
+            title="Historial de pedidos"
+            key={3}
+          />
         );
       case 'Envio':
         return <ShippingTab variants={containerVariants} key={4} />;

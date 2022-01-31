@@ -53,7 +53,7 @@ export const CollapseItem = styled.h1`
   align-items: center;
   justify-content: space-between;
 
-  @media only screen and (min-width: 500px) {
+  @media only screen and (min-width: 501px) {
     display: none;
   }
 `;

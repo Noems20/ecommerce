@@ -58,7 +58,7 @@ import {
   FaReceipt,
 } from 'react-icons/fa';
 
-import { RiAdminFill } from 'react-icons/ri';
+import { MdSell } from 'react-icons/md';
 
 function useOutsideAlerter(closer, ref, secondRef) {
   useEffect(() => {
@@ -274,12 +274,12 @@ const Header = () => {
                           <>
                             <DropDownItem
                               as={NavLink}
-                              to="/panel-admin"
+                              to="/pedidos-online"
                               exact
                               activeClassName="is-active"
-                              icon={<RiAdminFill />}
+                              icon={<MdSell />}
                             >
-                              <p>Administrador</p>
+                              <p>Pedidos online</p>
                             </DropDownItem>
                             <DropDownItem
                               as={NavLink}
@@ -418,10 +418,10 @@ const Header = () => {
                   <NavbarLink
                     activeClassName="is-active"
                     onClick={handleLinkClick}
-                    to="/panel-admin"
+                    to="/pedidos-online"
                     exact
                   >
-                    Administrador
+                    Pedidos online
                   </NavbarLink>
                 </NavItem>
                 <NavItem>

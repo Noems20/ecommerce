@@ -21,6 +21,7 @@ import EditLocalOrderPage from './pages/edit-local-order/edit-local-order.page';
 import VerifyAccount from './pages/verify-account/verify-account.page';
 import SearchPage from './pages/search/search.page';
 import CheckoutPage from './pages/checkout/checkout.page';
+import OnlineOrdersPage from './pages/online-orders/online-orders.page';
 
 // COMPONENTS
 import Header from './components/header/header.component';
@@ -96,6 +97,17 @@ const App = () => {
             render={() =>
               user && user.role === 'admin' ? (
                 <LocalOrdersPage />
+              ) : (
+                <Redirect to="/login" />
+              )
+            }
+          />
+          <Route
+            exact
+            path="/pedidos-online"
+            render={() =>
+              user && user.role === 'admin' ? (
+                <OnlineOrdersPage />
               ) : (
                 <Redirect to="/login" />
               )
