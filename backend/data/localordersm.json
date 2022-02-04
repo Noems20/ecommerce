@@ -1,0 +1,3834 @@
+[
+  {
+    "_id": {
+      "$oid": "61b2632bc7f25f4190bc8d17"
+    },
+    "clientName": "Ilda Saucedo",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4581084074",
+    "employeeName": "Miguel Muñoz",
+    "description": "2 encuadernados duros # 21/oro\n1 cd empastado #21 oro",
+    "products": [
+      {
+        "product": "Encuadernado grueso",
+        "quantity": "2",
+        "price": "250",
+        "totalPrice": "500",
+        "_id": {
+          "$oid": "61b2632bc7f25f4190bc8d18"
+        }
+      },
+      {
+        "product": "Cd encuadernado",
+        "quantity": "1",
+        "price": "150",
+        "totalPrice": "150",
+        "_id": {
+          "$oid": "61b2632bc7f25f4190bc8d19"
+        }
+      },
+      {
+        "product": "Impresión byn y color ink jet tinta",
+        "quantity": "1",
+        "price": "144",
+        "totalPrice": "144",
+        "_id": {
+          "$oid": "61b2632bc7f25f4190bc8d1a"
+        }
+      }
+    ],
+    "totalPrice": "794",
+    "paid": "794",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2021-12-10T00:30:00.804Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2021-12-09T20:12:27.796Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61b26350c7f25f4190bc8d43"
+    },
+    "clientName": "Maricela Villagrana",
+    "clientEmail": "Marpsychology@gmail.com",
+    "clientCellphone": "4924934845",
+    "employeeName": "Gael",
+    "description": "",
+    "products": [
+      {
+        "product": "1 Empastado pasta blanda impreso",
+        "quantity": "1",
+        "price": "156",
+        "totalPrice": "156",
+        "_id": {
+          "$oid": "61b26350c7f25f4190bc8d44"
+        }
+      },
+      {
+        "product": "1 Agenda semanal",
+        "quantity": "1",
+        "price": "320",
+        "totalPrice": "320",
+        "_id": {
+          "$oid": "61b26350c7f25f4190bc8d45"
+        }
+      },
+      {
+        "product": "1 Agenda con hojas en blanco",
+        "quantity": "1",
+        "price": "220",
+        "totalPrice": "220",
+        "_id": {
+          "$oid": "61b26350c7f25f4190bc8d46"
+        }
+      }
+    ],
+    "totalPrice": "696",
+    "paid": "300",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2021-12-14T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2021-12-09T20:13:04.002Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61b272e5c7f25f4190bc9096"
+    },
+    "clientName": "MEGAN TORRES",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4781105678",
+    "employeeName": "Miguel Muñoz",
+    "description": "5 encuadernados blanda azul brilloso nuevo / Impreso laser negro\nImp byn y color epson",
+    "products": [
+      {
+        "product": "Encuadernado pasta blanda",
+        "quantity": "5",
+        "price": "85",
+        "totalPrice": "425",
+        "_id": {
+          "$oid": "61b272e5c7f25f4190bc9097"
+        }
+      },
+      {
+        "product": "Impresión byn y color epson",
+        "quantity": "1",
+        "price": "240",
+        "totalPrice": "240",
+        "_id": {
+          "$oid": "61b272e5c7f25f4190bc9098"
+        }
+      }
+    ],
+    "totalPrice": "665",
+    "paid": "500",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2021-12-10T00:30:00.922Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2021-12-09T21:19:33.819Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61b2781d12d3734c577090bc"
+    },
+    "clientName": "Juan Carlos Guerrero",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4921032309",
+    "employeeName": "Gael",
+    "description": "Ya impreso",
+    "products": [
+      {
+        "product": "Encuadernado pasta dura #21, letra plata",
+        "quantity": "1",
+        "price": "260",
+        "totalPrice": "260",
+        "_id": {
+          "$oid": "61b2781d12d3734c577090bd"
+        }
+      },
+      {
+        "product": "Encuadernado pasta blanda #32, serigrafia letra plata",
+        "quantity": "6",
+        "price": "150",
+        "totalPrice": "900",
+        "_id": {
+          "$oid": "61b2781d12d3734c577090be"
+        }
+      }
+    ],
+    "totalPrice": "1160",
+    "paid": "1160",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2021-12-10T00:30:00.275Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2021-12-09T21:41:49.104Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61b4d4cbfe5934a54b962ee0"
+    },
+    "clientName": "Brenda Fabela",
+    "clientEmail": "brendafs15@gmail.com",
+    "clientCellphone": "4371028672",
+    "employeeName": "Gael",
+    "description": "Diseño elegido por el medio Whatsapp",
+    "products": [
+      {
+        "product": "Agenda Personalizada - 2 días por hoja",
+        "quantity": "1",
+        "price": "350.00",
+        "totalPrice": "350",
+        "_id": {
+          "$oid": "61b4d4cbfe5934a54b962ee1"
+        }
+      }
+    ],
+    "totalPrice": "350",
+    "paid": "350",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2021-12-15T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2021-12-11T16:41:47.348Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61b4d6adfe5934a54b962f02"
+    },
+    "clientName": "Diane",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4921815436",
+    "employeeName": "Chuy",
+    "description": "Diseño con flores y el nombre Isabel",
+    "products": [
+      {
+        "product": "Taza personalizada",
+        "quantity": "1",
+        "price": "75",
+        "totalPrice": "75",
+        "_id": {
+          "$oid": "61b4d6adfe5934a54b962f03"
+        }
+      }
+    ],
+    "totalPrice": "75",
+    "paid": "0",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2021-12-13T18:00:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2021-12-11T16:49:49.234Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61b4d7d1fe5934a54b962f1b"
+    },
+    "clientName": "Guadalupe",
+    "clientEmail": "pita.maqui@gmail.com",
+    "clientCellphone": "4921232336",
+    "employeeName": "Gael",
+    "description": "Empastados tamaño libro\n3ra hoja impresa a color\n\"Usted puede sanar su vida\"",
+    "products": [
+      {
+        "product": "Empastado pasta blanda impresa",
+        "quantity": "2",
+        "price": "90",
+        "totalPrice": "180",
+        "_id": {
+          "$oid": "61b4d7d1fe5934a54b962f1c"
+        }
+      },
+      {
+        "product": "Impresión a color inyección ",
+        "quantity": "2",
+        "price": "1",
+        "totalPrice": "2",
+        "_id": {
+          "$oid": "61b4d7d1fe5934a54b962f1d"
+        }
+      },
+      {
+        "product": "Impresión a Blanco y Negro",
+        "quantity": "206",
+        "price": "0.4",
+        "totalPrice": "82.4",
+        "_id": {
+          "$oid": "61b4d7d1fe5934a54b962f1e"
+        }
+      }
+    ],
+    "totalPrice": "264.4",
+    "paid": "0",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2021-12-14T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2021-12-11T16:54:41.455Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61b4e081fe5934a54b962f7e"
+    },
+    "clientName": "Alfredo Olvera",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4921361620",
+    "employeeName": "Gael",
+    "description": "",
+    "products": [
+      {
+        "product": "Empastado Pasta Blanda ",
+        "quantity": "20",
+        "price": "135",
+        "totalPrice": "2700",
+        "_id": {
+          "$oid": "61b4e081fe5934a54b962f7f"
+        }
+      }
+    ],
+    "totalPrice": "2700",
+    "paid": "2700",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2021-12-18T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2021-12-11T17:31:45.376Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61b4fa9ddb5bbb4ff3006d1e"
+    },
+    "clientName": "Yolanda Jacobo",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4922018621",
+    "employeeName": "Gael",
+    "description": "Empastado Duro #15 Tinta Oro\nImpresión a color en inyección\nImpresión B/N",
+    "products": [
+      {
+        "product": "Empastado Pasta Dura ",
+        "quantity": "1",
+        "price": "260",
+        "totalPrice": "260",
+        "_id": {
+          "$oid": "61b4fa9ddb5bbb4ff3006d1f"
+        }
+      },
+      {
+        "product": "Impresión a color Inyección",
+        "quantity": "15",
+        "price": "1",
+        "totalPrice": "15",
+        "_id": {
+          "$oid": "61b4fa9ddb5bbb4ff3006d20"
+        }
+      },
+      {
+        "product": "Impresión a B/N",
+        "quantity": "78",
+        "price": "0.4",
+        "totalPrice": "31.2",
+        "_id": {
+          "$oid": "61b4fa9ddb5bbb4ff3006d21"
+        }
+      }
+    ],
+    "totalPrice": "306.2",
+    "paid": "200",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2021-12-15T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2021-12-11T19:23:09.323Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61b7b5f7f0e545e08f4731bc"
+    },
+    "clientName": "Adan Rodriguez",
+    "clientEmail": "Aov190297@gmail.com",
+    "clientCellphone": "5549201938",
+    "employeeName": "Chuy",
+    "description": "Diseño e Impresión de Invitación de bautizo.",
+    "products": [
+      {
+        "product": "Diseño e Impresión",
+        "quantity": "0",
+        "price": "0",
+        "totalPrice": "0",
+        "_id": {
+          "$oid": "61b7b5f7f0e545e08f4731bd"
+        }
+      }
+    ],
+    "totalPrice": "0",
+    "paid": "0",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2021-12-14T18:00:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2021-12-13T21:07:03.120Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61b7c3698c8b9eb00fb3f05a"
+    },
+    "clientName": "Luz Maria Estrada",
+    "clientEmail": "luz_71@live.com.mx",
+    "clientCellphone": "4781109361",
+    "employeeName": "Jassiel",
+    "description": "Empastado - Cd - Impresión",
+    "products": [
+      {
+        "product": "Encuadernado Duro #Azul Nuevo - Cobre",
+        "quantity": "1",
+        "price": "260",
+        "totalPrice": "260",
+        "_id": {
+          "$oid": "61b7c3698c8b9eb00fb3f05b"
+        }
+      },
+      {
+        "product": "Impresión Blanco Y Negro",
+        "quantity": "36",
+        "price": ".40",
+        "totalPrice": "14.4",
+        "_id": {
+          "$oid": "61b7c3698c8b9eb00fb3f05c"
+        }
+      },
+      {
+        "product": "Impresión Color EPSON",
+        "quantity": "19",
+        "price": "2",
+        "totalPrice": "38",
+        "_id": {
+          "$oid": "61b7c6fc397fb2fc5061a225"
+        }
+      },
+      {
+        "product": "CD Empastado  #Azul Nuevo - Cobre",
+        "quantity": "1",
+        "price": "160",
+        "totalPrice": "160",
+        "_id": {
+          "$oid": "61b7c6fc397fb2fc5061a226"
+        }
+      }
+    ],
+    "totalPrice": "472.4",
+    "paid": "100",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2021-12-16T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2021-12-13T22:04:25.541Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61b7cea2397fb2fc5061a357"
+    },
+    "clientName": "Rubén Mata",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4928694840",
+    "employeeName": "Miguel Antonio",
+    "description": "Reparación",
+    "products": [
+      {
+        "product": "Encuadernado pasta blanda",
+        "quantity": "1",
+        "price": "85",
+        "totalPrice": "85",
+        "_id": {
+          "$oid": "61b7cea2397fb2fc5061a358"
+        }
+      }
+    ],
+    "totalPrice": "85",
+    "paid": "0",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2021-12-15T00:30:00.230Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2021-12-13T22:52:18.627Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61b91d6129f47a98adc1109a"
+    },
+    "clientName": "Luz Zuleima Márquez de Luna",
+    "clientEmail": "lzml342@gmail.com",
+    "clientCellphone": "4949491641",
+    "employeeName": "Jassiel",
+    "description": "1 Cd empastado #16 tinta oro",
+    "products": [
+      {
+        "product": "Cd Empastado",
+        "quantity": "1",
+        "price": "160",
+        "totalPrice": "160",
+        "_id": {
+          "$oid": "61b91d6129f47a98adc1109b"
+        }
+      }
+    ],
+    "totalPrice": "240",
+    "paid": "100",
+    "percentage": "50",
+    "status": "Entregado",
+    "date": {
+      "$date": "2021-12-15T15:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2021-12-14T22:40:33.750Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61b9313e29f47a98adc1154a"
+    },
+    "clientName": "Nathalia Fernández Carlos",
+    "clientEmail": "nathifdzcarlos@hotmail.com",
+    "clientCellphone": "4921132818",
+    "employeeName": "Gael",
+    "description": "4 Playeras blancas en transfer\nImpresión de etiquetas circulares, tamaño especificado\nDiseños en Whatsapp",
+    "products": [
+      {
+        "product": "Playeras en transfer ",
+        "quantity": "4",
+        "price": "250",
+        "totalPrice": "1000",
+        "_id": {
+          "$oid": "61b9313e29f47a98adc1154b"
+        }
+      },
+      {
+        "product": "Impresión papel adhesivo (2.8cm x 2.8cm) ",
+        "quantity": "4",
+        "price": "30",
+        "totalPrice": "120",
+        "_id": {
+          "$oid": "61b9313e29f47a98adc1154c"
+        }
+      },
+      {
+        "product": "Impresión papel adhesivo (5cm x 5cm)",
+        "quantity": "4",
+        "price": "25",
+        "totalPrice": "100",
+        "_id": {
+          "$oid": "61b9313e29f47a98adc1154d"
+        }
+      },
+      {
+        "product": "Impresión papel adhesivo (10cm x 10cm)",
+        "quantity": "25",
+        "price": "15",
+        "totalPrice": "375",
+        "_id": {
+          "$oid": "61b9313e29f47a98adc1154e"
+        }
+      }
+    ],
+    "totalPrice": "1595",
+    "paid": "0",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2021-12-17T15:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2021-12-15T00:05:18.844Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61bbe82d037a0f9ed60c2958"
+    },
+    "clientName": "Alejandro Rivera",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921701614",
+    "employeeName": "Miguel Muñoz",
+    "description": "",
+    "products": [
+      {
+        "product": "encuadernado blanda serigrafia · #33 cobre",
+        "quantity": "1",
+        "price": "170.00",
+        "totalPrice": "170",
+        "_id": {
+          "$oid": "61bbe82d037a0f9ed60c2959"
+        }
+      }
+    ],
+    "totalPrice": "170",
+    "paid": "85.00",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2021-12-18T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2021-12-17T01:30:21.253Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61c373441916432fb66d25bb"
+    },
+    "clientName": "Paulina Zapata",
+    "clientEmail": "pau_flauti_26@hotmail.com",
+    "clientCellphone": "4921377543",
+    "employeeName": "Gael",
+    "description": "Diseño en el medio de Whatsapp",
+    "products": [
+      {
+        "product": "Agenda Personalizada - 1 día por hoja",
+        "quantity": "1",
+        "price": "400",
+        "totalPrice": "400",
+        "_id": {
+          "$oid": "61c373441916432fb66d25bc"
+        }
+      }
+    ],
+    "totalPrice": "400",
+    "paid": "180",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2021-12-24T00:00:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2021-12-22T18:49:40.730Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61c378bf1916432fb66d25ca"
+    },
+    "clientName": "Griselda González Arriaga",
+    "clientEmail": "greygonzalez1977@gmail.com",
+    "clientCellphone": "4493235397",
+    "employeeName": "Gael",
+    "description": "",
+    "products": [
+      {
+        "product": "Empastado Pasta Blanda Impresa",
+        "quantity": "1",
+        "price": "90",
+        "totalPrice": "90",
+        "_id": {
+          "$oid": "61c378bf1916432fb66d25cb"
+        }
+      },
+      {
+        "product": "Impresión en inyección",
+        "quantity": "51",
+        "price": "1",
+        "totalPrice": "51",
+        "_id": {
+          "$oid": "61c378bf1916432fb66d25cc"
+        }
+      },
+      {
+        "product": "Impresión Blanco y Negro",
+        "quantity": "380",
+        "price": "0.4",
+        "totalPrice": "152",
+        "_id": {
+          "$oid": "61c378bf1916432fb66d25cd"
+        }
+      }
+    ],
+    "totalPrice": "293",
+    "paid": "100",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-06T00:00:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2021-12-22T19:13:03.815Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61d4a0af42f78b77223417f7"
+    },
+    "clientName": "Carolina Balderas",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921174358",
+    "employeeName": "José de Jesús",
+    "description": "1 Agenda Modelo Emoji 1 día por pagina",
+    "products": [
+      {
+        "product": "Agenda Emoji 1 día por pagina",
+        "quantity": "1",
+        "price": "400",
+        "totalPrice": "400",
+        "_id": {
+          "$oid": "61d4a0af42f78b77223417f8"
+        }
+      }
+    ],
+    "totalPrice": "400",
+    "paid": "400",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-07T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-04T19:31:59.277Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61d4a46342f78b7722341885"
+    },
+    "clientName": "Gis",
+    "clientEmail": "gissel.020895@gmail.com",
+    "clientCellphone": "4922278264",
+    "employeeName": "José de Jesús",
+    "description": "1 Libreta Dura 150 Hojas  Puntos",
+    "products": [
+      {
+        "product": "Libreta Dura 150 Hojas  Puntos ",
+        "quantity": "1",
+        "price": "250",
+        "totalPrice": "250",
+        "_id": {
+          "$oid": "61d4a46342f78b7722341886"
+        }
+      }
+    ],
+    "totalPrice": "250",
+    "paid": "0",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-07T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-04T19:47:47.534Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61d4ad3a42f78b7722341af6"
+    },
+    "clientName": "Juan Antonio",
+    "clientEmail": "japerez@uaz.edu.mx",
+    "clientCellphone": "4921183769",
+    "employeeName": "Jassiel",
+    "description": "4 encuadernados tamaño libro pasta blanda",
+    "products": [
+      {
+        "product": "Encuadernado A Course",
+        "quantity": "2",
+        "price": "360.60",
+        "totalPrice": "721.2",
+        "_id": {
+          "$oid": "61d4ad3a42f78b7722341af7"
+        }
+      },
+      {
+        "product": "Geometry",
+        "quantity": "2",
+        "price": "206",
+        "totalPrice": "412",
+        "_id": {
+          "$oid": "61d4ad3a42f78b7722341af8"
+        }
+      }
+    ],
+    "totalPrice": "1133.2",
+    "paid": "1133",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-08T00:00:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-04T20:25:30.435Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61d4ae3442f78b7722341b06"
+    },
+    "clientName": "Dentista",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921247923",
+    "employeeName": "José de Jesús",
+    "description": "1  Agenda  1 día x pagina",
+    "products": [
+      {
+        "product": "Agenda 1 día x pagina",
+        "quantity": "1",
+        "price": "400",
+        "totalPrice": "400",
+        "_id": {
+          "$oid": "61d4ae3442f78b7722341b07"
+        }
+      }
+    ],
+    "totalPrice": "400",
+    "paid": "0",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-07T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-04T20:29:40.018Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61d4b0df42f78b7722341b4b"
+    },
+    "clientName": "Rubí Murillo",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921965779",
+    "employeeName": "José de Jesús",
+    "description": "1 Agenda Emoji Formato Semanal",
+    "products": [
+      {
+        "product": "Agenda Semanal ",
+        "quantity": "1",
+        "price": "320",
+        "totalPrice": "320",
+        "_id": {
+          "$oid": "61d4b0df42f78b7722341b4c"
+        }
+      }
+    ],
+    "totalPrice": "320",
+    "paid": "320",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-08T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-04T20:41:03.156Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61d4b19442f78b7722341b5c"
+    },
+    "clientName": "Alejandro Salas",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921136639",
+    "employeeName": "José de Jesús",
+    "description": "10 Informes",
+    "products": [
+      {
+        "product": "Informe Laser",
+        "quantity": "10",
+        "price": "0",
+        "totalPrice": "0",
+        "_id": {
+          "$oid": "61d4b19442f78b7722341b5d"
+        }
+      }
+    ],
+    "totalPrice": "0",
+    "paid": "0",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-19T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-04T20:44:04.237Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61d4b29e42f78b7722341b8a"
+    },
+    "clientName": "Osvaldo",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921060598",
+    "employeeName": "José de Jesús",
+    "description": "2 Agendas Emojis a temporal factura",
+    "products": [
+      {
+        "product": "Agenda Atemporal Emoji",
+        "quantity": "2",
+        "price": "220",
+        "totalPrice": "440",
+        "_id": {
+          "$oid": "61d4b29e42f78b7722341b8b"
+        }
+      }
+    ],
+    "totalPrice": "510.4",
+    "paid": "510",
+    "percentage": "16",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-07T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-04T20:48:30.250Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61d4b37e42f78b7722341b9d"
+    },
+    "clientName": "Amaranta",
+    "clientEmail": "amaranta.jimenez@hotmail.com",
+    "clientCellphone": "4921122734",
+    "employeeName": "Gael",
+    "description": "Empastado tamaño libro",
+    "products": [
+      {
+        "product": "Empastado pasta blanda impreso",
+        "quantity": "1",
+        "price": "90",
+        "totalPrice": "90",
+        "_id": {
+          "$oid": "61d4b37e42f78b7722341b9e"
+        }
+      },
+      {
+        "product": "Impresión Blanco y Negro",
+        "quantity": "414",
+        "price": "0.4",
+        "totalPrice": "165.6",
+        "_id": {
+          "$oid": "61d4b37e42f78b7722341b9f"
+        }
+      }
+    ],
+    "totalPrice": "255.6",
+    "paid": "255.60",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-05T19:00:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-04T20:52:14.731Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61d4c50a42f78b7722341cb7"
+    },
+    "clientName": "Javier Domínguez",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4921440820",
+    "employeeName": "Miguel Antonio",
+    "description": "Agenda dia por hoja, lineas, engargolada, Diseño KIA",
+    "products": [
+      {
+        "product": "Agenda Diaria Lineas/ Eng",
+        "quantity": "1",
+        "price": "399",
+        "totalPrice": "399",
+        "_id": {
+          "$oid": "61d4c50a42f78b7722341cb8"
+        }
+      }
+    ],
+    "totalPrice": "399",
+    "paid": "399",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-05T22:00:00.938Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-04T22:07:06.062Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61d758756bac56505909c769"
+    },
+    "clientName": "Alejandra Davila",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4924921824",
+    "employeeName": "Miguel Muñoz",
+    "description": "Rediseñar Logo",
+    "products": [
+      {
+        "product": "Rediseño",
+        "quantity": "1",
+        "price": "200",
+        "totalPrice": "200",
+        "_id": {
+          "$oid": "61d758756bac56505909c76a"
+        }
+      }
+    ],
+    "totalPrice": "200",
+    "paid": "0",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-08T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-06T21:00:37.580Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61d78af36844923d8d1d4faf"
+    },
+    "clientName": "Samuel Macias",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4921910817",
+    "employeeName": "Gael",
+    "description": "Impresión 1/2 carta, doblados y grapados.",
+    "products": [
+      {
+        "product": "Cuadernillos grapados ",
+        "quantity": "80",
+        "price": "10",
+        "totalPrice": "800",
+        "_id": {
+          "$oid": "61d78af36844923d8d1d4fb0"
+        }
+      }
+    ],
+    "totalPrice": "800",
+    "paid": "800",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-08T19:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-07T00:36:03.819Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61d9c16941199c1e26da454c"
+    },
+    "clientName": "Alejandro Salas",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4921136639",
+    "employeeName": "José de Jesús",
+    "description": "",
+    "products": [
+      {
+        "product": "Agenda",
+        "quantity": "0",
+        "price": "0",
+        "totalPrice": "0",
+        "_id": {
+          "$oid": "61d9c16941199c1e26da454d"
+        }
+      }
+    ],
+    "totalPrice": "0",
+    "paid": "0",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-12T00:00:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-08T16:52:57.762Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61d9e71c62c5e8301ce74ab7"
+    },
+    "clientName": "Cecilia Cerros",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4921022434",
+    "employeeName": "Gael",
+    "description": "Diseño en whatsapp",
+    "products": [
+      {
+        "product": "Agenda Personalizada - Diaría Empastada",
+        "quantity": "1",
+        "price": "400",
+        "totalPrice": "400",
+        "_id": {
+          "$oid": "61d9e71c62c5e8301ce74ab8"
+        }
+      }
+    ],
+    "totalPrice": "400",
+    "paid": "400",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-12T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-08T19:33:48.228Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61dc67bdc136cbe41fdbea1c"
+    },
+    "clientName": "Bladimir Miramontes",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921214724",
+    "employeeName": "Jassiel",
+    "description": "Empastado, Razones para ser anticapitalista",
+    "products": [
+      {
+        "product": "Empsastado, blanda impresa",
+        "quantity": "1",
+        "price": "116",
+        "totalPrice": "116",
+        "_id": {
+          "$oid": "61dc67bdc136cbe41fdbea1d"
+        }
+      },
+      {
+        "product": "Empastado, Izquierdas del mundo",
+        "quantity": "1",
+        "price": "183",
+        "totalPrice": "183",
+        "_id": {
+          "$oid": "61dc67bdc136cbe41fdbea1e"
+        }
+      },
+      {
+        "product": "Empastado, Como ser anticapitalista",
+        "quantity": "1",
+        "price": "150",
+        "totalPrice": "150",
+        "_id": {
+          "$oid": "61dc67bdc136cbe41fdbea1f"
+        }
+      }
+    ],
+    "totalPrice": "449",
+    "paid": "449",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-11T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-10T17:07:09.842Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61dc70f4c136cbe41fdbeb08"
+    },
+    "clientName": "Armando Ramírez",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4929493601",
+    "employeeName": "Gael",
+    "description": "Empastados #16 tinta Plata\n*Facturar",
+    "products": [
+      {
+        "product": "Empastado Pasta Dura",
+        "quantity": "2",
+        "price": "250",
+        "totalPrice": "500",
+        "_id": {
+          "$oid": "61dc70f4c136cbe41fdbeb09"
+        }
+      }
+    ],
+    "totalPrice": "580",
+    "paid": "100",
+    "percentage": "16",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-13T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-10T17:46:28.628Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61dc789bc136cbe41fdbeb8c"
+    },
+    "clientName": "Jannet Paredes",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4581021365",
+    "employeeName": "Gael",
+    "description": "1 - 100 de tarjetas impresas por un lado",
+    "products": [
+      {
+        "product": "Tarjetas de presentación ",
+        "quantity": "1",
+        "price": "130",
+        "totalPrice": "130",
+        "_id": {
+          "$oid": "61dc789bc136cbe41fdbeb8d"
+        }
+      }
+    ],
+    "totalPrice": "130",
+    "paid": "130",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-11T00:30:00.581Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-10T18:19:07.186Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61dc7959c136cbe41fdbebcd"
+    },
+    "clientName": "Irma González",
+    "clientEmail": "Copiasnoe@gmail.com",
+    "clientCellphone": "4921600096",
+    "employeeName": "Gael",
+    "description": "1 - 100 de tarjetas de presentación impresas por ambos lados",
+    "products": [
+      {
+        "product": "Tarjetas de presentación ",
+        "quantity": "1",
+        "price": "190",
+        "totalPrice": "190",
+        "_id": {
+          "$oid": "61dc7959c136cbe41fdbebce"
+        }
+      }
+    ],
+    "totalPrice": "190",
+    "paid": "190",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-12T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-10T18:22:17.874Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61dcad4490f49ae73fa5576b"
+    },
+    "clientName": "Jose Manuel",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921354222",
+    "employeeName": "Jassiel",
+    "description": "1 encuadernado blanda",
+    "products": [
+      {
+        "product": "1 encuadernado en blanda Fisica",
+        "quantity": "01",
+        "price": "269",
+        "totalPrice": "269",
+        "_id": {
+          "$oid": "61dcad4490f49ae73fa5576c"
+        }
+      }
+    ],
+    "totalPrice": "269",
+    "paid": "269",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-13T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-10T22:03:48.284Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61dddf74ae10db6f70f6513c"
+    },
+    "clientName": "ISC Erika Aguilar",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "6717675707",
+    "employeeName": "Gael",
+    "description": "",
+    "products": [
+      {
+        "product": "Libreta Personalizada - 150 Hojas",
+        "quantity": "1",
+        "price": "325",
+        "totalPrice": "325",
+        "_id": {
+          "$oid": "61dddf74ae10db6f70f6513d"
+        }
+      }
+    ],
+    "totalPrice": "325",
+    "paid": "325",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-12T00:30:00.101Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-11T19:50:12.925Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61de1cc989b76eabac496e84"
+    },
+    "clientName": "Rosa Viviana Uribe Contreras",
+    "clientEmail": "viviana_rv29@hotmail.com",
+    "clientCellphone": "4581193505",
+    "employeeName": "Gael",
+    "description": "Empastados duros #19 tinta Plata\nPortada a color en láser\n135 hojas a blanco y negro",
+    "products": [
+      {
+        "product": "Empastado Pasta Dura",
+        "quantity": "5",
+        "price": "250",
+        "totalPrice": "1250",
+        "_id": {
+          "$oid": "61de1cc989b76eabac496e85"
+        }
+      },
+      {
+        "product": "Impresión color Láser",
+        "quantity": "5",
+        "price": "4",
+        "totalPrice": "20",
+        "_id": {
+          "$oid": "61de1cc989b76eabac496e86"
+        }
+      },
+      {
+        "product": "Impresión Blanco y Negro",
+        "quantity": "675",
+        "price": "0.4",
+        "totalPrice": "270",
+        "_id": {
+          "$oid": "61de1cc989b76eabac496e87"
+        }
+      }
+    ],
+    "totalPrice": "1540",
+    "paid": "1540",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-13T17:00:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-12T00:11:53.512Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61de211989b76eabac496ea2"
+    },
+    "clientName": "Sagrario Medina",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4921247770",
+    "employeeName": "Gael",
+    "description": "Diseño por medio de WhatsApp",
+    "products": [
+      {
+        "product": "Agenda Personalizada - 2 días por hoja Empastada",
+        "quantity": "1",
+        "price": "380",
+        "totalPrice": "380",
+        "_id": {
+          "$oid": "61de211989b76eabac496ea3"
+        }
+      }
+    ],
+    "totalPrice": "380",
+    "paid": "180",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-13T00:30:00.525Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-12T00:30:17.577Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61de277f89b76eabac496f58"
+    },
+    "clientName": "Edgar Encina",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4921087976",
+    "employeeName": "Gael",
+    "description": "Empastados duros tamaño libro",
+    "products": [
+      {
+        "product": "Empastado Pasta Dura Impreso",
+        "quantity": "2",
+        "price": "250",
+        "totalPrice": "500",
+        "_id": {
+          "$oid": "61de277f89b76eabac496f59"
+        }
+      },
+      {
+        "product": "Impresión Blanco y Negro",
+        "quantity": "98",
+        "price": "0.4",
+        "totalPrice": "39.2",
+        "_id": {
+          "$oid": "61de277f89b76eabac496f5a"
+        }
+      }
+    ],
+    "totalPrice": "539.2",
+    "paid": "539",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-15T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-12T00:57:35.980Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61e055e18d3fb2e351dde318"
+    },
+    "clientName": "Primaria \"Francisco I Madero\"",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4922046853",
+    "employeeName": "Miguel Muñoz",
+    "description": "Color Azul Marino con Rojo",
+    "products": [
+      {
+        "product": "Diseño \"Escudo de Escuela\"",
+        "quantity": "1",
+        "price": "350",
+        "totalPrice": "350",
+        "_id": {
+          "$oid": "61e055e18d3fb2e351dde319"
+        }
+      }
+    ],
+    "totalPrice": "350",
+    "paid": "350",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-18T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-13T16:40:01.333Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61e05e468d3fb2e351dde512"
+    },
+    "clientName": "Aldo Gandara",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4921066557",
+    "employeeName": "Gael",
+    "description": "",
+    "products": [
+      {
+        "product": "Taza Personalizada",
+        "quantity": "1",
+        "price": "75",
+        "totalPrice": "75",
+        "_id": {
+          "$oid": "61e05e468d3fb2e351dde513"
+        }
+      }
+    ],
+    "totalPrice": "75",
+    "paid": "75",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-14T00:30:00.908Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-13T17:15:50.690Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61e05f938d3fb2e351dde529"
+    },
+    "clientName": "Gloria Ruiz",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4639537072",
+    "employeeName": "Gael",
+    "description": "Diseños de agendas vía WhatsApp.\nDiseñar Propuestas de sello",
+    "products": [
+      {
+        "product": "Agenda Personalizada - Diaria Engargolada",
+        "quantity": "2",
+        "price": "370",
+        "totalPrice": "740",
+        "_id": {
+          "$oid": "61e05f938d3fb2e351dde52a"
+        }
+      },
+      {
+        "product": "Sello Autoentintable #4929",
+        "quantity": "1",
+        "price": "330",
+        "totalPrice": "330",
+        "_id": {
+          "$oid": "61e05f938d3fb2e351dde52b"
+        }
+      }
+    ],
+    "totalPrice": "1070",
+    "paid": "1070",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-15T19:00:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-13T17:21:23.141Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61e0626a8d3fb2e351dde7ce"
+    },
+    "clientName": "Anel Rivera Ortiz",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4921200418",
+    "employeeName": "Gael",
+    "description": "",
+    "products": [
+      {
+        "product": "Agenda Personalizada - 2 días por hoja Empastada",
+        "quantity": "1",
+        "price": "380",
+        "totalPrice": "380",
+        "_id": {
+          "$oid": "61e0626a8d3fb2e351dde7cf"
+        }
+      }
+    ],
+    "totalPrice": "380",
+    "paid": "200",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-15T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-13T17:33:30.974Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61e063498d3fb2e351dde829"
+    },
+    "clientName": "Araceli Lopez Acosta",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4921516217",
+    "employeeName": "Gael",
+    "description": "Lukas Ceviches",
+    "products": [
+      {
+        "product": "Sello Autoentintable #4912",
+        "quantity": "1",
+        "price": "200",
+        "totalPrice": "200",
+        "_id": {
+          "$oid": "61e063498d3fb2e351dde82a"
+        }
+      }
+    ],
+    "totalPrice": "200",
+    "paid": "100",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-14T00:30:00.919Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-13T17:37:13.226Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61e0660f8d3fb2e351dde959"
+    },
+    "clientName": "Karla",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4921692609",
+    "employeeName": "Gael",
+    "description": "Diseño de agenda vía WhatsApp.  Notas de venta 1/4 de hoja, papel original y autocopiante, impresas a blanco y negro, foliadas 300 al 600.",
+    "products": [
+      {
+        "product": "Agenda Personalizada - Diaria Engargolada",
+        "quantity": "1",
+        "price": "370",
+        "totalPrice": "370",
+        "_id": {
+          "$oid": "61e0660f8d3fb2e351dde95a"
+        }
+      },
+      {
+        "product": "Notas de Venta",
+        "quantity": "3",
+        "price": "130",
+        "totalPrice": "390",
+        "_id": {
+          "$oid": "61e0660f8d3fb2e351dde95b"
+        }
+      }
+    ],
+    "totalPrice": "760",
+    "paid": "760",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-15T19:00:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-13T17:49:03.683Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61e081ab200045308c802d73"
+    },
+    "clientName": "Juan Carlos",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4929498039",
+    "employeeName": "Jassiel",
+    "description": "Agenda",
+    "products": [
+      {
+        "product": "Agenda semanal empastada",
+        "quantity": "01",
+        "price": "330",
+        "totalPrice": "330",
+        "_id": {
+          "$oid": "61e081ab200045308c802d74"
+        }
+      }
+    ],
+    "totalPrice": "330",
+    "paid": "330",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-13T23:00:00.832Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-13T19:46:51.679Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61e08a28200045308c8032d6"
+    },
+    "clientName": "Maestra Paty",
+    "clientEmail": "patylee77@hotmail.com",
+    "clientCellphone": "4921051651",
+    "employeeName": "José de Jesús",
+    "description": "",
+    "products": [
+      {
+        "product": "Manuales",
+        "quantity": "0",
+        "price": "0",
+        "totalPrice": "0",
+        "_id": {
+          "$oid": "61e08a28200045308c8032d7"
+        }
+      }
+    ],
+    "totalPrice": "0",
+    "paid": "0",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-22T19:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-13T20:23:04.127Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61e1a451eb553e421f874b0d"
+    },
+    "clientName": "Mtra. Andrea",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921457013",
+    "employeeName": "Jassiel",
+    "description": "1 Agenda",
+    "products": [
+      {
+        "product": "Agenda diaria engargolada",
+        "quantity": "1",
+        "price": "370",
+        "totalPrice": "370",
+        "_id": {
+          "$oid": "61e1a451eb553e421f874b0e"
+        }
+      }
+    ],
+    "totalPrice": "370",
+    "paid": "0",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-19T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-14T16:26:57.354Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61e1af856251a05185170198"
+    },
+    "clientName": "Aquiles Gonzalez",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921221119",
+    "employeeName": "Jassiel",
+    "description": "1 empastado, 2 engargolados",
+    "products": [
+      {
+        "product": "1 empastado dura tamaño libro a color",
+        "quantity": "1",
+        "price": "1208",
+        "totalPrice": "1208",
+        "_id": {
+          "$oid": "61e1af856251a05185170199"
+        }
+      },
+      {
+        "product": "2 engargolados tamaño libro",
+        "quantity": "2",
+        "price": "222",
+        "totalPrice": "444",
+        "_id": {
+          "$oid": "61e1af856251a0518517019a"
+        }
+      }
+    ],
+    "totalPrice": "1652",
+    "paid": "1652",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-19T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-14T17:14:45.674Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61e1afd06251a051851701b1"
+    },
+    "clientName": "Celia Luna",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4921241923",
+    "employeeName": "José de Jesús",
+    "description": "Elaborar diseño de las notas",
+    "products": [
+      {
+        "product": "Agenda Personalizada - Diaria Empastada",
+        "quantity": "1",
+        "price": "400",
+        "totalPrice": "400",
+        "_id": {
+          "$oid": "61e1afd06251a051851701b2"
+        }
+      },
+      {
+        "product": "Notas - 200",
+        "quantity": "2",
+        "price": "250",
+        "totalPrice": "500",
+        "_id": {
+          "$oid": "61e1afd06251a051851701b3"
+        }
+      },
+      {
+        "product": "Diseño - Carnet",
+        "quantity": "1",
+        "price": "100",
+        "totalPrice": "100",
+        "_id": {
+          "$oid": "61e1afd06251a051851701b4"
+        }
+      }
+    ],
+    "totalPrice": "1000",
+    "paid": "1000",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-19T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-14T17:16:00.494Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61e1b0e96251a051851701d6"
+    },
+    "clientName": "Oscar Javier",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921063921",
+    "employeeName": "Jassiel",
+    "description": "1 Sello",
+    "products": [
+      {
+        "product": "1 sello fechador 4727",
+        "quantity": "1",
+        "price": "532.44",
+        "totalPrice": "532.44",
+        "_id": {
+          "$oid": "61e1b0e96251a051851701d7"
+        }
+      }
+    ],
+    "totalPrice": "532.44",
+    "paid": "532",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-15T19:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-14T17:20:41.867Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61e322e19dd4310e2d408de8"
+    },
+    "clientName": "Martin Balderas",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4921031559",
+    "employeeName": "José de Jesús",
+    "description": "",
+    "products": [
+      {
+        "product": "Playeras Vinil",
+        "quantity": "1",
+        "price": "0",
+        "totalPrice": "0",
+        "_id": {
+          "$oid": "61e322e19dd4310e2d408de9"
+        }
+      },
+      {
+        "product": "2 Cilindros Sublimados",
+        "quantity": "2",
+        "price": "0",
+        "totalPrice": "0",
+        "_id": {
+          "$oid": "61e322e19dd4310e2d408dea"
+        }
+      }
+    ],
+    "totalPrice": "0",
+    "paid": "0",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-19T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-15T19:39:13.932Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61e591bf5d3c55e1648c53ff"
+    },
+    "clientName": "Mtro. Rodolfo García",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921057154",
+    "employeeName": "Jassiel",
+    "description": "Empastados",
+    "products": [
+      {
+        "product": "1 empastado blanda tamaño libro \"El colapso Ecologico ya llego\"",
+        "quantity": "1",
+        "price": "272",
+        "totalPrice": "272",
+        "_id": {
+          "$oid": "61e591bf5d3c55e1648c5400"
+        }
+      },
+      {
+        "product": "1 empastado blanda tamaño libro \"Neuliberalismo\"",
+        "quantity": "1",
+        "price": "176",
+        "totalPrice": "176",
+        "_id": {
+          "$oid": "61e591bf5d3c55e1648c5401"
+        }
+      }
+    ],
+    "totalPrice": "448",
+    "paid": "448",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-20T15:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-17T15:56:47.596Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61e596435d3c55e1648c54be"
+    },
+    "clientName": "Mtra. Andrea",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921457013",
+    "employeeName": "Jassiel",
+    "description": "Agenda",
+    "products": [
+      {
+        "product": "1 agenda personalizada 1 día por hoja engargolada",
+        "quantity": "1",
+        "price": "370",
+        "totalPrice": "370",
+        "_id": {
+          "$oid": "61e596435d3c55e1648c54bf"
+        }
+      }
+    ],
+    "totalPrice": "370",
+    "paid": "0",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-19T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-17T16:16:03.775Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61e5e8b593d924a2894a9186"
+    },
+    "clientName": "Cristian Lamas",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921247296",
+    "employeeName": "Gael",
+    "description": "",
+    "products": [
+      {
+        "product": "Agenda Personalizada - Diaria Empastada",
+        "quantity": "1",
+        "price": "400",
+        "totalPrice": "400",
+        "_id": {
+          "$oid": "61e5e8b593d924a2894a9187"
+        }
+      }
+    ],
+    "totalPrice": "400",
+    "paid": "400",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-20T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-17T22:07:49.146Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61e5ea9b93d924a2894a91b0"
+    },
+    "clientName": "Diana Cristina Gaytan Carrera",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921621496",
+    "employeeName": "Gael",
+    "description": "",
+    "products": [
+      {
+        "product": "Cd Rotulado",
+        "quantity": "1",
+        "price": "50",
+        "totalPrice": "50",
+        "_id": {
+          "$oid": "61e5ea9b93d924a2894a91b1"
+        }
+      }
+    ],
+    "totalPrice": "50",
+    "paid": "50",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-18T15:30:00.926Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-17T22:15:55.013Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61e83796c63b32b5b4eb68a8"
+    },
+    "clientName": "Sonia Gallegos",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921369515",
+    "employeeName": "Jassiel",
+    "description": "1 Sello",
+    "products": [
+      {
+        "product": "1 Sello de madera 5 cm X 5 cm",
+        "quantity": "1",
+        "price": "170",
+        "totalPrice": "170",
+        "_id": {
+          "$oid": "61e83796c63b32b5b4eb68a9"
+        }
+      }
+    ],
+    "totalPrice": "170",
+    "paid": "170",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-21T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-19T16:08:54.864Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61e83f1dc63b32b5b4eb68d4"
+    },
+    "clientName": "Luz de Tampico",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4922252234",
+    "employeeName": "Jassiel",
+    "description": "2 encuadernados pasta dura",
+    "products": [
+      {
+        "product": "1 Encuadernado pasta dura tamaño oficio vertical #6 letra oro ",
+        "quantity": "1",
+        "price": "350",
+        "totalPrice": "350",
+        "_id": {
+          "$oid": "61e83f1dc63b32b5b4eb68d5"
+        }
+      },
+      {
+        "product": "1 Encuadernado pasta dura tamaño carta horizontal #6 letra oro",
+        "quantity": "1",
+        "price": "350",
+        "totalPrice": "350",
+        "_id": {
+          "$oid": "61e83f1dc63b32b5b4eb68d6"
+        }
+      }
+    ],
+    "totalPrice": "700",
+    "paid": "700",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-22T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-19T16:41:01.918Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61e9c3616d238020a4147e5b"
+    },
+    "clientName": "Eduardo Goitia",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921224076",
+    "employeeName": "Jassiel",
+    "description": "5 empastados",
+    "products": [
+      {
+        "product": "5 empastados blanda impresa \"Un camino para la paz\"",
+        "quantity": "5",
+        "price": "210",
+        "totalPrice": "1050",
+        "_id": {
+          "$oid": "61e9c3616d238020a4147e5c"
+        }
+      }
+    ],
+    "totalPrice": "1050",
+    "paid": "200",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-22T19:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-20T20:17:37.613Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61e9d73da3221d8813d9bdee"
+    },
+    "clientName": "Francisco Luna",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921463775",
+    "employeeName": "Jassiel",
+    "description": "Tarjetas de presentación",
+    "products": [
+      {
+        "product": "100 tarjetas de presentación x un lado redondeadas ",
+        "quantity": "1",
+        "price": "130",
+        "totalPrice": "130",
+        "_id": {
+          "$oid": "61e9d73da3221d8813d9bdef"
+        }
+      }
+    ],
+    "totalPrice": "130",
+    "paid": "130",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-25T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-20T21:42:21.611Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eb0dc4ec4b9815b9a2e978"
+    },
+    "clientName": "María Rodriguez",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921221045",
+    "employeeName": "Gael",
+    "description": "Empastados #21 Tinta Dorada.\nImpreso todo a b/n.\nEliminar a María Guadalupe Bernal Castro de Tesis.\nAgregar logo de Derecho.",
+    "products": [
+      {
+        "product": "Encuadernado Pasta Dura",
+        "quantity": "2",
+        "price": "250",
+        "totalPrice": "500",
+        "_id": {
+          "$oid": "61eb0dc4ec4b9815b9a2e979"
+        }
+      },
+      {
+        "product": "Impresión B/N",
+        "quantity": "298",
+        "price": "0.4",
+        "totalPrice": "119.2",
+        "_id": {
+          "$oid": "61eb0dc4ec4b9815b9a2e97a"
+        }
+      }
+    ],
+    "totalPrice": "619.2",
+    "paid": "619",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-25T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-21T19:47:16.675Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eb28f679be2ffe7950066d"
+    },
+    "clientName": "Abdiel Lucas",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921403819",
+    "employeeName": "Jassiel",
+    "description": "1 sello",
+    "products": [
+      {
+        "product": "1 Sello de madera 6 cm X 4 cm",
+        "quantity": "1",
+        "price": "180",
+        "totalPrice": "180",
+        "_id": {
+          "$oid": "61eb28f679be2ffe7950066e"
+        }
+      }
+    ],
+    "totalPrice": "180",
+    "paid": "180",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-25T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-21T21:43:18.415Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eeee0d2b45e7705872352b"
+    },
+    "clientName": "Santiago Arguelles",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4925936050",
+    "employeeName": "Jassiel",
+    "description": "1 encuadernado",
+    "products": [
+      {
+        "product": "1 encuadernado pasta blanda serigrafía #35 letra oro",
+        "quantity": "1",
+        "price": "170",
+        "totalPrice": "170",
+        "_id": {
+          "$oid": "61eeee0d2b45e7705872352c"
+        }
+      }
+    ],
+    "totalPrice": "170",
+    "paid": "170",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-26T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-24T18:21:01.404Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61eef1462b45e7705872358b"
+    },
+    "clientName": "Rafael Ramirez",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4771081018",
+    "employeeName": "Jassiel",
+    "description": "7 encuadernados",
+    "products": [
+      {
+        "product": "7 encuadernados pasta blanda impresa #1",
+        "quantity": "7",
+        "price": "110",
+        "totalPrice": "770",
+        "_id": {
+          "$oid": "61eef1462b45e7705872358c"
+        }
+      }
+    ],
+    "totalPrice": "770",
+    "paid": "770",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-26T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-24T18:34:46.861Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f042d0af993041ced69fdf"
+    },
+    "clientName": "Veronica Segiovia",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921606645",
+    "employeeName": "Jassiel",
+    "description": "1 Encuadernado, 4 cd's",
+    "products": [
+      {
+        "product": "1 Encuadernado pasta dura #4 letra oro",
+        "quantity": "1",
+        "price": "345",
+        "totalPrice": "345",
+        "_id": {
+          "$oid": "61f042d0af993041ced69fe0"
+        }
+      },
+      {
+        "product": "4 cd's empastados #4 letra oro",
+        "quantity": "4",
+        "price": "150",
+        "totalPrice": "600",
+        "_id": {
+          "$oid": "61f042d0af993041ced69fe1"
+        }
+      }
+    ],
+    "totalPrice": "945",
+    "paid": "945",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-26T23:00:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-25T18:34:56.831Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f06a69afef5e36de602d77"
+    },
+    "clientName": "Jose de Jesus",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921046543",
+    "employeeName": "Gael",
+    "description": "Tamaño libro.\nLibro: Ecología Forestal",
+    "products": [
+      {
+        "product": "Empastado Pasta Blanda",
+        "quantity": "1",
+        "price": "90",
+        "totalPrice": "90",
+        "_id": {
+          "$oid": "61f06a69afef5e36de602d78"
+        }
+      },
+      {
+        "product": "Impresión Blanco y Negro",
+        "quantity": "142",
+        "price": "0.4",
+        "totalPrice": "56.8",
+        "_id": {
+          "$oid": "61f06a69afef5e36de602d79"
+        }
+      }
+    ],
+    "totalPrice": "146.8",
+    "paid": "147",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-27T00:00:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-25T21:23:53.365Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f06b53afef5e36de602d8d"
+    },
+    "clientName": "Cecilia Cerros",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921022434",
+    "employeeName": "Gael",
+    "description": "",
+    "products": [
+      {
+        "product": "Agenda Diaria Empastada",
+        "quantity": "1",
+        "price": "400",
+        "totalPrice": "400",
+        "_id": {
+          "$oid": "61f06b53afef5e36de602d8e"
+        }
+      }
+    ],
+    "totalPrice": "400",
+    "paid": "400",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-27T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-25T21:27:47.120Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f0710cafef5e36de602dc0"
+    },
+    "clientName": "Moises Hernandez",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921304301",
+    "employeeName": "Gael",
+    "description": "Lo de whats",
+    "products": [
+      {
+        "product": "Lo que esta en Whats",
+        "quantity": "0",
+        "price": "0",
+        "totalPrice": "0",
+        "_id": {
+          "$oid": "61f0710cafef5e36de602dc1"
+        }
+      }
+    ],
+    "totalPrice": "0",
+    "paid": "0",
+    "percentage": "0",
+    "status": "En preparación",
+    "date": {
+      "$date": "2022-01-26T19:00:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-25T21:52:12.616Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f08a4d946c0fa70cd4801f"
+    },
+    "clientName": "Ester Palacios",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4928920401",
+    "employeeName": "Jassiel",
+    "description": "2 encuadernados",
+    "products": [
+      {
+        "product": "2 encuadernados pasta blanda impresa plastificada en mate",
+        "quantity": "2",
+        "price": "105",
+        "totalPrice": "210",
+        "_id": {
+          "$oid": "61f08a4d946c0fa70cd48020"
+        }
+      }
+    ],
+    "totalPrice": "210",
+    "paid": "130",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-27T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-25T23:39:57.742Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f16d915008838fa1b3396e"
+    },
+    "clientName": "Patricia Martinez",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921625103",
+    "employeeName": "Jassiel",
+    "description": "1 sello",
+    "products": [
+      {
+        "product": "1 sello autoentintable #4929",
+        "quantity": "1",
+        "price": "429",
+        "totalPrice": "429",
+        "_id": {
+          "$oid": "61f16d915008838fa1b3396f"
+        }
+      }
+    ],
+    "totalPrice": "429",
+    "paid": "429",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-27T00:30:00.279Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-26T15:49:37.710Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f16eef5008838fa1b339b7"
+    },
+    "clientName": "Valeria Herrera",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4497694535",
+    "employeeName": "Jassiel",
+    "description": "Encuadernación y CD'S",
+    "products": [
+      {
+        "product": "3 encuadernados pasta dura #21 letra oro",
+        "quantity": "3",
+        "price": "298",
+        "totalPrice": "894",
+        "_id": {
+          "$oid": "61f16eef5008838fa1b339b8"
+        }
+      },
+      {
+        "product": "2 CD'S rotulados",
+        "quantity": "2",
+        "price": "50",
+        "totalPrice": "100",
+        "_id": {
+          "$oid": "61f16eef5008838fa1b339b9"
+        }
+      }
+    ],
+    "totalPrice": "994",
+    "paid": "500",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-28T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-26T15:55:27.732Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f1880fafdfd46914eaba65"
+    },
+    "clientName": "Julian Hernandez",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921463111",
+    "employeeName": "Jassiel",
+    "description": "Encudernación",
+    "products": [
+      {
+        "product": "2 encuadernados pasta dura impresa tamaño libro",
+        "quantity": "2",
+        "price": "453.50",
+        "totalPrice": "907",
+        "_id": {
+          "$oid": "61f1880fafdfd46914eaba66"
+        }
+      },
+      {
+        "product": "3 encuadernados pasta blanda impresa tamaño libro",
+        "quantity": "3",
+        "price": "224.33",
+        "totalPrice": "672.99",
+        "_id": {
+          "$oid": "61f1880fafdfd46914eaba67"
+        }
+      }
+    ],
+    "totalPrice": "1579.99",
+    "paid": "0",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-29T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-26T17:42:39.980Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f2bf8980cc7630683f2fdb"
+    },
+    "clientName": "Vianey Hernandez",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4929098073",
+    "employeeName": "Jassiel",
+    "description": "Encuadernación y CD rotulado",
+    "products": [
+      {
+        "product": "1 encuadernado pasta dura #21 letra oro, color láser",
+        "quantity": "1",
+        "price": "458",
+        "totalPrice": "458",
+        "_id": {
+          "$oid": "61f2bf8980cc7630683f2fdc"
+        }
+      },
+      {
+        "product": "1 encuadernado pasta blanda serigrafía #32 letra oro, color epson Hd",
+        "quantity": "1",
+        "price": "290",
+        "totalPrice": "290",
+        "_id": {
+          "$oid": "61f2bf8980cc7630683f2fdd"
+        }
+      },
+      {
+        "product": "1 CD rotulado",
+        "quantity": "1",
+        "price": "50",
+        "totalPrice": "50",
+        "_id": {
+          "$oid": "61f2bf8980cc7630683f2fde"
+        }
+      }
+    ],
+    "totalPrice": "798",
+    "paid": "798",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-28T00:30:00.639Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-27T15:51:37.911Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f2d559f2e18a18fb056e35"
+    },
+    "clientName": "K9",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4922649188",
+    "employeeName": "Miguel Antonio",
+    "description": "30 CARTILLAS",
+    "products": [
+      {
+        "product": "CARTILLAS",
+        "quantity": "30",
+        "price": "28",
+        "totalPrice": "840",
+        "_id": {
+          "$oid": "61f2d559f2e18a18fb056e36"
+        }
+      }
+    ],
+    "totalPrice": "840",
+    "paid": "840",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-29T00:00:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-27T17:24:41.217Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f2ea5206b96e99c6c8e70e"
+    },
+    "clientName": "Lorena Rodriguez",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4581190063",
+    "employeeName": "Jassiel",
+    "description": "Empastados",
+    "products": [
+      {
+        "product": "5 encuadernados pasta dura #7 letra plata ",
+        "quantity": "5",
+        "price": "355",
+        "totalPrice": "1775",
+        "_id": {
+          "$oid": "61f2ea5206b96e99c6c8e70f"
+        }
+      }
+    ],
+    "totalPrice": "1775",
+    "paid": "1775",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-29T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-27T18:54:10.054Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f2f6e0cb205175587cd3b7"
+    },
+    "clientName": "Sociedad y Cultura",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4925240500",
+    "employeeName": "Gael",
+    "description": "1 sello de madera 4cm x 4cm\nEl logo debe quedar al raz de la madera",
+    "products": [
+      {
+        "product": "Sello de Madera",
+        "quantity": "1",
+        "price": "160",
+        "totalPrice": "160",
+        "_id": {
+          "$oid": "61f2f6e0cb205175587cd3b8"
+        }
+      }
+    ],
+    "totalPrice": "185.6",
+    "paid": "0",
+    "percentage": "16",
+    "status": "En preparación",
+    "date": {
+      "$date": "2022-01-29T19:00:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-27T19:47:44.344Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f30190cb205175587cd435"
+    },
+    "clientName": "Manuel Tiscareño",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4922903096",
+    "employeeName": "Gael",
+    "description": "1 Empastado Pasta Blanda",
+    "products": [
+      {
+        "product": "Encuadernado Pasta Blanda",
+        "quantity": "1",
+        "price": "112",
+        "totalPrice": "112",
+        "_id": {
+          "$oid": "61f30190cb205175587cd436"
+        }
+      }
+    ],
+    "totalPrice": "112",
+    "paid": "112",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-29T19:00:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-27T20:33:20.378Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f3022ecb205175587cd44b"
+    },
+    "clientName": "Edgar Cisneros",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921250804",
+    "employeeName": "Gael",
+    "description": "Copia y Empastado - Clon",
+    "products": [
+      {
+        "product": "Clon",
+        "quantity": "1",
+        "price": "286",
+        "totalPrice": "286",
+        "_id": {
+          "$oid": "61f3022ecb205175587cd44c"
+        }
+      }
+    ],
+    "totalPrice": "286",
+    "paid": "286",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-29T19:00:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-27T20:35:58.047Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f31ab3bef1d2e49fa0b963"
+    },
+    "clientName": "Mildred Yamileth",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4922081246",
+    "employeeName": "Miguel Antonio",
+    "description": "Agenda atemporal tipo 2\nReparación de libros",
+    "products": [
+      {
+        "product": "Reparación dura",
+        "quantity": "01",
+        "price": "200",
+        "totalPrice": "200",
+        "_id": {
+          "$oid": "61f31ab3bef1d2e49fa0b964"
+        }
+      },
+      {
+        "product": "Reparación blanda",
+        "quantity": "1",
+        "price": "85",
+        "totalPrice": "85",
+        "_id": {
+          "$oid": "61f31ab3bef1d2e49fa0b965"
+        }
+      },
+      {
+        "product": "Agenda atemporal formato 2",
+        "quantity": "1",
+        "price": "350",
+        "totalPrice": "350",
+        "_id": {
+          "$oid": "61f31ab3bef1d2e49fa0b966"
+        }
+      }
+    ],
+    "totalPrice": "635",
+    "paid": "0",
+    "percentage": "0",
+    "status": "En preparación",
+    "date": {
+      "$date": "2022-01-29T19:00:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-27T22:20:35.542Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f337c413104cf00bd7a677"
+    },
+    "clientName": "Conni del Río",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4924921278",
+    "employeeName": "Gael",
+    "description": "100 tarjetas de presentación impresas por ambos lados.\nDiseño en WhatsApp",
+    "products": [
+      {
+        "product": "Tarjetas de presentación",
+        "quantity": "1",
+        "price": "190",
+        "totalPrice": "190",
+        "_id": {
+          "$oid": "61f337c413104cf00bd7a678"
+        }
+      }
+    ],
+    "totalPrice": "220.4",
+    "paid": "220.4",
+    "percentage": "16",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-28T23:00:00.880Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-28T00:24:36.941Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f44e4371e49f550acef7fa"
+    },
+    "clientName": "Ana Silvia Aguilera",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4939595401",
+    "employeeName": "Gael",
+    "description": "*Tesis de la facultad de Letras* -1 Empastado Duro #7 Tinta Oro. -6 Empastados Blandos #35 Tinta Oro. -1 Cd rotulado (grabar todo lo de carpeta cd). -Página 20, 21 y 152 a color en epson. -Impresión B/N.",
+    "products": [
+      {
+        "product": "Empastado Duro ",
+        "quantity": "1",
+        "price": "260",
+        "totalPrice": "260",
+        "_id": {
+          "$oid": "61f44e4371e49f550acef7fb"
+        }
+      },
+      {
+        "product": "Empastado blando Serigrafía",
+        "quantity": "6",
+        "price": "160",
+        "totalPrice": "960",
+        "_id": {
+          "$oid": "61f44e4371e49f550acef7fc"
+        }
+      },
+      {
+        "product": "Impresión Inyección HD",
+        "quantity": "21",
+        "price": "2",
+        "totalPrice": "42",
+        "_id": {
+          "$oid": "61f44e4371e49f550acef7fd"
+        }
+      },
+      {
+        "product": "Impresión B/N",
+        "quantity": "1085",
+        "price": "0.4",
+        "totalPrice": "434",
+        "_id": {
+          "$oid": "61f44e4371e49f550acef7fe"
+        }
+      },
+      {
+        "product": "Cd Roulado",
+        "quantity": "1",
+        "price": "50",
+        "totalPrice": "50",
+        "_id": {
+          "$oid": "61f44e4371e49f550acef7ff"
+        }
+      }
+    ],
+    "totalPrice": "1746",
+    "paid": "1746",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-02-01T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-28T20:12:51.112Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f4523071e49f550acef822"
+    },
+    "clientName": "Rafael Correa",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921136673",
+    "employeeName": "Jassiel",
+    "description": "Encuadernación",
+    "products": [
+      {
+        "product": "3 encuadernados pasta dura, color vino nuevo, letra oro",
+        "quantity": "3",
+        "price": "303",
+        "totalPrice": "909",
+        "_id": {
+          "$oid": "61f4523071e49f550acef823"
+        }
+      }
+    ],
+    "totalPrice": "909",
+    "paid": "909",
+    "percentage": "0",
+    "status": "En preparación",
+    "date": {
+      "$date": "2022-02-02T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-28T20:29:36.903Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f4565a71e49f550acef848"
+    },
+    "clientName": "Leonardo Sandoval",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921295979",
+    "employeeName": "Jassiel",
+    "description": "Encuadernado",
+    "products": [
+      {
+        "product": "1 encuadernado pasta blanda impresa \"Probabilidad y Estadistica\"",
+        "quantity": "1",
+        "price": "416",
+        "totalPrice": "416",
+        "_id": {
+          "$oid": "61f4565a71e49f550acef849"
+        }
+      }
+    ],
+    "totalPrice": "416",
+    "paid": "416",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-02-01T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-28T20:47:22.390Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f456ee71e49f550acef85d"
+    },
+    "clientName": "Eduardo Goitia",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921224076",
+    "employeeName": "Jassiel",
+    "description": "Encuadernación tamaño libro",
+    "products": [
+      {
+        "product": "1 encuadernado pasta blanda impresa, opalina delgada",
+        "quantity": "1",
+        "price": "123",
+        "totalPrice": "123",
+        "_id": {
+          "$oid": "61f456ee71e49f550acef85e"
+        }
+      }
+    ],
+    "totalPrice": "123",
+    "paid": "123",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-01-29T19:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-28T20:49:50.111Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f561783724fc2c63b40147"
+    },
+    "clientName": "Esther Palacios",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4928920401",
+    "employeeName": "Jassiel",
+    "description": "Impresión y empastado",
+    "products": [
+      {
+        "product": "3 encuadernados pasta blanda impresa plastificados - mate",
+        "quantity": "3",
+        "price": "212",
+        "totalPrice": "636",
+        "_id": {
+          "$oid": "61f561783724fc2c63b40148"
+        }
+      }
+    ],
+    "totalPrice": "636",
+    "paid": "636",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-02-01T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-29T15:47:04.781Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f84a055ed5e95ee5c255df"
+    },
+    "clientName": "Mtra. Alma Moreno",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921242832",
+    "employeeName": "Jassiel",
+    "description": "2 agendas engargoladas semanales",
+    "products": [
+      {
+        "product": " 2 agendas engargoladas semanales personalizadas ",
+        "quantity": "2",
+        "price": "290",
+        "totalPrice": "580",
+        "_id": {
+          "$oid": "61f84a055ed5e95ee5c255e0"
+        }
+      }
+    ],
+    "totalPrice": "580",
+    "paid": "580",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-02-02T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-31T20:43:49.887Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f8748a2045daff09ab514a"
+    },
+    "clientName": "Eduardo Goitia",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921224076",
+    "employeeName": "Gael",
+    "description": "Impresión en opalina delgada B/N",
+    "products": [
+      {
+        "product": "Empastado Pasta Blanda",
+        "quantity": "2",
+        "price": "123",
+        "totalPrice": "246",
+        "_id": {
+          "$oid": "61f8748a2045daff09ab514b"
+        }
+      }
+    ],
+    "totalPrice": "246",
+    "paid": "100",
+    "percentage": "0",
+    "status": "En preparación",
+    "date": {
+      "$date": "2022-02-03T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-31T23:45:14.937Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f875142045daff09ab5161"
+    },
+    "clientName": "Guadalupe Julian",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4922660222",
+    "employeeName": "Gael",
+    "description": "Remplazar pastas de empastados y carátulas de cds. Quitar \"TESINA\" y agregar \"MONOGRAFÍA DE INVESTIGACIÓN\"",
+    "products": [
+      {
+        "product": "Empastado Pasta Blanda Serigrafia",
+        "quantity": "7",
+        "price": "160",
+        "totalPrice": "1120",
+        "_id": {
+          "$oid": "61f875142045daff09ab5162"
+        }
+      },
+      {
+        "product": "Cd Rotulado",
+        "quantity": "2",
+        "price": "30",
+        "totalPrice": "60",
+        "_id": {
+          "$oid": "61f875142045daff09ab5163"
+        }
+      }
+    ],
+    "totalPrice": "1180",
+    "paid": "0",
+    "percentage": "0",
+    "status": "En preparación",
+    "date": {
+      "$date": "2022-02-03T00:00:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-01-31T23:47:32.489Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f95aca6a9d60d8a018bd54"
+    },
+    "clientName": "Yolanda Varela",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921578080",
+    "employeeName": "Jassiel",
+    "description": "3 encuadernados \"Nocturnos\"",
+    "products": [
+      {
+        "product": "3 encuadernados pasta blanda impresa",
+        "quantity": "3",
+        "price": "190",
+        "totalPrice": "570",
+        "_id": {
+          "$oid": "61f95aca6a9d60d8a018bd55"
+        }
+      }
+    ],
+    "totalPrice": "570",
+    "paid": "570",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-02-02T00:30:00.880Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-02-01T16:07:38.965Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61f9a5f74b8ce3ca8dc0bcfb"
+    },
+    "clientName": "Josue Limón",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "8126427733",
+    "employeeName": "Jassiel",
+    "description": "8 encuadernados pasta dura #21 letra oro, impresión B/N",
+    "products": [
+      {
+        "product": "8 encuadernados",
+        "quantity": "8",
+        "price": "250.20",
+        "totalPrice": "2001.6",
+        "_id": {
+          "$oid": "61f9a5f74b8ce3ca8dc0bcfc"
+        }
+      }
+    ],
+    "totalPrice": "2001.6",
+    "paid": "1010",
+    "percentage": "0",
+    "status": "En preparación",
+    "date": {
+      "$date": "2022-02-10T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-02-01T21:28:23.816Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61fac4324502bcf7ddedc3fa"
+    },
+    "clientName": "Gorditas \"Las Cazuelas\"",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921053793",
+    "employeeName": "Jassiel",
+    "description": "100 tarjetas de presentación impresas por 1 lado",
+    "products": [
+      {
+        "product": "Tarjetas de presentación",
+        "quantity": "1",
+        "price": "130",
+        "totalPrice": "130",
+        "_id": {
+          "$oid": "61fac4324502bcf7ddedc3fb"
+        }
+      }
+    ],
+    "totalPrice": "130",
+    "paid": "130",
+    "percentage": "0",
+    "status": "En preparación",
+    "date": {
+      "$date": "2022-02-05T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-02-02T17:49:38.914Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61fac89f4502bcf7ddedc417"
+    },
+    "clientName": "Perla Morones",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4939592526",
+    "employeeName": "Gael",
+    "description": "Libreta tamaño media carta, 100 hojas impresas por ambos lados. Diseño de la Virgen (WhatsApp)",
+    "products": [
+      {
+        "product": "Libreta Personalizada",
+        "quantity": "1",
+        "price": "290",
+        "totalPrice": "290",
+        "_id": {
+          "$oid": "61fac89f4502bcf7ddedc418"
+        }
+      }
+    ],
+    "totalPrice": "290",
+    "paid": "0",
+    "percentage": "0",
+    "status": "En preparación",
+    "date": {
+      "$date": "2022-02-04T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-02-02T18:08:31.094Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61fad4074502bcf7ddedc447"
+    },
+    "clientName": "Edgar Cisneros",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4961250804",
+    "employeeName": "Jassiel",
+    "description": "Reparación de ambos libros en pasta Blanda",
+    "products": [
+      {
+        "product": "Empastado Pasta Blanda",
+        "quantity": "2",
+        "price": "90",
+        "totalPrice": "180",
+        "_id": {
+          "$oid": "61fad4074502bcf7ddedc448"
+        }
+      }
+    ],
+    "totalPrice": "180",
+    "paid": "180",
+    "percentage": "0",
+    "status": "Entregado",
+    "date": {
+      "$date": "2022-02-03T00:30:00.355Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-02-02T18:57:11.576Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61fad85f4502bcf7ddedc4c3"
+    },
+    "clientName": "Mtra. Aremí",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921264257",
+    "employeeName": "Gael",
+    "description": "*Agenda personalizada. *Diseño femenino, elegante para una maestra (WhatsApp)",
+    "products": [
+      {
+        "product": "Agenda Semanal Empastada",
+        "quantity": "1",
+        "price": "320",
+        "totalPrice": "320",
+        "_id": {
+          "$oid": "61fad85f4502bcf7ddedc4c4"
+        }
+      }
+    ],
+    "totalPrice": "320",
+    "paid": "0",
+    "percentage": "0",
+    "status": "En preparación",
+    "date": {
+      "$date": "2022-02-04T19:00:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-02-02T19:15:43.684Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61faf79d61c69f608ea5a39a"
+    },
+    "clientName": "Dra. Nicté Peréz",
+    "clientEmail": "copiasnoe@gmail.com",
+    "clientCellphone": "4941007348",
+    "employeeName": "Miguel Antonio",
+    "description": "8 latas sublimadas, 8 llaveros sublimados",
+    "products": [
+      {
+        "product": "Lata sublimada",
+        "quantity": "8",
+        "price": "319",
+        "totalPrice": "2552",
+        "_id": {
+          "$oid": "61faf79d61c69f608ea5a39b"
+        }
+      },
+      {
+        "product": "Llavero sublimado",
+        "quantity": "8",
+        "price": "60",
+        "totalPrice": "480",
+        "_id": {
+          "$oid": "61faf79d61c69f608ea5a39c"
+        }
+      }
+    ],
+    "totalPrice": "3032",
+    "paid": "0",
+    "percentage": "0",
+    "status": "En preparación",
+    "date": {
+      "$date": "2022-02-05T19:00:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-02-02T21:29:01.855Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61fc17eea5f6c18a9efe72d0"
+    },
+    "clientName": "Manuel Tiscareño",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4922903096",
+    "employeeName": "Jassiel",
+    "description": "1 encuadernado pasta blanda impresa",
+    "products": [
+      {
+        "product": "1 encuadernado pasta blanda",
+        "quantity": "1",
+        "price": "115",
+        "totalPrice": "115",
+        "_id": {
+          "$oid": "61fc17eea5f6c18a9efe72d1"
+        }
+      }
+    ],
+    "totalPrice": "115",
+    "paid": "100",
+    "percentage": "0",
+    "status": "En preparación",
+    "date": {
+      "$date": "2022-02-05T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-02-03T17:59:10.078Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61fc284dbb44eb8be56d4ec2"
+    },
+    "clientName": "Mireya",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921593829",
+    "employeeName": "Gael",
+    "description": "Diseño de Agenda (WhatsApp)",
+    "products": [
+      {
+        "product": "Agenda Semanal Engargolada",
+        "quantity": "1",
+        "price": "290",
+        "totalPrice": "290",
+        "_id": {
+          "$oid": "61fc284dbb44eb8be56d4ec3"
+        }
+      }
+    ],
+    "totalPrice": "290",
+    "paid": "200",
+    "percentage": "0",
+    "status": "En preparación",
+    "date": {
+      "$date": "2022-02-05T00:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-02-03T19:09:01.689Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61fc3d4fe7335e217e538431"
+    },
+    "clientName": "Tania Amaro",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921070467",
+    "employeeName": "Gael",
+    "description": "*700 Notas de venta. *Impresas a B/N. por ambos lados. *1/2de hoja. *Hoja bond. *Divididas en paquetes de 50 (14 paquetes).",
+    "products": [
+      {
+        "product": "Notas de Venta",
+        "quantity": "7",
+        "price": "110",
+        "totalPrice": "770",
+        "_id": {
+          "$oid": "61fc3d4fe7335e217e538432"
+        }
+      }
+    ],
+    "totalPrice": "770",
+    "paid": "500",
+    "percentage": "0",
+    "status": "En preparación",
+    "date": {
+      "$date": "2022-02-05T19:00:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-02-03T20:38:39.564Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61fc4bafcc2b6102bbddde1e"
+    },
+    "clientName": "Dra. Celia Luna",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921241923",
+    "employeeName": "José de Jesús",
+    "description": "200 notas de venta, blanco y negro con papel autocopiante. 1/4 de hoja .",
+    "products": [
+      {
+        "product": "Notas de Venta",
+        "quantity": "2",
+        "price": "120",
+        "totalPrice": "240",
+        "_id": {
+          "$oid": "61fc4bafcc2b6102bbddde1f"
+        }
+      }
+    ],
+    "totalPrice": "240",
+    "paid": "0",
+    "percentage": "0",
+    "status": "En preparación",
+    "date": {
+      "$date": "2022-02-05T19:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-02-03T21:39:59.519Z"
+    }
+  },
+  {
+    "_id": {
+      "$oid": "61fc64edd8a8991d0e106123"
+    },
+    "clientName": "Karla Chavez",
+    "clientEmail": "copiasnoe@hotmail.com",
+    "clientCellphone": "4921116265",
+    "employeeName": "Jassiel",
+    "description": "1 encuadernado pasta blanda impresa color azul, cosido",
+    "products": [
+      {
+        "product": "1 encuadernado pasta blanda",
+        "quantity": "1",
+        "price": "125",
+        "totalPrice": "125",
+        "_id": {
+          "$oid": "61fc64edd8a8991d0e106124"
+        }
+      }
+    ],
+    "totalPrice": "125",
+    "paid": "125",
+    "percentage": "0",
+    "status": "En preparación",
+    "date": {
+      "$date": "2022-02-05T19:30:00Z"
+    },
+    "user": {
+      "$oid": "61b25e13c7f25f4190bc8adc"
+    },
+    "createdAt": {
+      "$date": "2022-02-03T23:27:41.159Z"
+    }
+  }
+]

@@ -8,7 +8,7 @@ import 'moment/locale/es-us';
 // REDUX
 import {
   deleteLocalOrder,
-  setActiveLocalOrder,
+  changeLocalOrderStatus,
 } from '../../../redux/local-orders/local-orders-actions';
 
 // COMPONENTS
@@ -65,9 +65,9 @@ const LocalOrderCard = ({ order }) => {
     }
   };
 
-  const handleComplete = (active) => {
+  const handleStatusChange = (status) => {
     setCompleteLoader(true);
-    dispatch(setActiveLocalOrder(order._id, active));
+    dispatch(changeLocalOrderStatus(order._id, status));
   };
 
   const handleClose = () => {
@@ -169,34 +169,57 @@ const LocalOrderCard = ({ order }) => {
             </ItemContainer>
           </TwoColumnsPayment>
           <ButtonsContainer>
-            {order.active ? (
+            {(order.status === 'En preparación' ||
+              order.status === 'Listo para entregar') && (
+              <CustomButton
+                primary={1}
+                as={Link}
+                to={`/ordenes-locales/editar/${order._id}`}
+                target="_blank"
+              >
+                Editar
+              </CustomButton>
+            )}
+            {order.status === 'En preparación' && (
+              <CustomButton
+                success
+                onClick={() => handleStatusChange('Listo para entregar')}
+                loading={completeLoader}
+                disabled={completeLoader}
+              >
+                Listo para entregar
+              </CustomButton>
+            )}
+
+            {order.status === 'Listo para entregar' && (
               <>
                 <CustomButton
-                  primary={1}
-                  as={Link}
-                  to={`/ordenes-locales/editar/${order._id}`}
-                  target="_blank"
+                  danger
+                  onClick={() => handleStatusChange('En preparación')}
+                  loading={completeLoader}
+                  disabled={completeLoader}
                 >
-                  Editar
+                  En preparación
                 </CustomButton>
                 <CustomButton
                   success
-                  onClick={() => handleComplete(false)}
+                  onClick={() => handleStatusChange('Entregado')}
                   loading={completeLoader}
                   disabled={completeLoader}
                 >
-                  Completar
+                  Entregado
                 </CustomButton>
               </>
-            ) : (
+            )}
+            {order.status === 'Entregado' && (
               <>
                 <CustomButton
                   primary
-                  onClick={() => handleComplete(true)}
+                  onClick={() => handleStatusChange('Listo para entregar')}
                   loading={completeLoader}
                   disabled={completeLoader}
                 >
-                  Activar
+                  Listo para entregar
                 </CustomButton>
                 <CustomButton danger onClick={() => setOpen('delete')}>
                   Eliminar

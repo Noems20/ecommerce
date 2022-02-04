@@ -55,16 +55,17 @@ export const fetchSingleLocalOrder = (id) => async (dispatch) => {
 //  FETCH ORDERS
 // ------------------------------------------------------------------------
 export const fetchLocalOrders =
-  (active, limit = 9, page = 1) =>
+  (status, limit = 9, page = 1) =>
   async (dispatch) => {
     try {
       dispatch({
         type: SET_UI_LOADING,
         payload: { fetchLoader: true },
       });
-      const dateStr = active ? 'date' : '-date';
+
+      const dateStr = status !== 'Entregado' ? 'date' : '-date';
       const { data } = await axios.get(
-        `/api/v1/localOrders?active=${active}&page=${page}&limit=${limit}&sort=${dateStr}`
+        `/api/v1/localOrders?status=${status}&page=${page}&limit=${limit}&sort=${dateStr}`
       );
 
       batch(() => {
@@ -165,14 +166,14 @@ export const createLocalOrder =
 // ------------------------------------------------------------------------
 //  COMPLETE ORDER
 // ------------------------------------------------------------------------
-export const setActiveLocalOrder = (id, active) => async (dispatch) => {
+export const changeLocalOrderStatus = (id, status) => async (dispatch) => {
   try {
     const config = {
       headers: {
         'Content-Type': 'application/json',
       },
     };
-    await axios.patch(`/api/v1/localOrders/${id}`, { active }, config);
+    await axios.patch(`/api/v1/localOrders/${id}`, { status }, config);
     batch(() => {
       dispatch({
         type: COMPLETE_LOCAL_ORDER,
@@ -256,7 +257,7 @@ export const updateLocalOrder =
     } catch (error) {
       dispatch({
         type: SET_UI_ERRORS,
-        payload: { errorsTwo: error.response.data.uiErrors },
+        payload: { errorsOne: error.response.data.uiErrors },
       });
       dispatch({
         type: SET_UI_LOADING,

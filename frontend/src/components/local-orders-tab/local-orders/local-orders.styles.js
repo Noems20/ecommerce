@@ -41,6 +41,18 @@ export const DateTitle = styled.h1`
   }
 `;
 
+export const EmptyTitle = styled.h1`
+  margin: 10rem 0;
+  padding: 0 3rem;
+  font-size: 3rem;
+  color: var(--color-grey-product);
+  text-align: center;
+
+  & span {
+    font-size: 7rem;
+  }
+`;
+
 export const PaginationModified = styled(Pagination)`
   justify-self: center;
 `;

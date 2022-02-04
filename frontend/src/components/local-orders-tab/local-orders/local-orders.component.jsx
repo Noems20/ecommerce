@@ -18,11 +18,12 @@ import {
   Content,
   DateTitle,
   PaginationModified,
+  EmptyTitle,
 } from './local-orders.styles';
 import { LoaderModified } from '../../../general.styles';
 import { Fragment } from 'react';
 
-const LocalOrders = ({ active }) => {
+const LocalOrders = ({ status, variants }) => {
   // ------------------------------ STATE AND CONSTANTS --------------------
   // console.log('Entra');
   const [page, setPage] = useState(sessionStorage.getItem('page') || 1);
@@ -34,20 +35,25 @@ const LocalOrders = ({ active }) => {
 
   // ---------------------------- USE EFFECTs --------------------------
   useEffect(() => {
-    dispatch(fetchLocalOrders(active, 9, page));
+    dispatch(fetchLocalOrders(status, 9, page));
     return () => {
       dispatch(clearLocalOrders());
     };
-  }, [dispatch, active, page]);
+  }, [dispatch, status, page]);
 
   // -------------------------- HANDLERS ---------------------------
 
   return (
     <>
-      <Container>
+      <Container
+        variants={variants}
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
+      >
         {fetchLoader ? (
           <LoaderModified />
-        ) : (
+        ) : orders.length > 0 ? (
           <Content>
             {orders.map((order, index) => {
               const formatedDate = moment(order.date).calendar(null, {
@@ -79,6 +85,10 @@ const LocalOrders = ({ active }) => {
               );
             })}
           </Content>
+        ) : (
+          <EmptyTitle>
+            No tienes ninguna orden <br /> <span>😓</span>
+          </EmptyTitle>
         )}
         <PaginationModified page={page} numOfPages={pages} setPage={setPage} />
       </Container>

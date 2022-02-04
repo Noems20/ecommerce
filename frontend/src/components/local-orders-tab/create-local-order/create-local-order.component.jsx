@@ -253,7 +253,7 @@ const CreateLocalOrderTab = ({
   const handleTabChange = () => {
     dispatch(clearSuccess());
     if (!update) {
-      setTab('Ordenes activas');
+      setTab('En preparación');
       window.scrollTo(0, 0);
     }
   };

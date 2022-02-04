@@ -94,9 +94,13 @@ const localOrderSchema = new mongoose.Schema(
       max: [100, 'Debe estar entre -100% y 100%'],
       default: 0,
     },
-    active: {
-      type: Boolean,
-      default: true,
+    status: {
+      type: String,
+      enum: {
+        values: ['En preparación', 'Listo para entregar', 'Entregado'],
+        message: 'Proporciona un estado válido',
+      },
+      default: 'En preparación',
     },
     date: {
       type: Date,

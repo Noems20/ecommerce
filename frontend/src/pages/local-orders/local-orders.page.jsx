@@ -48,11 +48,15 @@ const LocalOrdersPage = () => {
         );
       case 'En preparación':
         return (
-          <LocalOrders variants={containerVariants} key={2} active={true} />
+          <LocalOrders variants={containerVariants} key={2} status={tab} />
         );
-      case 'Entregadas':
+      case 'Listo para entregar':
         return (
-          <LocalOrders variants={containerVariants} key={3} active={false} />
+          <LocalOrders variants={containerVariants} key={3} status={tab} />
+        );
+      case 'Entregado':
+        return (
+          <LocalOrders variants={containerVariants} key={4} status={tab} />
         );
       default:
         return <CreateLocalOrderTab variants={containerVariants} key={1} />;
@@ -73,11 +77,11 @@ const LocalOrdersPage = () => {
         <SettingItem tab="En preparación" setTab={setTab} currentTab={tab}>
           En preparación
         </SettingItem>
-        <SettingItem tab="Por entregar" setTab={setTab} currentTab={tab}>
-          Por entregar
+        <SettingItem tab="Listo para entregar" setTab={setTab} currentTab={tab}>
+          Listo para entregar
         </SettingItem>
-        <SettingItem tab="Entregadas" setTab={setTab} currentTab={tab}>
-          Entregadas
+        <SettingItem tab="Entregado" setTab={setTab} currentTab={tab}>
+          Entregado
         </SettingItem>
       </HeaderMenu>
 
