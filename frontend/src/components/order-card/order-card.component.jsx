@@ -9,6 +9,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { clearUiErrors } from '../../redux/ui/uiActions';
 import {
   updateOrderAddress,
+  updateOrderStatus,
   cancelMyOrder,
 } from '../../redux/orders/orders-actions';
 
@@ -33,6 +34,7 @@ import {
   CardBody,
   Body,
   Column,
+  SelectContainer,
   CardBodyTitle,
   CardBodyProducts,
   ButtonsContainer,
@@ -80,6 +82,7 @@ import { FaEdit } from 'react-icons/fa';
 
 const OrderCard = ({ order }) => {
   // ------------------------------ STATE AND CONSTANTS ------------
+  const [status, setStatus] = useState('');
   const [viewDetails, setViewDetails] = useState(false);
   const [open, setOpen] = useState(false);
   const [addressData, setAddressData] = useState({
@@ -160,6 +163,14 @@ const OrderCard = ({ order }) => {
     );
   };
 
+  const handleStatusChange = () => {
+    if (!status) setOpen(false);
+    else {
+      dispatch(updateOrderStatus(order._id, status));
+      setOpen(false);
+    }
+  };
+
   const handleDelete = () => {
     dispatch(cancelMyOrder(order._id));
   };
@@ -198,13 +209,59 @@ const OrderCard = ({ order }) => {
         <CardBody>
           <Body>
             <Column>
+              {user.role === 'admin' && (
+                <SelectContainer>
+                  <SelectInput
+                    label="Actualizar estado de pedido"
+                    onChange={(e) => setStatus(e.target.value)}
+                    defaultValue={order.status}
+                    value={status}
+                  >
+                    <option key={0} value={''}>
+                      Selecciona un estado
+                    </option>
+                    {order.status !== 'Pedido recibido' && (
+                      <option key={1} value={'Pedido recibido'}>
+                        Pedido recibido
+                      </option>
+                    )}
+                    {order.status !== 'Preparando pedido' && (
+                      <option key={2} value={'Preparando pedido'}>
+                        Preparando pedido
+                      </option>
+                    )}
+                    {order.status !== 'Listo para entregar' && (
+                      <option key={3} value="Listo para entregar">
+                        Listo para entregar
+                      </option>
+                    )}
+                    {order.status !== 'En camino' && (
+                      <option key={4} value="En camino">
+                        En camino
+                      </option>
+                    )}
+                    {order.status !== 'Entregado' && (
+                      <option key={5} value="Entregado">
+                        Entregado
+                      </option>
+                    )}
+                  </SelectInput>
+                  <CustomButton primary onClick={() => setOpen('statusChange')}>
+                    Actualizar estado de pedido
+                  </CustomButton>
+                </SelectContainer>
+              )}
               <CardBodyTitle style={{ color: 'var(--color-primary)' }}>
                 {order.status}
               </CardBodyTitle>
               <CardBodyTitle>
-                Entrega aproximada:{' '}
-                {moment(order.createdAt).add(3, 'days').format('LL')}
+                {order.status !== 'Entregado'
+                  ? `Entrega aproximada: ${moment(order.createdAt)
+                      .add(3, 'days')
+                      .format('LL')} `
+                  : `Entregado el: ${moment(order.deliveredAt).format('LLL')}`}
               </CardBodyTitle>
+
               {/* ---------------------------------------*/}
               {/* PRODUCTS */}
               {/* --------------------------------------- */}
@@ -468,7 +525,6 @@ const OrderCard = ({ order }) => {
         {open === 'delete' && (
           <Modal handleClose={handleClose}>
             <Alert
-              // style={{ maxWidth: '50vw' }}
               type="error"
               title="Cuidado"
               text="¿Seguro que deseas cancelar esta orden?
@@ -476,6 +532,22 @@ const OrderCard = ({ order }) => {
               button="Continuar"
               handleClose={handleClose}
               handleAction={handleDelete}
+            />
+          </Modal>
+        )}
+        {open === 'statusChange' && (
+          <Modal handleClose={handleClose}>
+            <Alert
+              type="warning"
+              title="Cuidado"
+              text={
+                status
+                  ? `¿Seguro que deseas cambiar el estado de esta orden? Cambiara de "${order.status}" a "${status}"`
+                  : 'No has seleccionado ningún estado'
+              }
+              button="Continuar"
+              handleClose={handleClose}
+              handleAction={handleStatusChange}
             />
           </Modal>
         )}

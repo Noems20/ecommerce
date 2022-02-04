@@ -1,5 +1,6 @@
 import React from 'react';
 import { RiCloseCircleFill, RiCheckboxCircleFill } from 'react-icons/ri';
+import { IoWarning } from 'react-icons/io5';
 
 // STYLES
 import {
@@ -29,6 +30,8 @@ const Message = ({
         return <RiCloseCircleFill />;
       case 'success':
         return <RiCheckboxCircleFill />;
+      case 'warning':
+        return <IoWarning />;
       default:
         return <RiCloseCircleFill />;
     }

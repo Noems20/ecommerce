@@ -83,6 +83,14 @@ export const CardBodyTitle = styled.h1`
   }
 `;
 
+export const SelectContainer = styled.div`
+  margin: 2rem 0;
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 2rem;
+`;
+
 export const CardBodyProducts = styled.div`
   margin-top: 2rem;
 

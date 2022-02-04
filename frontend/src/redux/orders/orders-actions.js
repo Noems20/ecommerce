@@ -193,6 +193,47 @@ export const updateOrderAddress =
   };
 
 // -----------------------------------------------------------
+// UPDATE ORDER STATUS -- ADMIN
+// -----------------------------------------------------------
+export const updateOrderStatus = (id, status) => async (dispatch) => {
+  try {
+    dispatch({
+      type: SET_UI_LOADING,
+      payload: { secondLoader: true },
+    });
+
+    const config = {
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+
+    // 1) Get current logger user orders
+    await axios.patch(
+      `/api/v1/orders/${id}`,
+      {
+        status,
+      },
+      config
+    );
+
+    dispatch({
+      type: DELETE_ORDER,
+      payload: id,
+    });
+    dispatch({
+      type: SET_UI_LOADING,
+      payload: { secondLoader: false },
+    });
+  } catch (error) {
+    dispatch({
+      type: SET_UI_LOADING,
+      payload: { secondLoader: false },
+    });
+  }
+};
+
+// -----------------------------------------------------------
 // CANCEL ORDER
 // -----------------------------------------------------------
 export const cancelMyOrder = (id) => async (dispatch) => {

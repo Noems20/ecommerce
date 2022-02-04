@@ -5,6 +5,7 @@ import { RiCloseLine } from 'react-icons/ri';
 
 const errorColor = 'var(--color-red)';
 const successColor = 'var(--color-success)';
+const warningColor = 'var(--color-warning)';
 
 const ErrorBackgroundColor = css`
   background-color: ${errorColor};
@@ -12,11 +13,18 @@ const ErrorBackgroundColor = css`
 const SuccessBackgroundColor = css`
   background-color: ${successColor};
 `;
+const WarningBackgroundColor = css`
+  background-color: ${warningColor};
+`;
+
 const ErrorColor = css`
   color: ${errorColor};
 `;
 const SuccessColor = css`
   color: ${successColor};
+`;
+const WarningColor = css`
+  color: ${warningColor};
 `;
 
 const getBackgroundColor = (props) => {
@@ -25,16 +33,21 @@ const getBackgroundColor = (props) => {
       return ErrorBackgroundColor;
     case 'success':
       return SuccessBackgroundColor;
+    case 'warning':
+      return WarningBackgroundColor;
     default:
       return ErrorBackgroundColor;
   }
 };
+
 const getColor = (props) => {
   switch (props.type) {
     case 'error':
       return ErrorColor;
     case 'success':
       return SuccessColor;
+    case 'warning':
+      return WarningColor;
     default:
       return ErrorColor;
   }

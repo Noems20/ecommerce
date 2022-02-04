@@ -160,13 +160,18 @@ const orderSchema = mongoose.Schema(
       },
       default: 'Pedido recibido',
     },
+    createdAt: {
+      type: Date,
+      default: Date.now,
+    },
     deliveredAt: {
       type: Date,
+      default: null,
     },
-  },
-  {
-    timestamps: true,
   }
+  // {
+  //   timestamps: true,
+  // }
 );
 
 // --------------------------------------- MIDDLEWARE -----------------------------------------------
@@ -197,6 +202,19 @@ orderSchema.pre('save', async function (next) {
   }
 
   next();
+});
+
+// ---------------------- SAVE MIDDLEWARE -------------------
+orderSchema.post(/^findOneAnd/, async function (doc) {
+  if (doc) {
+    if (doc.status === 'Entregado' && doc.deliveredAt === null) {
+      doc.deliveredAt = new Date().toISOString();
+    } else if (doc.status !== 'Entregado' && doc.deliveredAt !== null) {
+      doc.deliveredAt = null;
+    }
+  }
+
+  await doc.save();
 });
 
 // -------------------- QUERY MIDDLEWARE -------------------
