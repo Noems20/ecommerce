@@ -122,7 +122,7 @@ export const getCheckoutSession = catchAsync(async (req, res, next) => {
   const session = await stripe.checkout.sessions.create({
     payment_method_types: ['card'],
     mode: 'payment',
-    success_url: url + 'perfil?tab=ordenes-activas',
+    success_url: url + 'perfil?tab=Pedidos en curso',
     cancel_url: url + 'checkout',
     customer_email: req.user.email,
     // client_reference_id: req.params.tourId,

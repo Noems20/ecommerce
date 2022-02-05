@@ -178,6 +178,7 @@ const orderSchema = mongoose.Schema(
 
 // --------------- UPDATE PRODUCTS STOCK -----------------
 orderSchema.pre('save', async function (next) {
+  if (!this.isModified('orderItems')) return next();
   const fetchedProducts = {};
 
   for (const item of this.orderItems) {
