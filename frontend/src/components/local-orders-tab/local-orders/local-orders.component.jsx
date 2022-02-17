@@ -35,7 +35,7 @@ const LocalOrders = ({ status, variants }) => {
 
   // ---------------------------- USE EFFECTs --------------------------
   useEffect(() => {
-    dispatch(fetchLocalOrders(status, 9, page));
+    dispatch(fetchLocalOrders(status, 12, page));
     return () => {
       dispatch(clearLocalOrders());
     };

@@ -40,7 +40,7 @@ import {
 import { IoExpandSharp } from 'react-icons/io5';
 
 // IMAGES
-import logo from './logo.png';
+import logo from './logo-telefono.png';
 
 const LocalOrderCard = ({ order }) => {
   // ---------------------------- STATE AND CONSTANTS -------------------
@@ -250,30 +250,42 @@ const LocalOrderCard = ({ order }) => {
               <CardContent>
                 <CardTitle>{order.clientName}</CardTitle>
                 <TwoColumns>
-                  <ItemContainer>
-                    <CardSubtitle>Teléfono</CardSubtitle>
-                    <CardText>{order.clientCellphone}</CardText>
+                  <ItemContainer style={{ color: 'var(--color-primary)' }}>
+                    <CardSubtitle>Contáctanos al</CardSubtitle>
+                    <CardText style={{ fontWeight: 500 }}>
+                      (492) 144 1956
+                    </CardText>
                   </ItemContainer>
-                  <ItemContainer>
-                    <CardSubtitle>Email</CardSubtitle>
-                    <CardText>{order.clientEmail}</CardText>
+                  <ItemContainer style={{ color: 'var(--color-primary)' }}>
+                    <CardSubtitle>Nuestro correo</CardSubtitle>
+                    <CardText style={{ fontWeight: 500 }}>
+                      copiasnoe@hotmail.com
+                    </CardText>
                   </ItemContainer>
                   <ItemContainer>
                     <CardSubtitle>Atendió</CardSubtitle>
                     <CardText>{order.employeeName}</CardText>
                   </ItemContainer>
                   <ItemContainer>
+                    <CardSubtitle>Teléfono</CardSubtitle>
+                    <CardText>{order.clientCellphone}</CardText>
+                  </ItemContainer>
+                  {/* <ItemContainer>
+                    <CardSubtitle>Email</CardSubtitle>
+                    <CardText>{order.clientEmail}</CardText>
+                  </ItemContainer> */}
+                  <ItemContainer>
                     <CardSubtitle>Se encargó el</CardSubtitle>
                     <CardText>
                       {moment(order.createdAt).format('LLLL')}
                     </CardText>
                   </ItemContainer>
+                  <ItemContainer>
+                    <CardSubtitle>Fecha de entrega</CardSubtitle>
+                    <CardText>{moment(order.date).format('LLLL')}</CardText>
+                  </ItemContainer>
                 </TwoColumns>
 
-                <ItemContainer>
-                  <CardSubtitle>Fecha de entrega</CardSubtitle>
-                  <CardText>{moment(order.date).format('LLLL')}</CardText>
-                </ItemContainer>
                 {order.description && (
                   <ItemContainer>
                     <CardSubtitle>Descripción</CardSubtitle>
