@@ -166,7 +166,15 @@ const Footer = () => {
                   </ListItemLink>
                 </ListItem>
                 <ListItem>
-                  <ListItemLink to="/">Envio</ListItemLink>
+                  <ListItemLink
+                    to={
+                      user
+                        ? '/perfil?tab=Envio'
+                        : '/login?redirect=perfil?tab=Envio'
+                    }
+                  >
+                    Envio
+                  </ListItemLink>
                 </ListItem>
                 <ListItem>
                   <ListItemLink to="/">Contáctanos</ListItemLink>

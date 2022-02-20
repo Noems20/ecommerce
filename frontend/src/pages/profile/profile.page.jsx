@@ -106,14 +106,15 @@ const Profile = () => {
   };
 
   const urlTab = location.search.split('tab=')[1];
-  console.log(urlTab);
 
   // --------------------------------- USE EFFECT ------------------
 
   useEffect(() => {
-    if (!sessionStorage.getItem('tab') && urlTab === 'Pedidos%20en%20curso') {
-      sessionStorage.setItem('tab', 'Pedidos en curso');
-      setTab('Pedidos en curso');
+    if (!sessionStorage.getItem('tab') && urlTab) {
+      let formatedRoute = urlTab.replaceAll('%20', ' ');
+      console.log(formatedRoute);
+      sessionStorage.setItem('tab', formatedRoute);
+      setTab(formatedRoute);
     }
   }, [urlTab]);
 
