@@ -71,38 +71,38 @@ const ProfileTab = ({ variants }) => {
   return (
     <Container
       variants={variants}
-      initial='hidden'
-      animate='visible'
-      exit='hidden'
+      initial="hidden"
+      animate="visible"
+      exit="hidden"
     >
       <Content>
         <FormContainer onSubmit={handleDetailsSubmit}>
           <Title>Configuración de cuenta</Title>
           <TextInput
-            name='name'
-            type='text'
+            name="name"
+            type="text"
             handleChange={handleChange}
             value={name}
-            label='Nombre'
+            label="Nombre"
             error={uiErrors.errorsOne.name}
             required
           />
           <TextInput
-            name='phone'
-            type='text'
+            name="phone"
+            type="text"
             handleChange={handleChange}
             value={phone}
-            label='Teléfono'
+            label="Teléfono"
             // error={uiErrors.errorsOne.phone}
             required
           />
           <TextInput
             disabled={true}
-            name='email'
-            type='text'
+            name="email"
+            type="text"
             handleChange={handleChange}
             value={email}
-            label='Email'
+            label="Email"
             error={uiErrors.errorsOne.email}
           />
           <CustomButton
@@ -117,27 +117,27 @@ const ProfileTab = ({ variants }) => {
         <FormContainer onSubmit={handlePasswordSubmit}>
           <Title>Cambiar contraseña</Title>
           <TextInput
-            name='passwordCurrent'
-            type='password'
+            name="passwordCurrent"
+            password
             handleChange={handleChange}
             value={passwordCurrent}
-            label='Contraseña actual'
+            label="Contraseña actual"
             error={uiErrors.errorsTwo.passwordCurrent}
           />
           <TextInput
-            name='password'
-            type='password'
+            name="password"
+            password
             handleChange={handleChange}
             value={password}
-            label='Nueva contraseña'
+            label="Nueva contraseña"
             error={uiErrors.errorsTwo.password}
           />
           <TextInput
-            name='passwordConfirm'
-            type='password'
+            name="passwordConfirm"
+            password
             handleChange={handleChange}
             value={passwordConfirm}
-            label='Confirmar contraseña'
+            label="Confirmar contraseña"
             error={uiErrors.errorsTwo.passwordConfirm}
           />
           <CustomButton

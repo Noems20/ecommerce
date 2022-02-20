@@ -71,52 +71,52 @@ const SignUp = ({ variants }) => {
   return (
     <SignCard
       variants={variants}
-      initial='hidden'
-      animate='visible'
-      exit='exit'
+      initial="hidden"
+      animate="visible"
+      exit="exit"
     >
       <Form>
         <Logo src={logo4} />
         <SignTitle>Crear cuenta</SignTitle>
         <TextInput
-          name='name'
-          type='text'
+          name="name"
+          type="text"
           handleChange={handleChange}
           value={name}
-          label='Nombre'
+          label="Nombre"
           error={uiErrors.errorsOne.name}
           required
         />
         <TextInput
-          name='email'
-          type='text'
+          name="email"
+          type="text"
           handleChange={handleChange}
           value={email}
-          label='Email'
+          label="Email"
           error={uiErrors.errorsOne.email}
           required
         />
         <TextInput
-          name='password'
-          type='password'
+          password
+          name="password"
           handleChange={handleChange}
           value={password}
-          label='Contraseña'
+          label="Contraseña"
           error={uiErrors.errorsOne.password}
           required
         />
         <TextInput
-          name='passwordConfirm'
-          type='password'
+          password
+          name="passwordConfirm"
           handleChange={handleChange}
           value={passwordConfirm}
-          label='Confirmar contraseña'
+          label="Confirmar contraseña"
           error={uiErrors.errorsOne.passwordConfirm}
           required
         />
         <CustomButton
           primary
-          type='submit'
+          type="submit"
           loading={loading.firstLoader}
           disabled={loading.firstLoader}
           onClick={handleSubmit}

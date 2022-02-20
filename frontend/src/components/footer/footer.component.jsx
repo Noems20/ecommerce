@@ -11,6 +11,7 @@ import {
   Item,
   ItemTitle,
   IconsContainer,
+  IconContainer,
   List,
   ListItem,
   ListItemLink,
@@ -125,15 +126,15 @@ const Footer = () => {
         </TitleContainer>
         <ButtonContainer>
           {user ? (
-            <Button to='/perfil' className='register'>
+            <Button to="/perfil" className="register">
               <p>Ir a mi cuenta</p> <BsArrowRight />
             </Button>
           ) : (
-            <Button to='/registro' className='register'>
+            <Button to="/registro" className="register">
               <p>Registrate gratis</p> <BsArrowRight />
             </Button>
           )}
-          <Button to='/contacto'>
+          <Button to="/contacto">
             <p> Contáctanos</p> <BsArrowRight />
           </Button>
         </ButtonContainer>
@@ -149,24 +150,26 @@ const Footer = () => {
             {open.help && (
               <List
                 variants={containerVariants}
-                initial='hidden'
-                animate='visible'
-                exit='hidden'
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
               >
                 <ListItem>
-                  <ListItemLink to='/'>Estatus de orden</ListItemLink>
+                  <ListItemLink to="/perfil?tab=Pedidos%20en%20curso">
+                    Estatus de orden
+                  </ListItemLink>
                 </ListItem>
                 <ListItem>
-                  <ListItemLink to='/'>Envio</ListItemLink>
+                  <ListItemLink to="/">Envio</ListItemLink>
                 </ListItem>
                 <ListItem>
-                  <ListItemLink to='/'>Contáctanos</ListItemLink>
+                  <ListItemLink to="/">Contáctanos</ListItemLink>
                 </ListItem>
                 <ListItem>
-                  <ListItemLink to='/'>Devoluciones</ListItemLink>
+                  <ListItemLink to="/">Devoluciones</ListItemLink>
                 </ListItem>
                 <ListItem>
-                  <ListItemLink to='/'>Centro de ayuda</ListItemLink>
+                  <ListItemLink to="/">Centro de ayuda</ListItemLink>
                 </ListItem>
                 {/* <ListItem><ListItemLink to='/'>Terminos de venta</ListItemLink></ListItem> */}
               </List>
@@ -185,24 +188,24 @@ const Footer = () => {
             {open.clothes && (
               <List
                 variants={containerVariants}
-                initial='hidden'
-                animate='visible'
-                exit='hidden'
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
               >
                 <ListItem>
-                  <ListItemLink to='/ropa/general/todo'>General</ListItemLink>
+                  <ListItemLink to="/ropa/general/todo">General</ListItemLink>
                 </ListItem>
                 <ListItem>
-                  <ListItemLink to='/ropa/hombre/todo'>Hombre</ListItemLink>
+                  <ListItemLink to="/ropa/hombre/todo">Hombre</ListItemLink>
                 </ListItem>
                 <ListItem>
-                  <ListItemLink to='/ropa/mujer/todo'>Mujer</ListItemLink>
+                  <ListItemLink to="/ropa/mujer/todo">Mujer</ListItemLink>
                 </ListItem>
                 <ListItem>
-                  <ListItemLink to='/ropa/niño/todo'>Niño</ListItemLink>
+                  <ListItemLink to="/ropa/niño/todo">Niño</ListItemLink>
                 </ListItem>
                 <ListItem>
-                  <ListItemLink to='/ropa/niña/todo'>Niña</ListItemLink>
+                  <ListItemLink to="/ropa/niña/todo">Niña</ListItemLink>
                 </ListItem>
               </List>
             )}
@@ -220,32 +223,50 @@ const Footer = () => {
             {open.explore && (
               <List
                 variants={containerVariants}
-                initial='hidden'
-                animate='visible'
-                exit='hidden'
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
               >
                 <ListItem>
-                  <ListItemLink to='/agendas'>Agendas</ListItemLink>
+                  <ListItemLink to="/agendas">Agendas</ListItemLink>
                 </ListItem>
                 {/* <ListItem>
                   <ListItemLink to='/'>Encuadernación</ListItemLink>
                 </ListItem> */}
                 <ListItem>
-                  <ListItemLink to='/regalos'>Regalos</ListItemLink>
+                  <ListItemLink to="/regalos">Regalos</ListItemLink>
                 </ListItem>
                 <ListItem>
-                  <ListItemLink to='/'>Nosotros</ListItemLink>
+                  <ListItemLink to="/">Nosotros</ListItemLink>
                 </ListItem>
               </List>
             )}
           </AnimatePresence>
         </Item>
-        <Item className='social'>
+        <Item className="social">
           <ItemTitle>Social</ItemTitle>
           <IconsContainer>
-            <FaFacebookF />
-            <FaInstagram />
-            <FaWhatsapp />
+            <IconContainer
+              to={{ pathname: 'https://www.facebook.com/CopiasNoe' }}
+              target="_blank"
+            >
+              <FaFacebookF />
+            </IconContainer>
+            <IconContainer
+              to={{ pathname: 'https://www.instagram.com/copiasnoe/?hl=es-la' }}
+              target="_blank"
+            >
+              <FaInstagram />
+            </IconContainer>
+            <IconContainer
+              to={{
+                pathname:
+                  'https://api.whatsapp.com/send/?phone=524921441956&text=Hola%2C+me+gustar%C3%ADa+solicitar+una+cotizaci%C3%B3n.&app_absent=0',
+              }}
+              target="_blank"
+            >
+              <FaWhatsapp />
+            </IconContainer>
           </IconsContainer>
         </Item>
         <Item>
@@ -258,9 +279,9 @@ const Footer = () => {
             {open.about && (
               <List
                 variants={containerVariants}
-                initial='hidden'
-                animate='visible'
-                exit='hidden'
+                initial="hidden"
+                animate="visible"
+                exit="hidden"
               >
                 <ListItem>
                   Empresa 100% Zacatecana con más de 20 años de experiencia en

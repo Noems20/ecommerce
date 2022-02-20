@@ -80,35 +80,35 @@ const SignIn = ({ setTab, variants }) => {
   return (
     <SignCard
       variants={variants}
-      initial='hidden'
-      animate='visible'
-      exit='exit'
+      initial="hidden"
+      animate="visible"
+      exit="exit"
     >
       <Form>
         <Logo src={logo4} />
         <SignTitle>Iniciar sesión</SignTitle>
         {uiErrors.errorsOne.general && (
           <Message
-            title='Error'
+            title="Error"
             text={uiErrors.errorsOne.general}
-            type='error'
+            type="error"
           />
         )}
         <TextInput
-          name='email'
-          type='text'
+          name="email"
+          type="text"
           handleChange={handleChange}
           value={email}
-          label='Email'
+          label="Email"
           error={errorsOne.email}
           required
         />
         <TextInput
-          name='password'
-          type='password'
+          password
+          name="password"
           handleChange={handleChange}
           value={password}
-          label='Contraseña'
+          label="Contraseña"
           error={errorsOne.password}
           required
         />
@@ -116,7 +116,7 @@ const SignIn = ({ setTab, variants }) => {
           primary
           loading={loading.firstLoader}
           disabled={loading.firstLoader}
-          type='submit'
+          type="submit"
           onClick={handleSubmit}
         >
           Iniciar Sesión
@@ -132,7 +132,7 @@ const SignIn = ({ setTab, variants }) => {
           </BottomText>
           <BottomText>
             ¿Olvidaste tu contraseña? da click{' '}
-            <LinkText as='span' onClick={() => setTab('forgot-password')}>
+            <LinkText as="span" onClick={() => setTab('forgot-password')}>
               aqui
             </LinkText>
           </BottomText>

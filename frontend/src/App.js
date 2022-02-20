@@ -22,6 +22,7 @@ import VerifyAccount from './pages/verify-account/verify-account.page';
 import SearchPage from './pages/search/search.page';
 import CheckoutPage from './pages/checkout/checkout.page';
 import OnlineOrdersPage from './pages/online-orders/online-orders.page';
+import AdminPage from './pages/admin/admin.page';
 
 // COMPONENTS
 import Header from './components/header/header.component';
@@ -108,6 +109,17 @@ const App = () => {
             render={() =>
               user && user.role === 'admin' ? (
                 <OnlineOrdersPage />
+              ) : (
+                <Redirect to="/login" />
+              )
+            }
+          />
+          <Route
+            exact
+            path="/admin"
+            render={() =>
+              user && user.role === 'admin' ? (
+                <AdminPage />
               ) : (
                 <Redirect to="/login" />
               )

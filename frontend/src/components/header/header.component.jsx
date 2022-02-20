@@ -58,7 +58,7 @@ import {
   FaReceipt,
 } from 'react-icons/fa';
 
-import { MdSell } from 'react-icons/md';
+import { MdSell, MdAdminPanelSettings } from 'react-icons/md';
 
 function useOutsideAlerter(closer, ref, secondRef) {
   useEffect(() => {
@@ -274,6 +274,15 @@ const Header = () => {
                           <>
                             <DropDownItem
                               as={NavLink}
+                              to="/admin"
+                              exact
+                              activeClassName="is-active"
+                              icon={<MdAdminPanelSettings />}
+                            >
+                              <p>Admin</p>
+                            </DropDownItem>
+                            <DropDownItem
+                              as={NavLink}
                               to="/pedidos-online"
                               exact
                               activeClassName="is-active"
@@ -414,6 +423,16 @@ const Header = () => {
             </NavItem>
             {user.role === 'admin' && (
               <>
+                <NavItem>
+                  <NavbarLink
+                    activeClassName="is-active"
+                    onClick={handleLinkClick}
+                    to="/admin"
+                    exact
+                  >
+                    Admin
+                  </NavbarLink>
+                </NavItem>
                 <NavItem>
                   <NavbarLink
                     activeClassName="is-active"

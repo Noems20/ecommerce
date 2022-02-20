@@ -69,25 +69,39 @@ export const ItemTitle = styled.h2`
 `;
 
 export const IconsContainer = styled.div`
-  height: 100%;
-  margin-right: 10rem;
+  height: max-content;
   margin-top: 1.5rem;
 
   display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(3, 1fr);
-
-  & svg {
-    font-size: 3.5rem;
-    color: var(--color-primary);
-    background-color: #fff;
-    border-radius: 100%;
-    padding: 5px;
-  }
+  grid-auto-flow: column;
+  grid-auto-columns: max-content;
+  grid-auto-rows: max-content;
+  grid-gap: 2rem;
 
   @media only screen and (max-width: 447px) {
     margin: 0;
     grid-gap: 3rem;
+  }
+`;
+
+export const IconContainer = styled(Link)`
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 100px;
+  height: 4rem;
+  width: 4rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  & svg {
+    font-size: 1.8rem;
+    color: #fff !important;
   }
 `;
 

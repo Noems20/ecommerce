@@ -48,6 +48,7 @@ export const Input = styled(motion.input)`
   &:-webkit-autofill,
   &:-webkit-autofill:hover,
   &:-webkit-autofill:focus {
+    box-shadow: 0 0 0 30px white inset !important;
     -webkit-box-shadow: 0 0 0 30px white inset !important;
   }
 
@@ -171,5 +172,18 @@ export const ErrorText = styled.p`
 
   @media only screen and (max-width: 1100px) {
     font-size: 1.7rem;
+  }
+`;
+
+export const IconContainer = styled.div`
+  position: absolute;
+  display: flex;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  & svg {
+    font-size: 2rem;
   }
 `;
