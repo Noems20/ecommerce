@@ -56,7 +56,9 @@ const SignIn = ({ setTab, variants }) => {
     };
   }, [dispatch]);
 
-  const redirect = location.search ? location.search.split('=')[1] : '/';
+  const redirect = location.search
+    ? location.search.split('redirect=')[1]
+    : '/';
 
   useEffect(() => {
     if (user) {

@@ -66,7 +66,9 @@ const SignUp = ({ variants }) => {
     dispatch(signUp(name, email, password, passwordConfirm));
   };
 
-  const redirect = location.search ? location.search.split('=')[1] : '/';
+  const redirect = location.search
+    ? location.search.split('redirect=')[1]
+    : '/';
 
   return (
     <SignCard

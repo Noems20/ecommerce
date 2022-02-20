@@ -155,7 +155,13 @@ const Footer = () => {
                 exit="hidden"
               >
                 <ListItem>
-                  <ListItemLink to="/perfil?tab=Pedidos%20en%20curso">
+                  <ListItemLink
+                    to={
+                      user
+                        ? '/perfil?tab=Pedidos%20en%20curso'
+                        : '/login?redirect=perfil?tab=Pedidos%20en%20curso'
+                    }
+                  >
                     Estatus de orden
                   </ListItemLink>
                 </ListItem>
