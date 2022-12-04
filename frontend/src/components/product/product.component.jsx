@@ -268,7 +268,7 @@ const Product = ({ product }) => {
         </Description>
         {/* ------------- MEASUREMENTS ------------- */}
         <Description>
-          <InfoTitle>Especifiaciones</InfoTitle>
+          <InfoTitle>Especificaciones</InfoTitle>
           <List>
             {product.specifications.map((specification, index) => {
               return <ListItem key={index}>{specification}</ListItem>;

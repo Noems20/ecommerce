@@ -1,5 +1,5 @@
 export const isEmpty = (string) => {
-  if (string.trim() === '') return true;
+  if (string.trim() === "") return true;
   else return false;
 };
 
@@ -14,12 +14,12 @@ export const validateLoginData = (email, password) => {
   let errors = {};
 
   if (isEmpty(email)) {
-    errors.email = 'No puede estar vacío';
+    errors.email = "No puede estar vacío";
   } else if (!isEmail(email)) {
-    errors.email = 'Debe ser un email valido';
+    errors.email = "Debe ser un email valido";
   }
 
-  if (isEmpty(password)) errors.password = 'No puede estar vacío';
+  if (isEmpty(password)) errors.password = "No puede estar vacío";
 
   return {
     errors,
@@ -36,15 +36,15 @@ export const validateRegisterData = (
   let errors = {};
 
   if (isEmpty(email)) {
-    errors.email = 'No debe estar vacio';
+    errors.email = "No debe estar vacío";
   } else if (!isEmail(email)) {
-    errors.email = 'Debe ser un email valido';
+    errors.email = "Debe ser un email valido";
   }
 
-  if (isEmpty(name)) errors.name = 'No debe estar vacio';
-  if (isEmpty(password)) errors.password = 'No debe estar vacio';
+  if (isEmpty(name)) errors.name = "No debe estar vacío";
+  if (isEmpty(password)) errors.password = "No debe estar vacío";
   if (password !== confirmPassword)
-    errors.confirmPassword = 'Las contraseñas no coinciden';
+    errors.confirmPassword = "Las contraseñas no coinciden";
 
   return {
     errors,
@@ -55,16 +55,16 @@ export const validateRegisterData = (
 export const validateUpdateUserData = (name, password, confirmPassword) => {
   let errors = {};
 
-  if (isEmpty(name)) errors.name = 'No debe estar vacio';
+  if (isEmpty(name)) errors.name = "No debe estar vacío";
 
   if (isEmpty(password) && !isEmpty(confirmPassword))
-    errors.password = 'No debe estar vacio';
+    errors.password = "No debe estar vacío";
 
   if (isEmpty(confirmPassword) && !isEmpty(password))
-    errors.confirmPassword = 'Las contraseñas no coinciden';
+    errors.confirmPassword = "Las contraseñas no coinciden";
 
   if (password !== confirmPassword)
-    errors.confirmPassword = 'Las contraseñas no coinciden';
+    errors.confirmPassword = "Las contraseñas no coinciden";
 
   return {
     errors,
@@ -75,14 +75,14 @@ export const validateUpdateUserData = (name, password, confirmPassword) => {
 export const validateMailData = (name, email, subject, message) => {
   let errors = {};
 
-  if (isEmpty(name)) errors.name = 'No puede estar vacío';
+  if (isEmpty(name)) errors.name = "No puede estar vacío";
   if (isEmpty(email)) {
-    errors.email = 'No puede estar vacío';
+    errors.email = "No puede estar vacío";
   } else if (!isEmail(email)) {
-    errors.email = 'Debe ser un email válido';
+    errors.email = "Debe ser un email válido";
   }
-  if (isEmpty(subject)) errors.subject = 'No puede estar vacío';
-  if (isEmpty(message)) errors.message = 'No puede estar vacío';
+  if (isEmpty(subject)) errors.subject = "No puede estar vacío";
+  if (isEmpty(message)) errors.message = "No puede estar vacío";
 
   return {
     errors,

@@ -86,26 +86,26 @@ const ProductReviews = ({
           text={`${reviewRating} de 5`}
         />
         <TextInput
-          name='title'
-          type='text'
+          name="title"
+          type="text"
           handleChange={handleChange}
           value={reviewTitle}
-          label='Titulo'
+          label="Titulo"
           error={errorsTwo.title}
         />
         <TextInput
           textarea
           rows={2}
-          name='review'
-          type='review'
+          name="review"
+          type="review"
           handleChange={handleChange}
           value={review}
-          label='Reseña'
+          label="Reseña"
           error={errorsTwo.review}
         />
         <CustomButton
           primary
-          type='submit'
+          type="submit"
           style={{ justifySelf: 'start' }}
           loading={loading.secondLoader}
           disabled={loading.secondLoader}
@@ -124,32 +124,32 @@ const ProductReviews = ({
         <ReviewsCount>{reviewsQuantity} calificaciones</ReviewsCount>
         <RatingBarsContainer>
           <RatingBar
-            rating='Todos'
-            percentage='100%'
+            rating="Todos"
+            percentage="100%"
             onClick={() => handleFilter(0)}
           />
           <RatingBar
-            rating='5 estrellas'
+            rating="5 estrellas"
             percentage={`${reviewsStats[5]}%`}
             onClick={() => handleFilter(5)}
           />
           <RatingBar
-            rating='4 estrellas'
+            rating="4 estrellas"
             percentage={`${reviewsStats[4]}%`}
             onClick={() => handleFilter(4)}
           />
           <RatingBar
-            rating='3 estrellas'
+            rating="3 estrellas"
             percentage={`${reviewsStats[3]}%`}
             onClick={() => handleFilter(3)}
           />
           <RatingBar
-            rating='2 estrellas'
+            rating="2 estrellas"
             percentage={`${reviewsStats[2]}%`}
             onClick={() => handleFilter(2)}
           />
           <RatingBar
-            rating='1 estrella'
+            rating="1 estrella"
             percentage={`${reviewsStats[1]}%`}
             onClick={() => handleFilter(1)}
           />
